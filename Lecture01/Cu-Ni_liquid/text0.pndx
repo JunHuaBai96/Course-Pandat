@@ -1,5 +1,0 @@
-
-CompuTherm LLC Pandat Workspace File, Format Version 2012.00
-# Pandat 2012
-Project("PanPhaseDiagram") = "default", "default\default.pdproj", "{00000000-0000-0000-0000-000000000000}"
-EndProject

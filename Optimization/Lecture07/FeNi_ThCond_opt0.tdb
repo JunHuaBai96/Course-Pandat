@@ -1,0 +1,53 @@
+$  case_sensitive 
+
+Element         /-          ELECTRON_GAS         0         0         0 !
+Element         Fe                   Bcc    55.847      4489     27.28 !
+Element         Ni                   Fcc    58.693      4787    29.796 !
+Element         Va                VACUUM         0         0         0 !
+
+
+Function GHSERFE 298.15      1225.7+124.134*T-23.5143*T*ln(T)-0.00439752*T**2-5.8927e-008*T**3+77359*T**(-1); 1811 Y
+    0.00610478-25383.581+299.31255*T-46*T*ln(T)+2.29603e+031*T**(-9); 6000 N !
+Function GFCCFE 298.15      -1462.4+8.282*T-1.15*T*ln(T)+0.00064*T**2+GHSERFE; 1811 Y
+    -0.00306455-1713.815+0.94001*T+4.9251e+030*T**(-9)+GHSERFE; 6000 N !
+Function GHSERNI 298.15       -5179.159+117.854*T-22.096*T*ln(T) -.0048407*T**2; 1728 Y
+    -0.000384667-27840.655+279.135*T-43.1*T*ln(T)+1.12754e+31*T**(-9); 6000 N !
+Function ThCond_Fe_Bcc 140  75.833-0.04941*T+5544.577*T**(-1); 1043 Y
+    26.759+0.00274*T; 1184.81 Y
+    18.371+0.00832*T+2098.653*T**(-1); 1810.94 N !
+Function ThCond_Fe_Fcc 140  ThCond_Fe_Bcc; 1184.81 Y
+    53.314-0.00225*T-26661.379*T**(-1); 1810.94 N !
+Function ThCond_Ni_Fcc 173   81.186-0.04543*T+6917.218*T**(-1); 649.2 Y
+    53.27+0.01399*T; 1728.3 N !
+OPTIMIZATION FCC_FeNi -10 	0; 10 N !
+OPTIMIZATION FCC_FeNiT -100 	0; 100 N !
+OPTIMIZATION FCC_FeNiT1 -100 	0; 100 N !
+
+Type_Definition ( GES AMEND_PHASE_DESCRIPTION Fcc MAGNETIC -3 0.28 !
+Type_Definition e GES AMEND_PHASE_DESCRIPTION * VARIABLE_X ThRss !
+Type_Definition z PHASE_PROPERTY ThRss 1 !
+
+Phase Fcc %(ez 2 1 1 !
+Constituent Fcc :Fe,Ni:Va:!
+    Parameter G(Fcc,Fe:Va;0) 298.15        +GFCCFE; 6000 N !
+    Parameter G(Fcc,Ni:Va;0) 298.15        +GHSERNI; 3000 N !
+    Parameter G(Fcc,Fe,Ni:Va;0) 298.15      -12054.355+3.27413*T; 6000 N !
+    Parameter G(Fcc,Fe,Ni:Va;1) 298.15      11082.13-4.45077*T; 6000 N !
+    Parameter G(Fcc,Fe,Ni:Va;2) 298.15      -725.805174; 6000 N !
+    Parameter BMAGN(Fcc,Fe:Va;0) 298.15      -2.1; 6000 N !
+    Parameter BMAGN(Fcc,Ni:Va;0) 298.15      0.52; 6000 N !
+    Parameter BMAGN(Fcc,Fe,Ni:Va;0) 298.15      9.55; 6000 N !
+    Parameter BMAGN(Fcc,Fe,Ni:Va;1) 298.15      7.23; 6000 N !
+    Parameter BMAGN(Fcc,Fe,Ni:Va;2) 298.15      5.93; 6000 N !
+    Parameter BMAGN(Fcc,Fe,Ni:Va;3) 298.15      6.18; 6000 N !
+    Parameter TC(Fcc,Fe:Va;0) 298.15      -201; 6000 N !
+    Parameter TC(Fcc,Ni:Va;0) 298.15      633; 6000 N !
+    Parameter TC(Fcc,Fe,Ni:Va;0) 298.15      2133; 6000 N !
+    Parameter TC(Fcc,Fe,Ni:Va;1) 298.15      -682; 6000 N !
+    Parameter ThRss(Fcc,Fe;0) 298.15       1/ThCond_Fe_Fcc; 3000 N !
+    Parameter ThRss(Fcc,Ni;0) 298.15       1/ThCond_Ni_Fcc; 3000 N !
+    Parameter ThRss(Fcc,Fe,Ni;0) 298.15     FCC_FeNi+1e-5*FCC_FeNiT*T+FCC_FeNiT1*T**(-1); 3000 N !
+
+System_Property Sys_ThCond 1 !
+    Parameter L(Sys_ThCond,Fcc;0) 298.15   1/ThRss(@Fcc); 3000 N !
+

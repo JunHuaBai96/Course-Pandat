@@ -1,0 +1,71 @@
+<pbfx version="1.0" encoding="utf-8">
+  <Header copyright="CompuTherm, LLC">
+    <!-- this file defines the syntax for a batch calculation -->
+    <Application name="Pandat" version="2020" />
+  </Header>
+  <calculation name="User-Defined Property Fe-Ni" type="line" duration="0.2" original_batch_name="" id="11">
+    <databases>
+      <database type="tdb" file_name="FeNi_ThCond_opt0.tdb" />
+    </databases>
+    <units>
+      <unit name="P" value="bar" />
+      <unit name="T" value="K" />
+      <unit name="n" value="x" />
+    </units>
+    <system name="Default_System">
+      <components>
+        <component name="Fe" status="Selected" />
+        <component name="Ni" status="Selected" />
+      </components>
+      <phases>
+        <phase name="*" status="Entered" />
+      </phases>
+      <points>
+        <point>
+          <statespace>
+            <T value="250" />
+            <P value="1" />
+            <n component="Fe" value="0.5" />
+            <n component="Ni" value="0.5" />
+          </statespace>
+        </point>
+        <point>
+          <statespace>
+            <T value="1000" />
+            <P value="1" />
+            <n component="Fe" value="0.5" />
+            <n component="Ni" value="0.5" />
+          </statespace>
+        </point>
+      </points>
+      <condition>
+        <steps value="100" />
+        <driving_force value="true" />
+        <solvent value="Mg" />
+      </condition>
+    </system>
+    <output unit="">
+      <tables>
+		<table name="Exp" source="FeNi_ThCond.dat"/>	  
+        <table name="user_defined_property" source="Default" type="user_defined_property">
+          <column name="T" />
+          <column name="phase_name" />
+          <column name="x(*)" />
+          <column name="w(*)" />
+          <column name="Sys_ThCond" />
+          <column name="ThRss(@*)" />
+        </table>	
+      </tables>
+      <graphs>
+        <graph name="Sys_ThCond">
+          <plot table_name="user_defined_property" xaxis="T" yaxis="Sys_ThCond" />
+          <plot table_name="Exp" xaxis="T" yaxis="TC" />		  
+        </graph>
+        <graph name="ThRss(phases)">
+          <plot table_name="user_defined_property" xaxis="T" yaxis="ThRss(@*)" />
+          <plot table_name="Exp" xaxis="T" yaxis="TR" />		  
+        </graph>
+      </graphs>
+    </output>
+  </calculation>
+</pbfx>

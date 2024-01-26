@@ -1,0 +1,54 @@
+
+Element         /-          ELECTRON_GAS         0         0         0 !
+Element         Mg                   Hcp    24.305      4998    32.671 !
+Element         Sn                Bct_A5    118.71      6322    51.195 !
+Element         VA                VACUUM         0         0         0 !
+
+Species           Mg2Sn                   (Mg)2(Sn)1 !
+
+Function GHSERMG 298.14  -8367.34+143.675547*T-26.1849782*T*LN(T) +0.0004858*T**2-1.393669E-006*T**3+78950*T**(-1); 923 Y
+    -14130.185+204.716215*T-34.3088*T*LN(T) +1.038192E+028*T**(-9); 3000 N !
+Function GHSERSN 100  -7958.517+122.765451*T-25.858*T*LN(T) +0.00051185*T**2-3.192767E-006*T**3+18440*T**(-1); 250 Y
+    -5855.135+65.443315*T-15.961*T*LN(T) -0.0188702*T**2+3.121167E-006*T**3-61960*T**(-1); 505.07 Y
+    2524.724+4.005269*T-8.2590486*T*LN(T) -0.016814429*T**2+2.623131E-006*T**3-1081244*T**(-1)-1.2307E+025*T**(-9); 800 Y
+    -8256.959+138.99688*T-28.4512*T*LN(T) -1.2307E+025*T**(-9); 3000 N !
+Function GBCCMG 298.15  3100-2.1*T+GHSERMG; 6000 N !
+Function GLIQMG 298.14  8202.243-8.83693*T+GHSERMG -8.0176E-020*T**7; 923 Y
+    8690.316-9.392158*T+GHSERMG -1.038192E+028*T**(-9); 6000 N !
+Function GLIQSN 100  -855.425+108.677684*T-25.858*T*LN(T) +0.00051185*T**2-3.192767E-006*T**3+18440*T**(-1)+1.47031E-018*T**7; 250 Y
+    1247.957+51.355548*T-15.961*T*LN(T) -0.0188702*T**2+3.121167E-006*T**3-61960*T**(-1)+1.47031E-018*T**7; 505.07 Y
+    9496.31-9.809114*T-8.2590486*T*LN(T) -0.016814429*T**2+2.623131E-006*T**3-1081244*T**(-1); 800 Y
+    -1285.372+125.182498*T-28.4512*T*LN(T); 3000 N !
+
+Function GLIQMG2SN 298.15 -69092.9+97.6086*T-11.0957*T*LN(T)+2*GLIQMG+GLIQSN; 3000 N !
+
+Phase Liquid % 1 1 !
+Constituent Liquid :Mg,Mg2Sn,Sn:!
+    Parameter G(Liquid,Mg;0) 298.15  GLIQMG; 6000 N !
+    Parameter G(Liquid,Sn;0) 100  GLIQSN; 3000 N !
+    Parameter G(Liquid,Mg2Sn;0) 298.15  GLIQMG2SN; 3000 N !
+    Parameter G(Liquid,Mg,Mg2Sn;0) 298.15  6902.76-9.22726*T; 3000 N !
+    Parameter G(Liquid,Mg,Sn;0) 298.15  -31251+0.74703*T; 3000 N !
+    Parameter G(Liquid,Mg2Sn,Sn;0) 298.15  -8289.15-10.0268*T; 3000 N !
+
+Phase Bct_A5 % 1 1 !
+Constituent Bct_A5 :Sn:!
+    Parameter G(BCT_A5,Sn;0) 298.15  +GHSERSN; 6000 N !
+
+Phase Hcp % 1 1 !
+Constituent Hcp :Mg,Sn:!
+    Parameter G(Hcp,Mg;0) 298.15  +GHSERMG; 6000 N !
+    Parameter G(Hcp,Sn;0) 298.15  3900-4.4*T+GHSERSN; 6000 N !
+    Parameter G(Hcp,Mg,Sn;0) 298.15  -30000-3*T; 3000 N !
+    Parameter G(Hcp,Mg,Sn;1) 298.15  -11293.8-4.42051*T; 3000 N !
+
+Phase Mg2Sn % 2 0.5 0.25 !
+Constituent Mg2Sn :Mg:Sn:!
+    Parameter G(Mg2Sn,Mg:Sn;0) 298.15  -23268.16+83.18881*T-16.41831*T*LN(T)-0.002270999*T**2-157499.9*T**(-1); 6000 N !
+
+Phase FCC % 1 1 !
+Constituent FCC :Mg,Sn:!
+    Parameter G(FCC,Mg;0) 298.15  2600-0.9*T+GHSERMG; 6000 N !
+    Parameter G(FCC,Sn;0) 298.15  4150-5.2*T+GHSERSN; 6000 N !
+
+

@@ -1,0 +1,628 @@
+<PanChart SuppressExceptions="True" BackColor="Transparent" Size="903, 913" BackSecondaryColor="Transparent">
+  <Series>
+    <Series Name="Default$x(Ni)[mole/mole]$G_ex(@Liquid)$C:\Users\Administrator\Documents\CompuTherm LLC\Pandat\Temp\temp_0\Default.table_1" Legend="Legend1" XValueType="Double" YValueType="Double" ChartType="Line" ChartArea="Default" Color="0, 0, 255" BorderColor="0, 0, 0" BorderWidth="2" LabelForeColor="White" MarkerSize="15" MarkerColor="0, 0, 255" MarkerBorderColor="0, 0, 255" CustomProperties="EmptyPointValue=Zero" ToolTip="Liquid" IsVisibleInLegend="False" LegendText="G_ex(@Liquid)">
+      <Points>
+        <DataPoint YValues="0" />
+        <DataPoint XValue="0.01" YValues="0" />
+        <DataPoint XValue="0.02" YValues="0" />
+        <DataPoint XValue="0.03" YValues="0" />
+        <DataPoint XValue="0.04" YValues="0" />
+        <DataPoint XValue="0.05" YValues="0" />
+        <DataPoint XValue="0.06" YValues="0" />
+        <DataPoint XValue="0.07" YValues="0" />
+        <DataPoint XValue="0.08" YValues="0" />
+        <DataPoint XValue="0.09" YValues="0" />
+        <DataPoint XValue="0.1" YValues="0" />
+        <DataPoint XValue="0.11" YValues="0" />
+        <DataPoint XValue="0.12" YValues="0" />
+        <DataPoint XValue="0.13" YValues="0" />
+        <DataPoint XValue="0.14" YValues="0" />
+        <DataPoint XValue="0.15" YValues="0" />
+        <DataPoint XValue="0.16" YValues="0" />
+        <DataPoint XValue="0.17" YValues="0" />
+        <DataPoint XValue="0.18" YValues="0" />
+        <DataPoint XValue="0.19" YValues="0" />
+        <DataPoint XValue="0.2" YValues="0" />
+        <DataPoint XValue="0.21" YValues="0" />
+        <DataPoint XValue="0.22" YValues="0" />
+        <DataPoint XValue="0.23" YValues="0" />
+        <DataPoint XValue="0.24" YValues="0" />
+        <DataPoint XValue="0.25" YValues="0" />
+        <DataPoint XValue="0.26" YValues="0" />
+        <DataPoint XValue="0.27" YValues="0" />
+        <DataPoint XValue="0.28" YValues="0" />
+        <DataPoint XValue="0.29" YValues="0" />
+        <DataPoint XValue="0.3" YValues="0" />
+        <DataPoint XValue="0.31" YValues="0" />
+        <DataPoint XValue="0.32" YValues="0" />
+        <DataPoint XValue="0.33" YValues="0" />
+        <DataPoint XValue="0.34" YValues="0" />
+        <DataPoint XValue="0.35" YValues="0" />
+        <DataPoint XValue="0.36" YValues="0" />
+        <DataPoint XValue="0.37" YValues="0" />
+        <DataPoint XValue="0.38" YValues="0" />
+        <DataPoint XValue="0.39" YValues="0" />
+        <DataPoint XValue="0.4" YValues="0" />
+        <DataPoint XValue="0.41" YValues="0" />
+        <DataPoint XValue="0.42" YValues="0" />
+        <DataPoint XValue="0.43" YValues="0" />
+        <DataPoint XValue="0.44" YValues="0" />
+        <DataPoint XValue="0.45" YValues="0" />
+        <DataPoint XValue="0.46" YValues="0" />
+        <DataPoint XValue="0.47" YValues="0" />
+        <DataPoint XValue="0.48" YValues="0" />
+        <DataPoint XValue="0.49" YValues="0" />
+        <DataPoint XValue="0.5" YValues="0" />
+        <DataPoint XValue="0.51" YValues="0" />
+        <DataPoint XValue="0.52" YValues="0" />
+        <DataPoint XValue="0.53" YValues="0" />
+        <DataPoint XValue="0.54" YValues="0" />
+        <DataPoint XValue="0.55" YValues="0" />
+        <DataPoint XValue="0.56" YValues="0" />
+        <DataPoint XValue="0.57" YValues="0" />
+        <DataPoint XValue="0.58" YValues="0" />
+        <DataPoint XValue="0.59" YValues="0" />
+        <DataPoint XValue="0.6" YValues="0" />
+        <DataPoint XValue="0.61" YValues="0" />
+        <DataPoint XValue="0.62" YValues="0" />
+        <DataPoint XValue="0.63" YValues="0" />
+        <DataPoint XValue="0.64" YValues="0" />
+        <DataPoint XValue="0.65" YValues="0" />
+        <DataPoint XValue="0.66" YValues="0" />
+        <DataPoint XValue="0.67" YValues="0" />
+        <DataPoint XValue="0.68" YValues="0" />
+        <DataPoint XValue="0.69" YValues="0" />
+        <DataPoint XValue="0.7" YValues="0" />
+        <DataPoint XValue="0.71" YValues="0" />
+        <DataPoint XValue="0.72" YValues="0" />
+        <DataPoint XValue="0.73" YValues="0" />
+        <DataPoint XValue="0.74" YValues="0" />
+        <DataPoint XValue="0.75" YValues="0" />
+        <DataPoint XValue="0.76" YValues="0" />
+        <DataPoint XValue="0.77" YValues="0" />
+        <DataPoint XValue="0.78" YValues="0" />
+        <DataPoint XValue="0.79" YValues="0" />
+        <DataPoint XValue="0.8" YValues="0" />
+        <DataPoint XValue="0.81" YValues="0" />
+        <DataPoint XValue="0.82" YValues="0" />
+        <DataPoint XValue="0.83" YValues="0" />
+        <DataPoint XValue="0.84" YValues="0" />
+        <DataPoint XValue="0.85" YValues="0" />
+        <DataPoint XValue="0.86" YValues="0" />
+        <DataPoint XValue="0.87" YValues="0" />
+        <DataPoint XValue="0.88" YValues="0" />
+        <DataPoint XValue="0.89" YValues="0" />
+        <DataPoint XValue="0.9" YValues="0" />
+        <DataPoint XValue="0.91" YValues="0" />
+        <DataPoint XValue="0.92" YValues="0" />
+        <DataPoint XValue="0.93" YValues="0" />
+        <DataPoint XValue="0.94" YValues="0" />
+        <DataPoint XValue="0.95" YValues="0" />
+        <DataPoint XValue="0.96" YValues="0" />
+        <DataPoint XValue="0.97" YValues="0" />
+        <DataPoint XValue="0.98" YValues="0" />
+        <DataPoint XValue="0.99" YValues="0" />
+        <DataPoint XValue="1" YValues="0" />
+      </Points>
+    </Series>
+    <Series Name="Default$x(Ni)[mole/mole]$G_ex(@Liquid)$C:\Users\Administrator\Documents\CompuTherm LLC\Pandat\Temp\temp_0\Default.table_1_0" Legend="Legend1" XValueType="Double" YValueType="Double" ChartType="Line" ChartArea="Default" Color="255, 0, 0" BorderColor="0, 0, 0" BorderWidth="2" LabelForeColor="White" MarkerSize="15" MarkerColor="255, 0, 0" MarkerBorderColor="255, 0, 0" IsVisibleInLegend="False">
+      <Points>
+        <DataPoint YValues="0" LabelToolTip="" />
+        <DataPoint XValue="0.0099999997764825821" YValues="-9.89999961853027" LabelToolTip="" />
+        <DataPoint XValue="0.019999999552965164" YValues="-19.6000003814697" LabelToolTip="" />
+        <DataPoint XValue="0.029999999329447746" YValues="-29.1000003814697" LabelToolTip="" />
+        <DataPoint XValue="0.039999999105930328" YValues="-38.4000015258789" LabelToolTip="" />
+        <DataPoint XValue="0.05000000074505806" YValues="-47.5" LabelToolTip="" />
+        <DataPoint XValue="0.059999998658895493" YValues="-56.4000015258789" LabelToolTip="" />
+        <DataPoint XValue="0.070000000298023224" YValues="-65.0999984741211" LabelToolTip="" />
+        <DataPoint XValue="0.079999998211860657" YValues="-73.5999984741211" LabelToolTip="" />
+        <DataPoint XValue="0.090000003576278687" YValues="-81.9000015258789" LabelToolTip="" />
+        <DataPoint XValue="0.10000000149011612" YValues="-90" LabelToolTip="" />
+        <DataPoint XValue="0.10999999940395355" YValues="-97.9000015258789" LabelToolTip="" />
+        <DataPoint XValue="0.11999999731779099" YValues="-105.599998474121" LabelToolTip="" />
+        <DataPoint XValue="0.12999999523162842" YValues="-113.099998474121" LabelToolTip="" />
+        <DataPoint XValue="0.14000000059604645" YValues="-120.400001525879" LabelToolTip="" />
+        <DataPoint XValue="0.15000000596046448" YValues="-127.5" LabelToolTip="" />
+        <DataPoint XValue="0.15999999642372131" YValues="-134.399993896484" LabelToolTip="" />
+        <DataPoint XValue="0.17000000178813934" YValues="-141.100006103516" LabelToolTip="" />
+        <DataPoint XValue="0.18000000715255737" YValues="-147.600006103516" LabelToolTip="" />
+        <DataPoint XValue="0.18999999761581421" YValues="-153.899993896484" LabelToolTip="" />
+        <DataPoint XValue="0.20000000298023224" YValues="-160" LabelToolTip="" />
+        <DataPoint XValue="0.20999999344348908" YValues="-165.899993896484" LabelToolTip="" />
+        <DataPoint XValue="0.2199999988079071" YValues="-171.600006103516" LabelToolTip="" />
+        <DataPoint XValue="0.23000000417232513" YValues="-177.100006103516" LabelToolTip="" />
+        <DataPoint XValue="0.23999999463558197" YValues="-182.399993896484" LabelToolTip="" />
+        <DataPoint XValue="0.25" YValues="-187.5" LabelToolTip="" />
+        <DataPoint XValue="0.25999999046325684" YValues="-192.399993896484" LabelToolTip="" />
+        <DataPoint XValue="0.27000001072883606" YValues="-197.100006103516" LabelToolTip="" />
+        <DataPoint XValue="0.2800000011920929" YValues="-201.600006103516" LabelToolTip="" />
+        <DataPoint XValue="0.28999999165534973" YValues="-205.899993896484" LabelToolTip="" />
+        <DataPoint XValue="0.30000001192092896" YValues="-210" LabelToolTip="" />
+        <DataPoint XValue="0.31000000238418579" YValues="-213.899993896484" LabelToolTip="" />
+        <DataPoint XValue="0.31999999284744263" YValues="-217.600006103516" LabelToolTip="" />
+        <DataPoint XValue="0.33000001311302185" YValues="-221.100006103516" LabelToolTip="" />
+        <DataPoint XValue="0.34000000357627869" YValues="-224.399993896484" LabelToolTip="" />
+        <DataPoint XValue="0.34999999403953552" YValues="-227.5" LabelToolTip="" />
+        <DataPoint XValue="0.36000001430511475" YValues="-230.399993896484" LabelToolTip="" />
+        <DataPoint XValue="0.37000000476837158" YValues="-233.100006103516" LabelToolTip="" />
+        <DataPoint XValue="0.37999999523162842" YValues="-235.600006103516" LabelToolTip="" />
+        <DataPoint XValue="0.38999998569488525" YValues="-237.899993896484" LabelToolTip="" />
+        <DataPoint XValue="0.40000000596046448" YValues="-240" LabelToolTip="" />
+        <DataPoint XValue="0.40999999642372131" YValues="-241.899993896484" LabelToolTip="" />
+        <DataPoint XValue="0.41999998688697815" YValues="-243.600006103516" LabelToolTip="" />
+        <DataPoint XValue="0.43000000715255737" YValues="-245.100006103516" LabelToolTip="" />
+        <DataPoint XValue="0.43999999761581421" YValues="-246.399993896484" LabelToolTip="" />
+        <DataPoint XValue="0.44999998807907104" YValues="-247.5" LabelToolTip="" />
+        <DataPoint XValue="0.46000000834465027" YValues="-248.399993896484" LabelToolTip="" />
+        <DataPoint XValue="0.4699999988079071" YValues="-249.100006103516" LabelToolTip="" />
+        <DataPoint XValue="0.47999998927116394" YValues="-249.600006103516" LabelToolTip="" />
+        <DataPoint XValue="0.49000000953674316" YValues="-249.899993896484" LabelToolTip="" />
+        <DataPoint XValue="0.5" YValues="-250" LabelToolTip="" />
+        <DataPoint XValue="0.50999999046325684" YValues="-249.899993896484" LabelToolTip="" />
+        <DataPoint XValue="0.51999998092651367" YValues="-249.600006103516" LabelToolTip="" />
+        <DataPoint XValue="0.52999997138977051" YValues="-249.100006103516" LabelToolTip="" />
+        <DataPoint XValue="0.54000002145767212" YValues="-248.399993896484" LabelToolTip="" />
+        <DataPoint XValue="0.550000011920929" YValues="-247.5" LabelToolTip="" />
+        <DataPoint XValue="0.56000000238418579" YValues="-246.399993896484" LabelToolTip="" />
+        <DataPoint XValue="0.56999999284744263" YValues="-245.100006103516" LabelToolTip="" />
+        <DataPoint XValue="0.57999998331069946" YValues="-243.600006103516" LabelToolTip="" />
+        <DataPoint XValue="0.5899999737739563" YValues="-241.899993896484" LabelToolTip="" />
+        <DataPoint XValue="0.60000002384185791" YValues="-240" LabelToolTip="" />
+        <DataPoint XValue="0.61000001430511475" YValues="-237.899993896484" LabelToolTip="" />
+        <DataPoint XValue="0.62000000476837158" YValues="-235.600006103516" LabelToolTip="" />
+        <DataPoint XValue="0.62999999523162842" YValues="-233.100006103516" LabelToolTip="" />
+        <DataPoint XValue="0.63999998569488525" YValues="-230.399993896484" LabelToolTip="" />
+        <DataPoint XValue="0.64999997615814209" YValues="-227.5" LabelToolTip="" />
+        <DataPoint XValue="0.6600000262260437" YValues="-224.399993896484" LabelToolTip="" />
+        <DataPoint XValue="0.67000001668930054" YValues="-221.100006103516" LabelToolTip="" />
+        <DataPoint XValue="0.68000000715255737" YValues="-217.600006103516" LabelToolTip="" />
+        <DataPoint XValue="0.68999999761581421" YValues="-213.899993896484" LabelToolTip="" />
+        <DataPoint XValue="0.699999988079071" YValues="-210" LabelToolTip="" />
+        <DataPoint XValue="0.70999997854232788" YValues="-205.899993896484" LabelToolTip="" />
+        <DataPoint XValue="0.72000002861022949" YValues="-201.600006103516" LabelToolTip="" />
+        <DataPoint XValue="0.73000001907348633" YValues="-197.100006103516" LabelToolTip="" />
+        <DataPoint XValue="0.74000000953674316" YValues="-192.399993896484" LabelToolTip="" />
+        <DataPoint XValue="0.75" YValues="-187.5" LabelToolTip="" />
+        <DataPoint XValue="0.75999999046325684" YValues="-182.399993896484" LabelToolTip="" />
+        <DataPoint XValue="0.76999998092651367" YValues="-177.100006103516" LabelToolTip="" />
+        <DataPoint XValue="0.77999997138977051" YValues="-171.600006103516" LabelToolTip="" />
+        <DataPoint XValue="0.79000002145767212" YValues="-165.899993896484" LabelToolTip="" />
+        <DataPoint XValue="0.800000011920929" YValues="-160" LabelToolTip="" />
+        <DataPoint XValue="0.81000000238418579" YValues="-153.899993896484" LabelToolTip="" />
+        <DataPoint XValue="0.81999999284744263" YValues="-147.600006103516" LabelToolTip="" />
+        <DataPoint XValue="0.82999998331069946" YValues="-141.100006103516" LabelToolTip="" />
+        <DataPoint XValue="0.8399999737739563" YValues="-134.399993896484" LabelToolTip="" />
+        <DataPoint XValue="0.85000002384185791" YValues="-127.5" LabelToolTip="" />
+        <DataPoint XValue="0.86000001430511475" YValues="-120.400001525879" LabelToolTip="" />
+        <DataPoint XValue="0.87000000476837158" YValues="-113.099998474121" LabelToolTip="" />
+        <DataPoint XValue="0.87999999523162842" YValues="-105.599998474121" LabelToolTip="" />
+        <DataPoint XValue="0.88999998569488525" YValues="-97.9000015258789" LabelToolTip="" />
+        <DataPoint XValue="0.89999997615814209" YValues="-90" LabelToolTip="" />
+        <DataPoint XValue="0.9100000262260437" YValues="-81.9000015258789" LabelToolTip="" />
+        <DataPoint XValue="0.92000001668930054" YValues="-73.5999984741211" LabelToolTip="" />
+        <DataPoint XValue="0.93000000715255737" YValues="-65.0999984741211" LabelToolTip="" />
+        <DataPoint XValue="0.93999999761581421" YValues="-56.4000015258789" LabelToolTip="" />
+        <DataPoint XValue="0.949999988079071" YValues="-47.5" LabelToolTip="" />
+        <DataPoint XValue="0.95999997854232788" YValues="-38.4000015258789" LabelToolTip="" />
+        <DataPoint XValue="0.97000002861022949" YValues="-29.1000003814697" LabelToolTip="" />
+        <DataPoint XValue="0.98000001907348633" YValues="-19.6000003814697" LabelToolTip="" />
+        <DataPoint XValue="0.99000000953674316" YValues="-9.89999961853027" LabelToolTip="" />
+        <DataPoint XValue="1" YValues="0" LabelToolTip="" />
+      </Points>
+    </Series>
+    <Series Name="Default$x(Ni)[mole/mole]$G_ex(@Liquid)$C:\Users\Administrator\Documents\CompuTherm LLC\Pandat\Temp\temp_0\Default.table_1_1" Legend="Legend1" XValueType="Double" YValueType="Double" ChartType="Line" ChartArea="Default" Color="0, 128, 0" BorderColor="0, 0, 0" BorderWidth="2" LabelForeColor="White" MarkerSize="15" MarkerColor="0, 128, 0" MarkerBorderColor="0, 128, 0" IsVisibleInLegend="False">
+      <Points>
+        <DataPoint YValues="0" LabelToolTip="" />
+        <DataPoint XValue="0.0099999997764825821" YValues="-9.70199966430664" LabelToolTip="" />
+        <DataPoint XValue="0.019999999552965164" YValues="-18.8159999847412" LabelToolTip="" />
+        <DataPoint XValue="0.029999999329447746" YValues="-27.3540000915527" LabelToolTip="" />
+        <DataPoint XValue="0.039999999105930328" YValues="-35.3279991149902" LabelToolTip="" />
+        <DataPoint XValue="0.05000000074505806" YValues="-42.75" LabelToolTip="" />
+        <DataPoint XValue="0.059999998658895493" YValues="-49.6319999694824" LabelToolTip="" />
+        <DataPoint XValue="0.070000000298023224" YValues="-55.9860000610352" LabelToolTip="" />
+        <DataPoint XValue="0.079999998211860657" YValues="-61.8240013122559" LabelToolTip="" />
+        <DataPoint XValue="0.090000003576278687" YValues="-67.1579971313477" LabelToolTip="" />
+        <DataPoint XValue="0.10000000149011612" YValues="-72" LabelToolTip="" />
+        <DataPoint XValue="0.10999999940395355" YValues="-76.3619995117188" LabelToolTip="" />
+        <DataPoint XValue="0.11999999731779099" YValues="-80.2559967041016" LabelToolTip="" />
+        <DataPoint XValue="0.12999999523162842" YValues="-83.6940002441406" LabelToolTip="" />
+        <DataPoint XValue="0.14000000059604645" YValues="-86.6880035400391" LabelToolTip="" />
+        <DataPoint XValue="0.15000000596046448" YValues="-89.25" LabelToolTip="" />
+        <DataPoint XValue="0.15999999642372131" YValues="-91.3919982910156" LabelToolTip="" />
+        <DataPoint XValue="0.17000000178813934" YValues="-93.1259994506836" LabelToolTip="" />
+        <DataPoint XValue="0.18000000715255737" YValues="-94.463996887207" LabelToolTip="" />
+        <DataPoint XValue="0.18999999761581421" YValues="-95.4179992675781" LabelToolTip="" />
+        <DataPoint XValue="0.20000000298023224" YValues="-96" LabelToolTip="" />
+        <DataPoint XValue="0.20999999344348908" YValues="-96.2220001220703" LabelToolTip="" />
+        <DataPoint XValue="0.2199999988079071" YValues="-96.0960006713867" LabelToolTip="" />
+        <DataPoint XValue="0.23000000417232513" YValues="-95.6340026855469" LabelToolTip="" />
+        <DataPoint XValue="0.23999999463558197" YValues="-94.8479995727539" LabelToolTip="" />
+        <DataPoint XValue="0.25" YValues="-93.75" LabelToolTip="" />
+        <DataPoint XValue="0.25999999046325684" YValues="-92.3519973754883" LabelToolTip="" />
+        <DataPoint XValue="0.27000001072883606" YValues="-90.6660003662109" LabelToolTip="" />
+        <DataPoint XValue="0.2800000011920929" YValues="-88.7040023803711" LabelToolTip="" />
+        <DataPoint XValue="0.28999999165534973" YValues="-86.4779968261719" LabelToolTip="" />
+        <DataPoint XValue="0.30000001192092896" YValues="-84" LabelToolTip="" />
+        <DataPoint XValue="0.31000000238418579" YValues="-81.2819976806641" LabelToolTip="" />
+        <DataPoint XValue="0.31999999284744263" YValues="-78.3359985351563" LabelToolTip="" />
+        <DataPoint XValue="0.33000001311302185" YValues="-75.1740036010742" LabelToolTip="" />
+        <DataPoint XValue="0.34000000357627869" YValues="-71.8079986572266" LabelToolTip="" />
+        <DataPoint XValue="0.34999999403953552" YValues="-68.25" LabelToolTip="" />
+        <DataPoint XValue="0.36000001430511475" YValues="-64.5120010375977" LabelToolTip="" />
+        <DataPoint XValue="0.37000000476837158" YValues="-60.6059989929199" LabelToolTip="" />
+        <DataPoint XValue="0.37999999523162842" YValues="-56.5439987182617" LabelToolTip="" />
+        <DataPoint XValue="0.38999998569488525" YValues="-52.3380012512207" LabelToolTip="" />
+        <DataPoint XValue="0.40000000596046448" YValues="-48" LabelToolTip="" />
+        <DataPoint XValue="0.40999999642372131" YValues="-43.5419998168945" LabelToolTip="" />
+        <DataPoint XValue="0.41999998688697815" YValues="-38.976001739502" LabelToolTip="" />
+        <DataPoint XValue="0.43000000715255737" YValues="-34.3139991760254" LabelToolTip="" />
+        <DataPoint XValue="0.43999999761581421" YValues="-29.568000793457" LabelToolTip="" />
+        <DataPoint XValue="0.44999998807907104" YValues="-24.75" LabelToolTip="" />
+        <DataPoint XValue="0.46000000834465027" YValues="-19.8719997406006" LabelToolTip="" />
+        <DataPoint XValue="0.4699999988079071" YValues="-14.9460000991821" LabelToolTip="" />
+        <DataPoint XValue="0.47999998927116394" YValues="-9.98400020599365" LabelToolTip="" />
+        <DataPoint XValue="0.49000000953674316" YValues="-4.9980001449585" LabelToolTip="" />
+        <DataPoint XValue="0.5" YValues="0" LabelToolTip="" />
+        <DataPoint XValue="0.50999999046325684" YValues="4.9980001449585" LabelToolTip="" />
+        <DataPoint XValue="0.51999998092651367" YValues="9.98400020599365" LabelToolTip="" />
+        <DataPoint XValue="0.52999997138977051" YValues="14.9460000991821" LabelToolTip="" />
+        <DataPoint XValue="0.54000002145767212" YValues="19.8719997406006" LabelToolTip="" />
+        <DataPoint XValue="0.550000011920929" YValues="24.75" LabelToolTip="" />
+        <DataPoint XValue="0.56000000238418579" YValues="29.568000793457" LabelToolTip="" />
+        <DataPoint XValue="0.56999999284744263" YValues="34.3139991760254" LabelToolTip="" />
+        <DataPoint XValue="0.57999998331069946" YValues="38.976001739502" LabelToolTip="" />
+        <DataPoint XValue="0.5899999737739563" YValues="43.5419998168945" LabelToolTip="" />
+        <DataPoint XValue="0.60000002384185791" YValues="48" LabelToolTip="" />
+        <DataPoint XValue="0.61000001430511475" YValues="52.3380012512207" LabelToolTip="" />
+        <DataPoint XValue="0.62000000476837158" YValues="56.5439987182617" LabelToolTip="" />
+        <DataPoint XValue="0.62999999523162842" YValues="60.6059989929199" LabelToolTip="" />
+        <DataPoint XValue="0.63999998569488525" YValues="64.5120010375977" LabelToolTip="" />
+        <DataPoint XValue="0.64999997615814209" YValues="68.25" LabelToolTip="" />
+        <DataPoint XValue="0.6600000262260437" YValues="71.8079986572266" LabelToolTip="" />
+        <DataPoint XValue="0.67000001668930054" YValues="75.1740036010742" LabelToolTip="" />
+        <DataPoint XValue="0.68000000715255737" YValues="78.3359985351563" LabelToolTip="" />
+        <DataPoint XValue="0.68999999761581421" YValues="81.2819976806641" LabelToolTip="" />
+        <DataPoint XValue="0.699999988079071" YValues="84" LabelToolTip="" />
+        <DataPoint XValue="0.70999997854232788" YValues="86.4779968261719" LabelToolTip="" />
+        <DataPoint XValue="0.72000002861022949" YValues="88.7040023803711" LabelToolTip="" />
+        <DataPoint XValue="0.73000001907348633" YValues="90.6660003662109" LabelToolTip="" />
+        <DataPoint XValue="0.74000000953674316" YValues="92.3519973754883" LabelToolTip="" />
+        <DataPoint XValue="0.75" YValues="93.75" LabelToolTip="" />
+        <DataPoint XValue="0.75999999046325684" YValues="94.8479995727539" LabelToolTip="" />
+        <DataPoint XValue="0.76999998092651367" YValues="95.6340026855469" LabelToolTip="" />
+        <DataPoint XValue="0.77999997138977051" YValues="96.0960006713867" LabelToolTip="" />
+        <DataPoint XValue="0.79000002145767212" YValues="96.2220001220703" LabelToolTip="" />
+        <DataPoint XValue="0.800000011920929" YValues="96" LabelToolTip="" />
+        <DataPoint XValue="0.81000000238418579" YValues="95.4179992675781" LabelToolTip="" />
+        <DataPoint XValue="0.81999999284744263" YValues="94.463996887207" LabelToolTip="" />
+        <DataPoint XValue="0.82999998331069946" YValues="93.1259994506836" LabelToolTip="" />
+        <DataPoint XValue="0.8399999737739563" YValues="91.3919982910156" LabelToolTip="" />
+        <DataPoint XValue="0.85000002384185791" YValues="89.25" LabelToolTip="" />
+        <DataPoint XValue="0.86000001430511475" YValues="86.6880035400391" LabelToolTip="" />
+        <DataPoint XValue="0.87000000476837158" YValues="83.6940002441406" LabelToolTip="" />
+        <DataPoint XValue="0.87999999523162842" YValues="80.2559967041016" LabelToolTip="" />
+        <DataPoint XValue="0.88999998569488525" YValues="76.3619995117188" LabelToolTip="" />
+        <DataPoint XValue="0.89999997615814209" YValues="72" LabelToolTip="" />
+        <DataPoint XValue="0.9100000262260437" YValues="67.1579971313477" LabelToolTip="" />
+        <DataPoint XValue="0.92000001668930054" YValues="61.8240013122559" LabelToolTip="" />
+        <DataPoint XValue="0.93000000715255737" YValues="55.9860000610352" LabelToolTip="" />
+        <DataPoint XValue="0.93999999761581421" YValues="49.6319999694824" LabelToolTip="" />
+        <DataPoint XValue="0.949999988079071" YValues="42.75" LabelToolTip="" />
+        <DataPoint XValue="0.95999997854232788" YValues="35.3279991149902" LabelToolTip="" />
+        <DataPoint XValue="0.97000002861022949" YValues="27.3540000915527" LabelToolTip="" />
+        <DataPoint XValue="0.98000001907348633" YValues="18.8159999847412" LabelToolTip="" />
+        <DataPoint XValue="0.99000000953674316" YValues="9.70199966430664" LabelToolTip="" />
+        <DataPoint XValue="1" YValues="0" LabelToolTip="" />
+      </Points>
+    </Series>
+    <Series Name="Default$x(Ni)[mole/mole]$G_ex(@Liquid)$C:\Users\Administrator\Documents\CompuTherm LLC\Pandat\Temp\temp_0\Default.table_1_2" Legend="Legend1" XValueType="Double" YValueType="Double" ChartType="Line" ChartArea="Default" Color="255, 165, 0" BorderColor="0, 0, 0" BorderWidth="2" LabelForeColor="White" MarkerSize="15" MarkerColor="255, 165, 0" MarkerBorderColor="255, 165, 0" IsVisibleInLegend="False">
+      <Points>
+        <DataPoint YValues="0" LabelToolTip="" />
+        <DataPoint XValue="0.0099999997764825821" YValues="-9.50796031951904" LabelToolTip="" />
+        <DataPoint XValue="0.019999999552965164" YValues="-18.0633602142334" LabelToolTip="" />
+        <DataPoint XValue="0.029999999329447746" YValues="-25.712760925293" LabelToolTip="" />
+        <DataPoint XValue="0.039999999105930328" YValues="-32.5017585754395" LabelToolTip="" />
+        <DataPoint XValue="0.05000000074505806" YValues="-38.4749984741211" LabelToolTip="" />
+        <DataPoint XValue="0.059999998658895493" YValues="-43.6761589050293" LabelToolTip="" />
+        <DataPoint XValue="0.070000000298023224" YValues="-48.1479606628418" LabelToolTip="" />
+        <DataPoint XValue="0.079999998211860657" YValues="-51.9321594238281" LabelToolTip="" />
+        <DataPoint XValue="0.090000003576278687" YValues="-55.0695610046387" LabelToolTip="" />
+        <DataPoint XValue="0.10000000149011612" YValues="-57.5999984741211" LabelToolTip="" />
+        <DataPoint XValue="0.10999999940395355" YValues="-59.5623588562012" LabelToolTip="" />
+        <DataPoint XValue="0.11999999731779099" YValues="-60.9945602416992" LabelToolTip="" />
+        <DataPoint XValue="0.12999999523162842" YValues="-61.9335594177246" LabelToolTip="" />
+        <DataPoint XValue="0.14000000059604645" YValues="-62.4153594970703" LabelToolTip="" />
+        <DataPoint XValue="0.15000000596046448" YValues="-62.4749984741211" LabelToolTip="" />
+        <DataPoint XValue="0.15999999642372131" YValues="-62.1465606689453" LabelToolTip="" />
+        <DataPoint XValue="0.17000000178813934" YValues="-61.4631614685059" LabelToolTip="" />
+        <DataPoint XValue="0.18000000715255737" YValues="-60.456958770752" LabelToolTip="" />
+        <DataPoint XValue="0.18999999761581421" YValues="-59.1591606140137" LabelToolTip="" />
+        <DataPoint XValue="0.20000000298023224" YValues="-57.5999984741211" LabelToolTip="" />
+        <DataPoint XValue="0.20999999344348908" YValues="-55.8087615966797" LabelToolTip="" />
+        <DataPoint XValue="0.2199999988079071" YValues="-53.8137588500977" LabelToolTip="" />
+        <DataPoint XValue="0.23000000417232513" YValues="-51.6423606872559" LabelToolTip="" />
+        <DataPoint XValue="0.23999999463558197" YValues="-49.3209609985352" LabelToolTip="" />
+        <DataPoint XValue="0.25" YValues="-46.875" LabelToolTip="" />
+        <DataPoint XValue="0.25999999046325684" YValues="-44.3289604187012" LabelToolTip="" />
+        <DataPoint XValue="0.27000001072883606" YValues="-41.7063598632813" LabelToolTip="" />
+        <DataPoint XValue="0.2800000011920929" YValues="-39.0297584533691" LabelToolTip="" />
+        <DataPoint XValue="0.28999999165534973" YValues="-36.3207588195801" LabelToolTip="" />
+        <DataPoint XValue="0.30000001192092896" YValues="-33.5999984741211" LabelToolTip="" />
+        <DataPoint XValue="0.31000000238418579" YValues="-30.8871593475342" LabelToolTip="" />
+        <DataPoint XValue="0.31999999284744263" YValues="-28.2009601593018" LabelToolTip="" />
+        <DataPoint XValue="0.33000001311302185" YValues="-25.5591602325439" LabelToolTip="" />
+        <DataPoint XValue="0.34000000357627869" YValues="-22.9785594940186" LabelToolTip="" />
+        <DataPoint XValue="0.34999999403953552" YValues="-20.4750003814697" LabelToolTip="" />
+        <DataPoint XValue="0.36000001430511475" YValues="-18.0633602142334" LabelToolTip="" />
+        <DataPoint XValue="0.37000000476837158" YValues="-15.7575597763062" LabelToolTip="" />
+        <DataPoint XValue="0.37999999523162842" YValues="-13.5705604553223" LabelToolTip="" />
+        <DataPoint XValue="0.38999998569488525" YValues="-11.5143604278564" LabelToolTip="" />
+        <DataPoint XValue="0.40000000596046448" YValues="-9.60000038146973" LabelToolTip="" />
+        <DataPoint XValue="0.40999999642372131" YValues="-7.83756017684937" LabelToolTip="" />
+        <DataPoint XValue="0.41999998688697815" YValues="-6.23615980148315" LabelToolTip="" />
+        <DataPoint XValue="0.43000000715255737" YValues="-4.80395984649658" LabelToolTip="" />
+        <DataPoint XValue="0.43999999761581421" YValues="-3.54816007614136" LabelToolTip="" />
+        <DataPoint XValue="0.44999998807907104" YValues="-2.47499990463257" LabelToolTip="" />
+        <DataPoint XValue="0.46000000834465027" YValues="-1.58975994586945" LabelToolTip="" />
+        <DataPoint XValue="0.4699999988079071" YValues="-0.896759986877441" LabelToolTip="" />
+        <DataPoint XValue="0.47999998927116394" YValues="-0.399360001087189" LabelToolTip="" />
+        <DataPoint XValue="0.49000000953674316" YValues="-0.0999599993228912" LabelToolTip="" />
+        <DataPoint XValue="0.5" YValues="0" LabelToolTip="" />
+        <DataPoint XValue="0.50999999046325684" YValues="-0.0999599993228912" LabelToolTip="" />
+        <DataPoint XValue="0.51999998092651367" YValues="-0.399360001087189" LabelToolTip="" />
+        <DataPoint XValue="0.52999997138977051" YValues="-0.896759986877441" LabelToolTip="" />
+        <DataPoint XValue="0.54000002145767212" YValues="-1.58975994586945" LabelToolTip="" />
+        <DataPoint XValue="0.550000011920929" YValues="-2.47499990463257" LabelToolTip="" />
+        <DataPoint XValue="0.56000000238418579" YValues="-3.54816007614136" LabelToolTip="" />
+        <DataPoint XValue="0.56999999284744263" YValues="-4.80395984649658" LabelToolTip="" />
+        <DataPoint XValue="0.57999998331069946" YValues="-6.23615980148315" LabelToolTip="" />
+        <DataPoint XValue="0.5899999737739563" YValues="-7.83756017684937" LabelToolTip="" />
+        <DataPoint XValue="0.60000002384185791" YValues="-9.60000038146973" LabelToolTip="" />
+        <DataPoint XValue="0.61000001430511475" YValues="-11.5143604278564" LabelToolTip="" />
+        <DataPoint XValue="0.62000000476837158" YValues="-13.5705604553223" LabelToolTip="" />
+        <DataPoint XValue="0.62999999523162842" YValues="-15.7575597763062" LabelToolTip="" />
+        <DataPoint XValue="0.63999998569488525" YValues="-18.0633602142334" LabelToolTip="" />
+        <DataPoint XValue="0.64999997615814209" YValues="-20.4750003814697" LabelToolTip="" />
+        <DataPoint XValue="0.6600000262260437" YValues="-22.9785594940186" LabelToolTip="" />
+        <DataPoint XValue="0.67000001668930054" YValues="-25.5591602325439" LabelToolTip="" />
+        <DataPoint XValue="0.68000000715255737" YValues="-28.2009601593018" LabelToolTip="" />
+        <DataPoint XValue="0.68999999761581421" YValues="-30.8871593475342" LabelToolTip="" />
+        <DataPoint XValue="0.699999988079071" YValues="-33.5999984741211" LabelToolTip="" />
+        <DataPoint XValue="0.70999997854232788" YValues="-36.3207588195801" LabelToolTip="" />
+        <DataPoint XValue="0.72000002861022949" YValues="-39.0297584533691" LabelToolTip="" />
+        <DataPoint XValue="0.73000001907348633" YValues="-41.7063598632813" LabelToolTip="" />
+        <DataPoint XValue="0.74000000953674316" YValues="-44.3289604187012" LabelToolTip="" />
+        <DataPoint XValue="0.75" YValues="-46.875" LabelToolTip="" />
+        <DataPoint XValue="0.75999999046325684" YValues="-49.3209609985352" LabelToolTip="" />
+        <DataPoint XValue="0.76999998092651367" YValues="-51.6423606872559" LabelToolTip="" />
+        <DataPoint XValue="0.77999997138977051" YValues="-53.8137588500977" LabelToolTip="" />
+        <DataPoint XValue="0.79000002145767212" YValues="-55.8087615966797" LabelToolTip="" />
+        <DataPoint XValue="0.800000011920929" YValues="-57.5999984741211" LabelToolTip="" />
+        <DataPoint XValue="0.81000000238418579" YValues="-59.1591606140137" LabelToolTip="" />
+        <DataPoint XValue="0.81999999284744263" YValues="-60.456958770752" LabelToolTip="" />
+        <DataPoint XValue="0.82999998331069946" YValues="-61.4631614685059" LabelToolTip="" />
+        <DataPoint XValue="0.8399999737739563" YValues="-62.1465606689453" LabelToolTip="" />
+        <DataPoint XValue="0.85000002384185791" YValues="-62.4749984741211" LabelToolTip="" />
+        <DataPoint XValue="0.86000001430511475" YValues="-62.4153594970703" LabelToolTip="" />
+        <DataPoint XValue="0.87000000476837158" YValues="-61.9335594177246" LabelToolTip="" />
+        <DataPoint XValue="0.87999999523162842" YValues="-60.9945602416992" LabelToolTip="" />
+        <DataPoint XValue="0.88999998569488525" YValues="-59.5623588562012" LabelToolTip="" />
+        <DataPoint XValue="0.89999997615814209" YValues="-57.5999984741211" LabelToolTip="" />
+        <DataPoint XValue="0.9100000262260437" YValues="-55.0695610046387" LabelToolTip="" />
+        <DataPoint XValue="0.92000001668930054" YValues="-51.9321594238281" LabelToolTip="" />
+        <DataPoint XValue="0.93000000715255737" YValues="-48.1479606628418" LabelToolTip="" />
+        <DataPoint XValue="0.93999999761581421" YValues="-43.6761589050293" LabelToolTip="" />
+        <DataPoint XValue="0.949999988079071" YValues="-38.4749984741211" LabelToolTip="" />
+        <DataPoint XValue="0.95999997854232788" YValues="-32.5017585754395" LabelToolTip="" />
+        <DataPoint XValue="0.97000002861022949" YValues="-25.712760925293" LabelToolTip="" />
+        <DataPoint XValue="0.98000001907348633" YValues="-18.0633602142334" LabelToolTip="" />
+        <DataPoint XValue="0.99000000953674316" YValues="-9.50796031951904" LabelToolTip="" />
+        <DataPoint XValue="1" YValues="0" LabelToolTip="" />
+      </Points>
+    </Series>
+    <Series Name="Default$x(Ni)[mole/mole]$G_ex(@Liquid)$C:\Users\Administrator\Documents\CompuTherm LLC\Pandat\Temp\temp_0\Default.table_1_3" Legend="Legend1" XValueType="Double" YValueType="Double" ChartType="Line" ChartArea="Default" Color="255, 0, 255" BorderColor="0, 0, 0" BorderWidth="2" LabelForeColor="White" MarkerSize="15" MarkerColor="255, 0, 255" MarkerBorderColor="255, 0, 255" IsVisibleInLegend="False">
+      <Points>
+        <DataPoint YValues="0" LabelToolTip="" />
+        <DataPoint XValue="0.0099999997764825821" YValues="-9.31780052185059" LabelToolTip="" />
+        <DataPoint XValue="0.019999999552965164" YValues="-17.3408260345459" LabelToolTip="" />
+        <DataPoint XValue="0.029999999329447746" YValues="-24.169994354248" LabelToolTip="" />
+        <DataPoint XValue="0.039999999105930328" YValues="-29.9016189575195" LabelToolTip="" />
+        <DataPoint XValue="0.05000000074505806" YValues="-34.627498626709" LabelToolTip="" />
+        <DataPoint XValue="0.059999998658895493" YValues="-38.4350204467773" LabelToolTip="" />
+        <DataPoint XValue="0.070000000298023224" YValues="-41.4072456359863" LabelToolTip="" />
+        <DataPoint XValue="0.079999998211860657" YValues="-43.6230125427246" LabelToolTip="" />
+        <DataPoint XValue="0.090000003576278687" YValues="-45.157039642334" LabelToolTip="" />
+        <DataPoint XValue="0.10000000149011612" YValues="-46.0800018310547" LabelToolTip="" />
+        <DataPoint XValue="0.10999999940395355" YValues="-46.4586410522461" LabelToolTip="" />
+        <DataPoint XValue="0.11999999731779099" YValues="-46.3558654785156" LabelToolTip="" />
+        <DataPoint XValue="0.12999999523162842" YValues="-45.8308334350586" LabelToolTip="" />
+        <DataPoint XValue="0.14000000059604645" YValues="-44.9390602111816" LabelToolTip="" />
+        <DataPoint XValue="0.15000000596046448" YValues="-43.7324981689453" LabelToolTip="" />
+        <DataPoint XValue="0.15999999642372131" YValues="-42.2596626281738" LabelToolTip="" />
+        <DataPoint XValue="0.17000000178813934" YValues="-40.5656852722168" LabelToolTip="" />
+        <DataPoint XValue="0.18000000715255737" YValues="-38.692455291748" LabelToolTip="" />
+        <DataPoint XValue="0.18999999761581421" YValues="-36.6786804199219" LabelToolTip="" />
+        <DataPoint XValue="0.20000000298023224" YValues="-34.560001373291" LabelToolTip="" />
+        <DataPoint XValue="0.20999999344348908" YValues="-32.3690795898438" LabelToolTip="" />
+        <DataPoint XValue="0.2199999988079071" YValues="-30.135705947876" LabelToolTip="" />
+        <DataPoint XValue="0.23000000417232513" YValues="-27.8868751525879" LabelToolTip="" />
+        <DataPoint XValue="0.23999999463558197" YValues="-25.6468982696533" LabelToolTip="" />
+        <DataPoint XValue="0.25" YValues="-23.4375" LabelToolTip="" />
+        <DataPoint XValue="0.25999999046325684" YValues="-21.2779006958008" LabelToolTip="" />
+        <DataPoint XValue="0.27000001072883606" YValues="-19.1849250793457" LabelToolTip="" />
+        <DataPoint XValue="0.2800000011920929" YValues="-17.1730937957764" LabelToolTip="" />
+        <DataPoint XValue="0.28999999165534973" YValues="-15.2547187805176" LabelToolTip="" />
+        <DataPoint XValue="0.30000001192092896" YValues="-13.4399995803833" LabelToolTip="" />
+        <DataPoint XValue="0.31000000238418579" YValues="-11.7371206283569" LabelToolTip="" />
+        <DataPoint XValue="0.31999999284744263" YValues="-10.1523456573486" LabelToolTip="" />
+        <DataPoint XValue="0.33000001311302185" YValues="-8.69011402130127" LabelToolTip="" />
+        <DataPoint XValue="0.34000000357627869" YValues="-7.35313940048218" LabelToolTip="" />
+        <DataPoint XValue="0.34999999403953552" YValues="-6.14249992370605" LabelToolTip="" />
+        <DataPoint XValue="0.36000001430511475" YValues="-5.05774068832397" LabelToolTip="" />
+        <DataPoint XValue="0.37000000476837158" YValues="-4.09696578979492" LabelToolTip="" />
+        <DataPoint XValue="0.37999999523162842" YValues="-3.25693440437317" LabelToolTip="" />
+        <DataPoint XValue="0.38999998569488525" YValues="-2.53315925598145" LabelToolTip="" />
+        <DataPoint XValue="0.40000000596046448" YValues="-1.91999995708466" LabelToolTip="" />
+        <DataPoint XValue="0.40999999642372131" YValues="-1.41076076030731" LabelToolTip="" />
+        <DataPoint XValue="0.41999998688697815" YValues="-0.997785627841949" LabelToolTip="" />
+        <DataPoint XValue="0.43000000715255737" YValues="-0.67255437374115" LabelToolTip="" />
+        <DataPoint XValue="0.43999999761581421" YValues="-0.425779193639755" LabelToolTip="" />
+        <DataPoint XValue="0.44999998807907104" YValues="-0.247500002384186" LabelToolTip="" />
+        <DataPoint XValue="0.46000000834465027" YValues="-0.127180799841881" LabelToolTip="" />
+        <DataPoint XValue="0.4699999988079071" YValues="-0.0538056008517742" LabelToolTip="" />
+        <DataPoint XValue="0.47999998927116394" YValues="-0.0159744005650282" LabelToolTip="" />
+        <DataPoint XValue="0.49000000953674316" YValues="-0.00199920008890331" LabelToolTip="" />
+        <DataPoint XValue="0.5" YValues="0" LabelToolTip="" />
+        <DataPoint XValue="0.50999999046325684" YValues="0.00199920008890331" LabelToolTip="" />
+        <DataPoint XValue="0.51999998092651367" YValues="0.0159744005650282" LabelToolTip="" />
+        <DataPoint XValue="0.52999997138977051" YValues="0.0538056008517742" LabelToolTip="" />
+        <DataPoint XValue="0.54000002145767212" YValues="0.127180799841881" LabelToolTip="" />
+        <DataPoint XValue="0.550000011920929" YValues="0.247500002384186" LabelToolTip="" />
+        <DataPoint XValue="0.56000000238418579" YValues="0.425779193639755" LabelToolTip="" />
+        <DataPoint XValue="0.56999999284744263" YValues="0.67255437374115" LabelToolTip="" />
+        <DataPoint XValue="0.57999998331069946" YValues="0.997785627841949" LabelToolTip="" />
+        <DataPoint XValue="0.5899999737739563" YValues="1.41076076030731" LabelToolTip="" />
+        <DataPoint XValue="0.60000002384185791" YValues="1.91999995708466" LabelToolTip="" />
+        <DataPoint XValue="0.61000001430511475" YValues="2.53315925598145" LabelToolTip="" />
+        <DataPoint XValue="0.62000000476837158" YValues="3.25693440437317" LabelToolTip="" />
+        <DataPoint XValue="0.62999999523162842" YValues="4.09696578979492" LabelToolTip="" />
+        <DataPoint XValue="0.63999998569488525" YValues="5.05774068832397" LabelToolTip="" />
+        <DataPoint XValue="0.64999997615814209" YValues="6.14249992370605" LabelToolTip="" />
+        <DataPoint XValue="0.6600000262260437" YValues="7.35313940048218" LabelToolTip="" />
+        <DataPoint XValue="0.67000001668930054" YValues="8.69011402130127" LabelToolTip="" />
+        <DataPoint XValue="0.68000000715255737" YValues="10.1523456573486" LabelToolTip="" />
+        <DataPoint XValue="0.68999999761581421" YValues="11.7371206283569" LabelToolTip="" />
+        <DataPoint XValue="0.699999988079071" YValues="13.4399995803833" LabelToolTip="" />
+        <DataPoint XValue="0.70999997854232788" YValues="15.2547187805176" LabelToolTip="" />
+        <DataPoint XValue="0.72000002861022949" YValues="17.1730937957764" LabelToolTip="" />
+        <DataPoint XValue="0.73000001907348633" YValues="19.1849250793457" LabelToolTip="" />
+        <DataPoint XValue="0.74000000953674316" YValues="21.2779006958008" LabelToolTip="" />
+        <DataPoint XValue="0.75" YValues="23.4375" LabelToolTip="" />
+        <DataPoint XValue="0.75999999046325684" YValues="25.6468982696533" LabelToolTip="" />
+        <DataPoint XValue="0.76999998092651367" YValues="27.8868751525879" LabelToolTip="" />
+        <DataPoint XValue="0.77999997138977051" YValues="30.135705947876" LabelToolTip="" />
+        <DataPoint XValue="0.79000002145767212" YValues="32.3690795898438" LabelToolTip="" />
+        <DataPoint XValue="0.800000011920929" YValues="34.560001373291" LabelToolTip="" />
+        <DataPoint XValue="0.81000000238418579" YValues="36.6786804199219" LabelToolTip="" />
+        <DataPoint XValue="0.81999999284744263" YValues="38.692455291748" LabelToolTip="" />
+        <DataPoint XValue="0.82999998331069946" YValues="40.5656852722168" LabelToolTip="" />
+        <DataPoint XValue="0.8399999737739563" YValues="42.2596626281738" LabelToolTip="" />
+        <DataPoint XValue="0.85000002384185791" YValues="43.7324981689453" LabelToolTip="" />
+        <DataPoint XValue="0.86000001430511475" YValues="44.9390602111816" LabelToolTip="" />
+        <DataPoint XValue="0.87000000476837158" YValues="45.8308334350586" LabelToolTip="" />
+        <DataPoint XValue="0.87999999523162842" YValues="46.3558654785156" LabelToolTip="" />
+        <DataPoint XValue="0.88999998569488525" YValues="46.4586410522461" LabelToolTip="" />
+        <DataPoint XValue="0.89999997615814209" YValues="46.0800018310547" LabelToolTip="" />
+        <DataPoint XValue="0.9100000262260437" YValues="45.157039642334" LabelToolTip="" />
+        <DataPoint XValue="0.92000001668930054" YValues="43.6230125427246" LabelToolTip="" />
+        <DataPoint XValue="0.93000000715255737" YValues="41.4072456359863" LabelToolTip="" />
+        <DataPoint XValue="0.93999999761581421" YValues="38.4350204467773" LabelToolTip="" />
+        <DataPoint XValue="0.949999988079071" YValues="34.627498626709" LabelToolTip="" />
+        <DataPoint XValue="0.95999997854232788" YValues="29.9016189575195" LabelToolTip="" />
+        <DataPoint XValue="0.97000002861022949" YValues="24.169994354248" LabelToolTip="" />
+        <DataPoint XValue="0.98000001907348633" YValues="17.3408260345459" LabelToolTip="" />
+        <DataPoint XValue="0.99000000953674316" YValues="9.31780052185059" LabelToolTip="" />
+        <DataPoint XValue="1" YValues="0" LabelToolTip="" />
+      </Points>
+    </Series>
+  </Series>
+  <Legends>
+    <Legend Name="Legend1" DockedToChartArea="Default" IsTextAutoFit="False" BackColor="Transparent" BackSecondaryColor="Transparent" Font="Arial, 10.6934214pt" ForeColor="Transparent" TextWrapThreshold="200" TitleFont="Arial, 18pt">
+      <Position X="17.35349" Y="5.85064936" Width="23.1045818" Height="13.53899" Auto="False" />
+      <CustomItems>
+        <LegendItem Name="\L(1)G(Liquid,Cu,Ni;0)=0" Color="0, 0, 255" ImageStyle="Line" BorderWidth="2" MarkerBorderWidth="2" MarkerSize="15" MarkerColor="0, 0, 255" MarkerBorderColor="0, 0, 255">
+          <Cells>
+            <LegendCell Name="LegendCell1" CellType="SeriesSymbol" Alignment="MiddleLeft" Margins="0, 0, 0, 0" />
+            <LegendCell Name="LegendCell2" Text="G(Liquid,Cu,Ni;0)=0" Alignment="MiddleLeft" Margins="0, 0, 0, 0" />
+          </Cells>
+        </LegendItem>
+        <LegendItem Name="\L(2)G(Liquid,Cu,Ni;0)=-1000" Color="255, 0, 0" ImageStyle="Line" BorderWidth="2" MarkerBorderWidth="2" MarkerSize="15" MarkerColor="255, 0, 0" MarkerBorderColor="255, 0, 0">
+          <Cells>
+            <LegendCell Name="LegendCell1" CellType="SeriesSymbol" Alignment="MiddleLeft" Margins="0, 0, 0, 0" />
+            <LegendCell Name="LegendCell2" Text="G(Liquid,Cu,Ni;0)=-1000" Alignment="MiddleLeft" Margins="0, 0, 0, 0" />
+          </Cells>
+        </LegendItem>
+        <LegendItem Name="\L(3)G(Liquid,Cu,Ni;1)=-1000" Color="0, 128, 0" ImageStyle="Line" BorderWidth="2" MarkerBorderWidth="2" MarkerSize="15" MarkerColor="0, 128, 0" MarkerBorderColor="0, 128, 0">
+          <Cells>
+            <LegendCell Name="LegendCell1" CellType="SeriesSymbol" Alignment="MiddleLeft" Margins="0, 0, 0, 0" />
+            <LegendCell Name="LegendCell2" Text="G(Liquid,Cu,Ni;1)=-1000" Alignment="MiddleLeft" Margins="0, 0, 0, 0" />
+          </Cells>
+        </LegendItem>
+        <LegendItem Name="\L(4)G(Liquid,Cu,Ni;2)=-1000" Color="255, 165, 0" ImageStyle="Line" BorderWidth="2" MarkerBorderWidth="2" MarkerSize="15" MarkerColor="255, 165, 0" MarkerBorderColor="255, 165, 0">
+          <Cells>
+            <LegendCell Name="LegendCell1" CellType="SeriesSymbol" Alignment="MiddleLeft" Margins="0, 0, 0, 0" />
+            <LegendCell Name="LegendCell2" Text="G(Liquid,Cu,Ni;2)=-1000" Alignment="MiddleLeft" Margins="0, 0, 0, 0" />
+          </Cells>
+        </LegendItem>
+        <LegendItem Name="\L(5)G(Liquid,Cu,Ni;3)=-1000" Color="255, 0, 255" ImageStyle="Line" BorderWidth="2" MarkerBorderWidth="2" MarkerSize="15" MarkerColor="255, 0, 255" MarkerBorderColor="255, 0, 255">
+          <Cells>
+            <LegendCell Name="LegendCell1" CellType="SeriesSymbol" Alignment="MiddleLeft" Margins="0, 0, 0, 0" />
+            <LegendCell Name="LegendCell2" Text="G(Liquid,Cu,Ni;3)=-1000" Alignment="MiddleLeft" Margins="0, 0, 0, 0" />
+          </Cells>
+        </LegendItem>
+      </CustomItems>
+    </Legend>
+  </Legends>
+  <Annotations>
+    <TextAnnotation Font="Arial, 36pt" LineColor="0, 0, 0" Name="ElementO" X="0" Y="-1" Width="2.371046781539917" Height="3.49314546585083" ForeColor="Transparent" ShadowColor="0, 0, 0" AxisXName="Default\rX" YAxisName="Default\rY" AllowSelecting="True" AllowMoving="True">
+    </TextAnnotation>
+    <TextAnnotation Text="Ni" Font="Arial, 36pt" LineColor="0, 0, 0" Name="ElementX" X="0.96698357948772518" Y="-277.44790433680544" Width="5.3564643859863281" Height="3.4931449890136719" ForeColor="Transparent" ShadowColor="0, 0, 0" AxisXName="Default\rX" YAxisName="Default\rY" AllowSelecting="True" AllowMoving="True">
+    </TextAnnotation>
+    <TextAnnotation Font="Arial, 36pt" LineColor="0, 0, 0" Name="ElementY" X="0" Y="1" Width="2.371046781539917" Height="3.4931464195251465" ForeColor="Transparent" ShadowColor="0, 0, 0" AxisXName="Default\rX" YAxisName="Default\rY" AllowSelecting="True" AllowMoving="True">
+    </TextAnnotation>
+    <PolylineAnnotation ForeColor="0, 0, 0" Name="MarginAnnotation" X="0" Y="0" Width="0" Height="0" Visible="False" LineColor="0, 0, 0" ShadowColor="0, 0, 0">
+    </PolylineAnnotation>
+    <PolylineAnnotation ForeColor="Transparent" BackColor="Transparent" Name="TempSelectingRectName" X="1" Y="1" Width="0" Height="0" Visible="False" LineColor="255, 20, 147" LineWidth="2" LineDashStyle="Dot" ShadowColor="Transparent" AxisXName="Default\rX" YAxisName="Default\rY">
+      <GraphicsPathPoints>
+        <AnnotationPathPoint PointType="0" />
+        <AnnotationPathPoint X="100" />
+        <AnnotationPathPoint X="100" Y="100" />
+        <AnnotationPathPoint Y="100" PointType="129" />
+      </GraphicsPathPoints>
+    </PolylineAnnotation>
+    <TextAnnotation Text="x(Ni)" Font="Arial, 36pt" LineColor="0, 0, 0" Name="Pandat_Graph_X_Axis_Name" X="0.44426216619266" Y="-277.44790433680544" Width="9.0427036285400391" Height="3.4931449890136719" ForeColor="Transparent" ShadowColor="0, 0, 0" AxisXName="Default\rX" YAxisName="Default\rY" AllowSelecting="True" AllowMoving="True">
+    </TextAnnotation>
+    <TextAnnotation Text="G_ex(@Liquid)" Font="Arial, 36pt" LineColor="0, 0, 0" Name="Pandat_Graph_Y_Axis_Name" X="-0.13044803273850231" Y="70.035207845523473" Width="3.5318717956542969" Height="23.419944763183594" ForeColor="Transparent" ShadowColor="0, 0, 0" ShadowOffset="90" AxisXName="Default\rX" YAxisName="Default\rY" AllowSelecting="True" AllowMoving="True">
+    </TextAnnotation>
+  </Annotations>
+  <ChartAreas>
+    <ChartArea BackColor="Transparent" Name="Default">
+      <CursorX Interval="NaN" />
+      <CursorY Interval="NaN" />
+      <AxisY IsLabelAutoFit="False" Title="G_ex(@Liquid)" TitleForeColor="Transparent" TitleFont="Arial, 36pt" LineColor="0, 0, 0" ToolTip="G_ex(@Liquid)" IsStartedFromZero="False" IsMarginVisible="False" Maximum="250" Minimum="-250">
+        <MajorGrid LineColor="LightGray" Enabled="False" />
+        <MinorGrid LineColor="LightGray" />
+        <MajorTickMark LineColor="0, 0, 0" />
+        <MinorTickMark LineColor="0, 0, 0" />
+        <LabelStyle Font="Arial, 24pt" ForeColor="Transparent" Format="G6" />
+        <ScaleView Position="-250" Size="500" />
+        <ScrollBar Enabled="False" />
+      </AxisY>
+      <AxisX IsLabelAutoFit="False" Title="x(Ni)" TitleForeColor="Transparent" TitleFont="Arial, 36pt" LineColor="0, 0, 0" ToolTip="x(Ni)[mole/mole]" IsStartedFromZero="False" IsMarginVisible="False" Maximum="1" Minimum="0">
+        <MajorGrid LineColor="LightGray" Enabled="False" />
+        <MinorGrid LineColor="LightGray" />
+        <MajorTickMark LineColor="0, 0, 0" />
+        <MinorTickMark LineColor="0, 0, 0" />
+        <LabelStyle Font="Arial, 24pt" ForeColor="Transparent" Format="G6" />
+        <ScaleView Position="0" Size="1" />
+        <ScrollBar Enabled="False" />
+      </AxisX>
+      <AxisX2 TitleForeColor="Transparent" LineColor="0, 0, 0" Enabled="True">
+        <MajorGrid LineColor="LightGray" Enabled="False" />
+        <MinorGrid LineColor="LightGray" />
+        <MajorTickMark LineColor="0, 0, 0" Enabled="False" />
+        <MinorTickMark LineColor="0, 0, 0" />
+        <LabelStyle ForeColor="Transparent" Enabled="False" />
+      </AxisX2>
+      <AxisY2 TitleForeColor="Transparent" LineColor="0, 0, 0" Enabled="True">
+        <MajorGrid LineColor="LightGray" Enabled="False" />
+        <MinorGrid LineColor="LightGray" />
+        <MajorTickMark LineColor="0, 0, 0" Enabled="False" />
+        <MinorTickMark LineColor="0, 0, 0" />
+        <LabelStyle ForeColor="Transparent" Enabled="False" />
+      </AxisY2>
+      <Position X="2.5" Y="2.5" Width="95" Height="95" Auto="False" />
+      <Area3DStyle IsRightAngleAxes="False" WallWidth="2" />
+    </ChartArea>
+  </ChartAreas>
+</PanChart>

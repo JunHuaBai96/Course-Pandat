@@ -1,0 +1,63 @@
+$  case_sensitive 
+$  database_version Fe_Pressure
+
+Element         /-          ELECTRON_GAS         0         0         0 !
+Element         Fe                Bcc    55.847      4489     27.28 !
+Element         Va                VACUUM         0         0         0 !
+
+Function GHSERFE 298.15  1225.7+124.134*T-23.5143*T*LN(T)-4.39752E-3*T**2-0.058927E-6*T**3 +77359*T**(-1); 1811 Y
+    -25383.581+299.31255*T-46*T*LN(T)+2296.03E28*T**(-9); 6000 N !
+Function GFCCFE 298.15  -236.7+132.416*T-24.6643*T*LN(T)-3.75752E-3*T**2-0.058927E-6*T**3 +77359*T**(-1); 1811 Y
+    -27097.3963+300.252559*T-46*T*LN(T)+2788.54E28*T**(-9); 6000 N !
+Function GLIQFE 298.15  12040.17-6.55843*T-367.516E-23*T**7+GHSERFE; 1811 Y
+    -10838.83+291.302*T-46*T*LN(T); 6000 N !
+Function GHCPFE 298.15  -2480.08+136.725*T-24.6643*T*LN(T)-3.75752E-3*T**2-0.058927E-6*T**3 +77359*T**(-1); 1811 Y
+    -29340.776+304.561559*T-46*T*LN(T)+2788.54E28*T**(-9); 6000 N !
+ 
+Function GGAS_FE   298  710957.5-23.9012*T-20.08*T*LN(T)-2.700E-04*T**2
+      -4.000E+04*T**(-1); 4055  N !
+Function RTlnP 298.15 +R*T*ln(1e-005*P); 6000 N !
+
+Type_Definition & GES AMEND_PHASE_DESCRIPTION Bcc MAGNETIC -1 0.4 !
+Type_Definition ( GES AMEND_PHASE_DESCRIPTION Fcc MAGNETIC -3 0.28 !
+
+Phase GAS:G %  1  1.0  !
+ Constituent GAS:G :Fe:  !
+ Parameter G(GAS,Fe;0)    298  GGAS_FE+RTlnP;      6000 N ! 
+
+Phase Liquid % 1 1 !
+Constituent Liquid :Fe:!
+  Parameter G(Liquid,Fe;0) 298.15  GLIQFE; 6000 N !
+  Parameter P_A(Liquid,Fe;0) 298.15  6.62574e-6; 6000 N !
+  Parameter P_alpha(Liquid,Fe;0) 298.15  10.7895e-5*T-25.79493*T**(-1); 6000 N !
+  Parameter P_K(Liquid,Fe;0) 298.15  0.75475e-12+485.09e-17*T; 6000 N !
+  Parameter P_n(Liquid,Fe;0) 298.15  6.59834; 6000 N !
+
+Phase Bcc %& 2 1 3 !
+Constituent Bcc :Fe:Va:!
+  Parameter G(Bcc,Fe:Va;0) 298.15  GHSERFE; 6000 N !
+  Parameter BMAGN(Bcc,Fe:Va;0) 298.15  2.22; 6000 N !
+  Parameter TC(Bcc,Fe:Va;0) 298.15  1043; 6000 N !
+  Parameter P_A(Bcc,Fe:Va;0) 298.15  7.042095e-6; 6000 N !
+  Parameter P_alpha(Bcc,Fe:Va;0) 298.15  2.3987e-5*T+0.5*2.569e-8*T**2; 6000 N !
+  Parameter P_K(Bcc,Fe:Va;0) 298.15  5.965e-12+6.5152e-17*T; 6000 N !
+  Parameter P_n(Bcc,Fe:Va;0) 298.15  4.7041; 6000 N !
+
+Phase Fcc %( 2 1 1 !
+Constituent Fcc :Fe:Va:!
+  Parameter G(Fcc,Fe:Va;0) 298.15  GFCCFE; 6000 N !
+  Parameter BMAGN(Fcc,Fe:Va;0) 298.15  -2.10; 6000 N !
+  Parameter TC(Fcc,Fe:Va;0) 298.15  -201; 6000 N !
+
+  Parameter P_A(Fcc,Fe:Va;0) 298.15  6.688726e-6; 6000 N !
+  Parameter P_alpha(Fcc,Fe:Va;0) 298.15  7.3097e-5*T; 6000 N !
+  Parameter P_K(Fcc,Fe:Va;0) 298.15  6.2951e-12+6.5152e-17*T; 6000 N !
+  Parameter P_n(Fcc,Fe:Va;0) 298.15  5.1665; 6000 N !
+
+Phase Hcp % 2 1 0.5 !
+Constituent Hcp :Fe:Va:!
+  Parameter G(Hcp,Fe:Va;0) 298.15  GHCPFE; 6000 N !
+  Parameter P_A(Hcp,Fe:Va;0) 298.15  6.59121e-6; 6000 N !
+  Parameter P_alpha(Hcp,Fe:Va;0) 298.15  7.3646e-5*T; 6000 N !
+  Parameter P_K(Hcp,Fe:Va;0) 298.15  6.2951e-12+6.5152e-17*T; 6000 N !
+  Parameter P_n(Hcp,Fe:Va;0) 298.15  5.1665; 6000 N !

@@ -1,0 +1,77 @@
+<pbfx version="1.0" encoding="utf-8">
+  <Header copyright="CompuTherm, LLC">
+    <!-- this file defines the syntax for a batch calculation -->
+    <Application name="Pandat" version="2020" />
+  </Header>
+  <calculation name="Line ZN" type="line" duration="0.3" original_batch_name="" id="0">
+    <databases>
+      <database type="tdb" file_name="C:\Users\17868\OneDrive\Desktop\Optimization\Lecture01\exercise\Zn.tdb" />
+    </databases>
+    <units>
+      <unit name="P" value="bar" />
+      <unit name="T" value="K" />
+      <unit name="n" value="x" />
+    </units>
+    <system name="Default_System">
+      <components>
+        <component name="ZN" status="Selected" />
+      </components>
+      <phases>
+        <phase name="*" status="Entered" />
+      </phases>
+      <points>
+        <point>
+          <statespace>
+            <T value="200" />
+            <P value="1" />
+            <n component="ZN" value="1" />
+          </statespace>
+        </point>
+        <point>
+          <statespace>
+            <T value="1200" />
+            <P value="1" />
+            <n component="ZN" value="1" />
+          </statespace>
+        </point>
+      </points>
+      <condition>
+        <extensive_search value="true" />
+        <steps value="100" />
+        <individual_phase value="true" />
+        <driving_force value="true" />
+      </condition>
+    </system>
+    <output unit="">
+      <tables>
+        <table name="Default" source="Default" type="Default">
+          <column name="T" />
+          <column name="G(@BCC)" />
+          <column name="G(@FCC)" />
+          <column name="G(@HCP)" />
+          <column name="G(@LIQUID)" />
+          <column name="Cp(@*)" />
+          <column name="G(@*:HCP[*])" />
+        </table>
+      </tables>
+      <graphs>
+        <graph name="Default">
+          <plot table_name="Default" xaxis="T" yaxis="G(@*)" />
+        </graph>
+        <graph name="graph_g">
+          <plot table_name="Default" xaxis="T" yaxis="Cp(@BCC)" />
+        </graph>
+        <graph name="graph_g">
+          <plot table_name="Default" xaxis="T" yaxis="Cp(@BCC)" />
+          <plot table_name="Default" xaxis="T" yaxis="Cp(@LIQUID)" />
+        </graph>
+        <graph name="graph_g">
+          <plot table_name="Default" xaxis="T" yaxis="G(@BCC:HCP[*])" />
+          <plot table_name="Default" xaxis="T" yaxis="G(@FCC:HCP[*])" />
+          <plot table_name="Default" xaxis="T" yaxis="G(@HCP:HCP[*])" />
+          <plot table_name="Default" xaxis="T" yaxis="G(@LIQUID:HCP[*])" />
+        </graph>
+      </graphs>
+    </output>
+  </calculation>
+</pbfx>

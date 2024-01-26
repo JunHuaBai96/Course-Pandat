@@ -1,0 +1,599 @@
+<PanChart SuppressExceptions="True" BackColor="Transparent" Size="1349, 913" BackSecondaryColor="Transparent">
+  <Series>
+    <Series Name="tieline$x(Ni)[mole/mole]$T[K]$C:\Users\Administrator\Documents\CompuTherm LLC\Pandat\Temp\temp_0\tieline.table_1" Enabled="False" ChartType="Line" ChartArea="Default" Color="0, 128, 0" BorderColor="0, 0, 0" LabelForeColor="White" MarkerSize="15" MarkerColor="0, 128, 0" MarkerBorderColor="0, 128, 0" CustomProperties="EmptyPointValue=Zero" LegendText="T[K]">
+      <Points>
+        <DataPoint XValue="0.0151394633159853" YValues="1371.41538844072" />
+        <DataPoint XValue="0.0265530593669723" YValues="1371.41538844072" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.0309693988898903" YValues="1384.5319034288" />
+        <DataPoint XValue="0.0532326431320975" YValues="1384.5319034288" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.047541209637603" YValues="1397.34356383045" />
+        <DataPoint XValue="0.0800849154631798" YValues="1397.34356383045" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.0646805137809089" YValues="1409.91649702286" />
+        <DataPoint XValue="0.107085876059057" YValues="1409.91649702286" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.0824798573281848" YValues="1422.20793901399" />
+        <DataPoint XValue="0.134271270860578" YValues="1422.20793901399" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.100938778245071" YValues="1434.21502097181" />
+        <DataPoint XValue="0.161650168380753" YValues="1434.21502097181" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.120056086841637" YValues="1445.93736265448" />
+        <DataPoint XValue="0.189224899025675" YValues="1445.93736265448" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.139830892848493" YValues="1457.37685938703" />
+        <DataPoint XValue="0.216990667124537" YValues="1457.37685938703" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.160263463037143" YValues="1468.53749007836" />
+        <DataPoint XValue="0.244935269165235" YValues="1468.53749007836" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.18135592955731" YValues="1479.42513890485" />
+        <DataPoint XValue="0.27303892046897" YValues="1479.42513890485" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.203112835004691" YValues="1490.04741761727" />
+        <DataPoint XValue="0.301274243187689" YValues="1490.04741761727" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.225541462621438" YValues="1500.41348087528" />
+        <DataPoint XValue="0.329606490100272" YValues="1500.41348087528" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.248651885203515" YValues="1510.5338249676" />
+        <DataPoint XValue="0.357994099544585" YValues="1510.5338249676" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.272532181081386" YValues="1520.3965217083" />
+        <DataPoint XValue="0.386384777747983" YValues="1520.3965217083" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.297165041094892" YValues="1530.02809594907" />
+        <DataPoint XValue="0.414716259315517" YValues="1530.02809594907" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.322533096571669" YValues="1539.45290098796" />
+        <DataPoint XValue="0.442932853025418" YValues="1539.45290098796" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.348661060517415" YValues="1548.6821202017" />
+        <DataPoint XValue="0.470976295741804" YValues="1548.6821202017" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.375690690372317" YValues="1557.70146943409" />
+        <DataPoint XValue="0.498747682493109" YValues="1557.70146943409" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.403480221666382" YValues="1566.56029632857" />
+        <DataPoint XValue="0.526240734818953" YValues="1566.56029632857" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.432111248242143" YValues="1575.25604172353" />
+        <DataPoint XValue="0.553381536361674" YValues="1575.25604172353" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.461533894540408" YValues="1583.81028474414" />
+        <DataPoint XValue="0.580155225304928" YValues="1583.81028474414" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.491703558690982" YValues="1592.24113508413" />
+        <DataPoint XValue="0.606552074437751" YValues="1592.24113508413" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.522549248479837" YValues="1600.56812785881" />
+        <DataPoint XValue="0.6325844706282" YValues="1600.56812785881" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.553996314759751" YValues="1608.81078856761" />
+        <DataPoint XValue="0.658268486525249" YValues="1608.81078856761" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.585896706150826" YValues="1616.99688262639" />
+        <DataPoint XValue="0.68366887726121" YValues="1616.99688262639" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.618188069816588" YValues="1625.14485590792" />
+        <DataPoint XValue="0.708792658054201" YValues="1625.14485590792" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.650701011056214" YValues="1633.28435797526" />
+        <DataPoint XValue="0.733720274915914" YValues="1633.28435797526" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.68333731166735" YValues="1641.43740363485" />
+        <DataPoint XValue="0.758483901629377" YValues="1641.43740363485" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.715987256830985" YValues="1649.63191205348" />
+        <DataPoint XValue="0.783109495513211" YValues="1649.63191205348" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.748560848207747" YValues="1657.88572152321" />
+        <DataPoint XValue="0.80763354003062" YValues="1657.88572152321" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.780980503243519" YValues="1666.22232842849" />
+        <DataPoint XValue="0.832063128582348" YValues="1666.22232842849" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.813176231472963" YValues="1674.66438350478" />
+        <DataPoint XValue="0.856400299427398" YValues="1674.66438350478" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.845124290880308" YValues="1683.21861343078" />
+        <DataPoint XValue="0.880648614545406" YValues="1683.21861343078" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.876756911432347" YValues="1691.91504269314" />
+        <DataPoint XValue="0.904785770516405" YValues="1691.91504269314" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.908078062084774" YValues="1700.7539179144" />
+        <DataPoint XValue="0.928807058484228" YValues="1700.7539179144" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.939063868839854" YValues="1709.74943776606" />
+        <DataPoint XValue="0.952693756482448" YValues="1709.74943776606" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.969693173902803" YValues="1718.91617329286" />
+        <DataPoint XValue="0.976423309173372" YValues="1718.91617329286" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.0885801600441548" YValues="321.480057486828" />
+        <DataPoint XValue="0.997804335945939" YValues="321.480057486828" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.102964090693978" YValues="342.819509746591" />
+        <DataPoint XValue="0.99676473466124" YValues="342.819509746591" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.118103005400758" YValues="364.012650772861" />
+        <DataPoint XValue="0.995409083024337" YValues="364.012650772861" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.133956388561172" YValues="385.07833012064" />
+        <DataPoint XValue="0.993721347973019" YValues="385.07833012064" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.150583051022856" YValues="406.016280025588" />
+        <DataPoint XValue="0.991643521955348" YValues="406.016280025588" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.168004803922207" YValues="426.832747604394" />
+        <DataPoint XValue="0.989135052447588" YValues="426.832747604394" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.186305082723041" YValues="447.52713970544" />
+        <DataPoint XValue="0.986114283510711" YValues="447.52713970544" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.205584705902477" YValues="468.104297445015" />
+        <DataPoint XValue="0.982465873253531" YValues="468.104297445015" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.22592506658171" YValues="488.58580269332" />
+        <DataPoint XValue="0.978043682958669" YValues="488.58580269332" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.247454782708602" YValues="509.018040057757" />
+        <DataPoint XValue="0.972579940884977" YValues="509.018040057757" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.27036019874019" YValues="529.514530565606" />
+        <DataPoint XValue="0.965547739486837" YValues="529.514530565606" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.295078012137698" YValues="550.441685748382" />
+        <DataPoint XValue="0.955411146666509" YValues="550.441685748382" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.322994030115589" YValues="573.292036484663" />
+        <DataPoint XValue="0.93630676264449" YValues="573.292036484663" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.351206821789085" YValues="595.832080309716" />
+        <DataPoint XValue="0.917836525642265" YValues="595.832080309716" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.381162803007996" YValues="618.008672848282" />
+        <DataPoint XValue="0.898713452963664" YValues="618.008672848282" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.414157176623166" YValues="640.245867323866" />
+        <DataPoint XValue="0.876370182064536" YValues="640.245867323866" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.451747337665643" YValues="662.57489579659" />
+        <DataPoint XValue="0.849155621751564" YValues="662.57489579659" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.496983841938644" YValues="685.013952790058" />
+        <DataPoint XValue="0.813964632645831" YValues="685.013952790058" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.558903442527463" YValues="707.576443210696" />
+        <DataPoint XValue="0.761720246942774" YValues="707.576443210696" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.539861522607025" YValues="701.574112507932" />
+        <DataPoint XValue="0.778229019185099" YValues="701.574112507932" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.48180952982517" YValues="678.126524173561" />
+        <DataPoint XValue="0.826105855885989" YValues="678.126524173561" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.438111937153796" YValues="654.814463552815" />
+        <DataPoint XValue="0.859221709335521" YValues="654.814463552815" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.400944490777214" YValues="631.611999401619" />
+        <DataPoint XValue="0.885478627081614" YValues="631.611999401619" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.368179385480166" YValues="608.500319185937" />
+        <DataPoint XValue="0.907060851937619" YValues="608.500319185937" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.337929024867741" YValues="585.425997373761" />
+        <DataPoint XValue="0.926016256882473" YValues="585.425997373761" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.308484992392203" YValues="561.413065547176" />
+        <DataPoint XValue="0.946981163762134" YValues="561.413065547176" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.281209110324464" YValues="538.819028415995" />
+        <DataPoint XValue="0.961521236140819" YValues="538.819028415995" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.256616669310814" YValues="517.367996632111" />
+        <DataPoint XValue="0.96994885143945" YValues="517.367996632111" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.233634313100259" YValues="496.096604450609" />
+        <DataPoint XValue="0.97622746309417" YValues="496.096604450609" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.2120769568751" YValues="474.805241060872" />
+        <DataPoint XValue="0.981140988418122" YValues="474.805241060872" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.191761736897444" YValues="453.414636131878" />
+        <DataPoint XValue="0.985110102110094" YValues="453.414636131878" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.172482311201203" YValues="431.905071440857" />
+        <DataPoint XValue="0.98840030080337" YValues="431.905071440857" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.154150346086191" YValues="410.267515894657" />
+        <DataPoint XValue="0.991127011454899" YValues="410.267515894657" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.136696499276346" YValues="388.498207542949" />
+        <DataPoint XValue="0.993370862235909" YValues="388.498207542949" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.120068226307035" YValues="366.594311777431" />
+        <DataPoint XValue="0.995192901414332" YValues="366.594311777431" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.104177197578168" YValues="344.561097635023" />
+        <DataPoint XValue="0.99666565147959" YValues="344.561097635023" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.0891442163276709" YValues="322.364014051775" />
+        <DataPoint XValue="0.997771962415434" YValues="322.364014051775" />
+      </Points>
+    </Series>
+    <Series Name="Default$x(Ni)[mole/mole]$T[K]$C:\Users\Administrator\Documents\CompuTherm LLC\Pandat\Temp\temp_0\Default.table_1" XValueType="Double" YValueType="Double" ChartType="Line" ChartArea="Default" Color="0, 0, 255" BorderColor="0, 0, 0" BorderWidth="2" LabelForeColor="White" MarkerSize="15" MarkerColor="0, 0, 255" MarkerBorderColor="0, 0, 255" CustomProperties="EmptyPointValue=Zero" LegendText="T[K]">
+      <Points>
+        <DataPoint XValue="3.499213722E-06" YValues="1358.023286" />
+        <DataPoint XValue="7.940035613E-06" YValues="1358.027346" />
+        <DataPoint XValue="1.682172354E-05" YValues="1358.035466" />
+        <DataPoint XValue="3.458526664E-05" YValues="1358.051705" />
+        <DataPoint XValue="0.0001056419418" YValues="1358.11665" />
+        <DataPoint XValue="0.0003899073443" YValues="1358.37626" />
+        <DataPoint XValue="0.001527585971" YValues="1359.411997" />
+        <DataPoint XValue="0.0106633349" YValues="1367.545407" />
+        <DataPoint XValue="0.01525285629" YValues="1371.513426" />
+        <DataPoint XValue="0.01755274198" YValues="1373.473554" />
+        <DataPoint XValue="0.01870393228" YValues="1374.447743" />
+        <DataPoint XValue="0.01927983517" YValues="1374.93338" />
+        <DataPoint XValue="0.01956786306" YValues="1375.175836" />
+        <DataPoint XValue="0.02" YValues="1375.539067" />
+        <DataPoint XValue="0.02028815464" YValues="1375.78092" />
+        <DataPoint XValue="0.02057635957" YValues="1376.022533" />
+        <DataPoint XValue="0.02115292007" YValues="1376.505039" />
+        <DataPoint XValue="0.02230663975" YValues="1377.467184" />
+        <DataPoint XValue="0.02461644282" YValues="1379.380098" />
+        <DataPoint XValue="0.02924526263" YValues="1383.161117" />
+        <DataPoint XValue="0.03853792827" YValues="1390.549315" />
+        <DataPoint XValue="0.05725019619" YValues="1404.670367" />
+        <DataPoint XValue="0.07610952489" YValues="1417.98588" />
+        <DataPoint XValue="0.09509426096" YValues="1430.568375" />
+        <DataPoint XValue="0.1141867309" YValues="1442.480989" />
+        <DataPoint XValue="0.1333723539" YValues="1453.779108" />
+        <DataPoint XValue="0.1526389862" YValues="1464.511652" />
+        <DataPoint XValue="0.1719764275" YValues="1474.722111" />
+        <DataPoint XValue="0.1913760424" YValues="1484.449379" />
+        <DataPoint XValue="0.210830468" YValues="1493.728458" />
+        <DataPoint XValue="0.2303333819" YValues="1502.591042" />
+        <DataPoint XValue="0.2498793185" YValues="1511.066032" />
+        <DataPoint XValue="0.2694635205" YValues="1519.179978" />
+        <DataPoint XValue="0.2890818184" YValues="1526.957481" />
+        <DataPoint XValue="0.3087305324" YValues="1534.421538" />
+        <DataPoint XValue="0.3284063923" YValues="1541.593857" />
+        <DataPoint XValue="0.3481064725" YValues="1548.495115" />
+        <DataPoint XValue="0.3678281385" YValues="1555.145194" />
+        <DataPoint XValue="0.3875690051" YValues="1561.563351" />
+        <DataPoint XValue="0.407326902" YValues="1567.768353" />
+        <DataPoint XValue="0.4270998468" YValues="1573.778563" />
+        <DataPoint XValue="0.4468860231" YValues="1579.611992" />
+        <DataPoint XValue="0.4666837635" YValues="1585.286312" />
+        <DataPoint XValue="0.4864915346" YValues="1590.818836" />
+        <DataPoint XValue="0.5063079246" YValues="1596.226492" />
+        <DataPoint XValue="0.5261316329" YValues="1601.525772" />
+        <DataPoint XValue="0.5459614594" YValues="1606.732682" />
+        <DataPoint XValue="0.565796296" YValues="1611.862694" />
+        <DataPoint XValue="0.5856351175" YValues="1616.930697" />
+        <DataPoint XValue="0.6054769729" YValues="1621.950965" />
+        <DataPoint XValue="0.6253209783" YValues="1626.937127" />
+        <DataPoint XValue="0.6451663084" YValues="1631.902153" />
+        <DataPoint XValue="0.6650121903" YValues="1636.85835" />
+        <DataPoint XValue="0.6848578962" YValues="1641.817365" />
+        <DataPoint XValue="0.7047027376" YValues="1646.790198" />
+        <DataPoint XValue="0.7245460597" YValues="1651.787225" />
+        <DataPoint XValue="0.744387236" YValues="1656.818219" />
+        <DataPoint XValue="0.764225664" YValues="1661.892378" />
+        <DataPoint XValue="0.7840607612" YValues="1667.018359" />
+        <DataPoint XValue="0.8038919614" YValues="1672.204301" />
+        <DataPoint XValue="0.8237187119" YValues="1677.457858" />
+        <DataPoint XValue="0.8435404709" YValues="1682.786223" />
+        <DataPoint XValue="0.863356706" YValues="1688.19615" />
+        <DataPoint XValue="0.8831668924" YValues="1693.693973" />
+        <DataPoint XValue="0.9029705123" YValues="1699.285624" />
+        <DataPoint XValue="0.9227670545" YValues="1704.976639" />
+        <DataPoint XValue="0.9425560148" YValues="1710.772172" />
+        <DataPoint XValue="0.9623368963" YValues="1716.676994" />
+        <DataPoint XValue="0.9821092106" YValues="1722.695494" />
+        <DataPoint XValue="0.9919920024" YValues="1725.74864" />
+        <DataPoint XValue="0.9969325315" YValues="1727.286395" />
+        <DataPoint XValue="0.9994025762" YValues="1728.058093" />
+        <DataPoint XValue="0.9997113214" YValues="1728.154688" />
+        <DataPoint XValue="0.9998656931" YValues="1728.202996" />
+        <DataPoint XValue="0.9999428788" YValues="1728.227153" />
+        <DataPoint XValue="0.9999814716" YValues="1728.239232" />
+        <DataPoint XValue="0.9999911198" YValues="1728.242252" />
+        <DataPoint XValue="0.9999959438" YValues="1728.243762" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.9999966012" YValues="1728.243667" />
+        <DataPoint XValue="0.9999870265" YValues="1728.239824" />
+        <DataPoint XValue="0.9999487279" YValues="1728.224449" />
+        <DataPoint XValue="0.9998721304" YValues="1728.193703" />
+        <DataPoint XValue="0.9997189346" YValues="1728.132217" />
+        <DataPoint XValue="0.9984933313" YValues="1727.640703" />
+        <DataPoint XValue="0.9935902638" YValues="1725.681183" />
+        <DataPoint XValue="0.9837810475" YValues="1721.793112" />
+        <DataPoint XValue="0.9641507964" YValues="1714.137202" />
+        <DataPoint XValue="0.9445057871" YValues="1706.634239" />
+        <DataPoint XValue="0.9248472085" YValues="1699.274813" />
+        <DataPoint XValue="0.9051762446" YValues="1692.048976" />
+        <DataPoint XValue="0.8854940619" YValues="1684.94639" />
+        <DataPoint XValue="0.8658017965" YValues="1677.956488" />
+        <DataPoint XValue="0.8461005424" YValues="1671.068648" />
+        <DataPoint XValue="0.8263913396" YValues="1664.272376" />
+        <DataPoint XValue="0.8066751634" YValues="1657.557499" />
+        <DataPoint XValue="0.7869529142" YValues="1650.91434" />
+        <DataPoint XValue="0.7672254107" YValues="1644.333883" />
+        <DataPoint XValue="0.7474933848" YValues="1637.807888" />
+        <DataPoint XValue="0.7277574818" YValues="1631.328957" />
+        <DataPoint XValue="0.7080182662" YValues="1624.890521" />
+        <DataPoint XValue="0.6882762327" YValues="1618.486736" />
+        <DataPoint XValue="0.6685318241" YValues="1612.112309" />
+        <DataPoint XValue="0.6487854535" YValues="1605.76224" />
+        <DataPoint XValue="0.6290375282" YValues="1599.431538" />
+        <DataPoint XValue="0.6092884744" YValues="1593.114933" />
+        <DataPoint XValue="0.5895387575" YValues="1586.806627" />
+        <DataPoint XValue="0.5697888978" YValues="1580.500109" />
+        <DataPoint XValue="0.5500394803" YValues="1574.188055" />
+        <DataPoint XValue="0.5302911582" YValues="1567.862305" />
+        <DataPoint XValue="0.510544652" YValues="1561.513922" />
+        <DataPoint XValue="0.4908007438" YValues="1555.133298" />
+        <DataPoint XValue="0.4710602712" YValues="1548.710296" />
+        <DataPoint XValue="0.4513241182" YValues="1542.234413" />
+        <DataPoint XValue="0.4315932076" YValues="1535.694942" />
+        <DataPoint XValue="0.4118684932" YValues="1529.081126" />
+        <DataPoint XValue="0.3921509525" YValues="1522.382294" />
+        <DataPoint XValue="0.3724415807" YValues="1515.587983" />
+        <DataPoint XValue="0.3527413852" YValues="1508.688042" />
+        <DataPoint XValue="0.33305138" YValues="1501.672718" />
+        <DataPoint XValue="0.3133725811" YValues="1494.532725" />
+        <DataPoint XValue="0.293706001" YValues="1487.259314" />
+        <DataPoint XValue="0.2740526437" YValues="1479.844316" />
+        <DataPoint XValue="0.2544134983" YValues="1472.280199" />
+        <DataPoint XValue="0.2347895318" YValues="1464.560111" />
+        <DataPoint XValue="0.2151816819" YValues="1456.677923" />
+        <DataPoint XValue="0.1955908472" YValues="1448.628278" />
+        <DataPoint XValue="0.1760178769" YValues="1440.40664" />
+        <DataPoint XValue="0.1564635585" YValues="1432.009347" />
+        <DataPoint XValue="0.1369286039" YValues="1423.433673" />
+        <DataPoint XValue="0.1174136341" YValues="1414.677885" />
+        <DataPoint XValue="0.09791916135" YValues="1405.741324" />
+        <DataPoint XValue="0.0784455699" YValues="1396.624474" />
+        <DataPoint XValue="0.05899309477" YValues="1387.329054" />
+        <DataPoint XValue="0.03956179865" YValues="1377.858102" />
+        <DataPoint XValue="0.02985406502" YValues="1373.05814" />
+        <DataPoint XValue="0.02500216208" YValues="1370.642328" />
+        <DataPoint XValue="0.02257669901" YValues="1369.430504" />
+        <DataPoint XValue="0.02136408921" YValues="1368.823619" />
+        <DataPoint XValue="0.02075781469" YValues="1368.519934" />
+        <DataPoint XValue="0.02045468502" YValues="1368.36803" />
+        <DataPoint XValue="0.02" YValues="1368.1401" />
+        <DataPoint XValue="0.0196700741" YValues="1367.97465" />
+        <DataPoint XValue="0.01936696257" YValues="1367.822602" />
+        <DataPoint XValue="0.01876075466" YValues="1367.518385" />
+        <DataPoint XValue="0.01754839938" YValues="1366.909469" />
+        <DataPoint XValue="0.01512393059" YValues="1365.689713" />
+        <DataPoint XValue="0.0102759562" YValues="1363.242556" />
+        <DataPoint XValue="0.0005838269426" YValues="1358.318074" />
+        <DataPoint XValue="0.0002810293678" YValues="1358.163544" />
+        <DataPoint XValue="0.0001296324198" YValues="1358.086265" />
+        <DataPoint XValue="5.393440488E-05" YValues="1358.047621" />
+        <DataPoint XValue="1.608551239E-05" YValues="1358.028299" />
+        <DataPoint XValue="6.623301348E-06" YValues="1358.023468" />
+        <DataPoint XValue="1.892198394E-06" YValues="1358.021053" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.07485618008" YValues="300.0010464" />
+        <DataPoint XValue="0.07488655222" YValues="300.0501753" />
+        <DataPoint XValue="0.07494730169" YValues="300.1484202" />
+        <DataPoint XValue="0.07506882133" YValues="300.3448589" />
+        <DataPoint XValue="0.07701685492" YValues="303.4786522" />
+        <DataPoint XValue="0.08487610798" YValues="315.8450812" />
+        <DataPoint XValue="0.092835236" YValues="327.9533067" />
+        <DataPoint XValue="0.09684959705" YValues="333.9148184" />
+        <DataPoint XValue="0.09886508591" YValues="336.8730642" />
+        <DataPoint XValue="0.09987486297" YValues="338.3466317" />
+        <DataPoint XValue="0.1003802544" YValues="339.0820351" />
+        <DataPoint XValue="0.1006330751" YValues="339.4493928" />
+        <DataPoint XValue="0.1010124621" YValues="340" />
+        <DataPoint XValue="0.1014911387" YValues="340.6935884" />
+        <DataPoint XValue="0.1017443232" YValues="341.0599426" />
+        <DataPoint XValue="0.1022509392" YValues="341.791968" />
+        <DataPoint XValue="0.1032651535" YValues="343.253295" />
+        <DataPoint XValue="0.1052974743" YValues="346.165114" />
+        <DataPoint XValue="0.109377391" YValues="351.9458683" />
+        <DataPoint XValue="0.1175961616" YValues="363.3391662" />
+        <DataPoint XValue="0.1342546459" YValues="385.4746489" />
+        <DataPoint XValue="0.1511839909" YValues="406.7722807" />
+        <DataPoint XValue="0.1683618338" YValues="427.2585407" />
+        <DataPoint XValue="0.1857697925" YValues="446.9524967" />
+        <DataPoint XValue="0.2033917276" YValues="465.8699387" />
+        <DataPoint XValue="0.2212125118" YValues="484.0269925" />
+        <DataPoint XValue="0.2392169898" YValues="501.444084" />
+        <DataPoint XValue="0.257388814" YValues="518.1515443" />
+        <DataPoint XValue="0.2757085816" YValues="534.1997359" />
+        <DataPoint XValue="0.2941495689" YValues="549.6826282" />
+        <DataPoint XValue="0.3126625262" YValues="564.8180715" />
+        <DataPoint XValue="0.3311668942" YValues="579.9954714" />
+        <DataPoint XValue="0.3497592534" YValues="594.7364587" />
+        <DataPoint XValue="0.3684646269" YValues="608.8940015" />
+        <DataPoint XValue="0.3872889841" YValues="622.4060073" />
+        <DataPoint XValue="0.4062342374" YValues="635.2243346" />
+        <DataPoint XValue="0.4252998102" YValues="647.3080317" />
+        <DataPoint XValue="0.444483363" YValues="658.6202022" />
+        <DataPoint XValue="0.4637811575" YValues="669.1264151" />
+        <DataPoint XValue="0.4831882517" YValues="678.7938229" />
+        <DataPoint XValue="0.5026986106" YValues="687.590617" />
+        <DataPoint XValue="0.5223051688" YValues="695.485647" />
+        <DataPoint XValue="0.5419998646" YValues="702.4481061" />
+        <DataPoint XValue="0.5617736511" YValues="708.4472291" />
+        <DataPoint XValue="0.5816164873" YValues="713.4519665" />
+        <DataPoint XValue="0.6015173064" YValues="717.4306103" />
+        <DataPoint XValue="0.6214639538" YValues="720.3503755" />
+        <DataPoint XValue="0.631450109" YValues="721.4024261" />
+        <DataPoint XValue="0.6414426128" YValues="722.1766862" />
+        <DataPoint XValue="0.6464406309" YValues="722.4582144" />
+        <DataPoint XValue="0.6514395253" YValues="722.668497" />
+        <DataPoint XValue="0.6539392193" YValues="722.7467239" />
+        <DataPoint XValue="0.6564389169" YValues="722.824488" />
+        <DataPoint XValue="0.6576887659" YValues="722.8633525" />
+        <DataPoint XValue="0.6578449957" YValues="722.8683752" />
+        <DataPoint XValue="0.6578840463" YValues="722.8664487" />
+        <DataPoint XValue="0.6579230928" YValues="722.8642132" />
+        <DataPoint XValue="0.6579621394" YValues="722.8619816" />
+        <DataPoint XValue="0.6580011526" YValues="722.8580566" />
+        <DataPoint XValue="0.6580401658" YValues="722.8541354" />
+        <DataPoint XValue="0.6581181924" YValues="722.8462929" />
+        <DataPoint XValue="0.6582744076" YValues="722.8396991" />
+        <DataPoint XValue="0.6585868652" YValues="722.8294129" />
+        <DataPoint XValue="0.6588993231" YValues="722.8191458" />
+        <DataPoint XValue="0.6592117809" YValues="722.8088784" />
+        <DataPoint XValue="0.6592898954" YValues="722.8063148" />
+        <DataPoint XValue="0.6593680099" YValues="722.8037513" />
+        <DataPoint XValue="0.6594461241" YValues="722.8011617" />
+        <DataPoint XValue="0.6595242384" YValues="722.7985721" />
+        <DataPoint XValue="0.6596023527" YValues="722.7959783" />
+        <DataPoint XValue="0.6597585812" YValues="722.7907955" />
+        <DataPoint XValue="0.6600710382" YValues="722.7804303" />
+        <DataPoint XValue="0.660695952" YValues="722.759668" />
+        <DataPoint XValue="0.6619457798" YValues="722.7181787" />
+        <DataPoint XValue="0.6644453475" YValues="722.8111596" />
+        <DataPoint XValue="0.6650701043" YValues="722.8460305" />
+        <DataPoint XValue="0.6651481989" YValues="722.8503858" />
+        <DataPoint XValue="0.6652262935" YValues="722.8547414" />
+        <DataPoint XValue="0.6652360554" YValues="722.8552859" />
+        <DataPoint XValue="0.6652409363" YValues="722.8555581" />
+        <DataPoint XValue="0.6634604638" YValues="722.8790238" />
+        <DataPoint YValues="0" IsEmpty="True" />
+        <DataPoint XValue="0.6708484109" YValues="722.8811631" />
+        <DataPoint XValue="0.6708679402" YValues="722.8806071" />
+        <DataPoint XValue="0.6710241745" YValues="722.8761739" />
+        <DataPoint XValue="0.6716491118" YValues="722.8584639" />
+        <DataPoint XValue="0.672274049" YValues="722.840754" />
+        <DataPoint XValue="0.6728989863" YValues="722.8230438" />
+        <DataPoint XValue="0.6735239238" YValues="722.8053677" />
+        <DataPoint XValue="0.6785222048" YValues="722.5431695" />
+        <DataPoint XValue="0.6835204908" YValues="722.2813542" />
+        <DataPoint XValue="0.6935134077" YValues="721.5287231" />
+        <DataPoint XValue="0.7034992741" YValues="720.4657639" />
+        <DataPoint XValue="0.7084887078" YValues="719.8159883" />
+        <DataPoint XValue="0.7134753776" YValues="719.0862646" />
+        <DataPoint XValue="0.7184589275" YValues="718.2757582" />
+        <DataPoint XValue="0.7234389892" YValues="717.3836033" />
+        <DataPoint XValue="0.7284151832" YValues="716.4089362" />
+        <DataPoint XValue="0.7482740931" YValues="711.6660701" />
+        <DataPoint XValue="0.7680369548" YValues="705.5246378" />
+        <DataPoint XValue="0.787671615" YValues="697.9140872" />
+        <DataPoint XValue="0.8071403291" YValues="688.7556659" />
+        <DataPoint XValue="0.8263984956" YValues="677.9625156" />
+        <DataPoint XValue="0.8453933051" YValues="665.44098" />
+        <DataPoint XValue="0.8640626402" YValues="651.0944225" />
+        <DataPoint XValue="0.8823352547" YValues="634.8326195" />
+        <DataPoint XValue="0.9001354555" YValues="616.5949825" />
+        <DataPoint XValue="0.9174028704" YValues="596.4121798" />
+        <DataPoint XValue="0.9258364846" YValues="585.6652451" />
+        <DataPoint XValue="0.9341617792" YValues="574.5856294" />
+        <DataPoint XValue="0.9431201962" YValues="565.6981633" />
+        <DataPoint XValue="0.9518641072" YValues="555.9937271" />
+        <DataPoint XValue="0.9595650611" YValues="543.2351521" />
+        <DataPoint XValue="0.9661962933" YValues="528.264947" />
+        <DataPoint XValue="0.9718684888" YValues="511.7936145" />
+        <DataPoint XValue="0.9767238062" YValues="494.3092338" />
+        <DataPoint XValue="0.9808882908" YValues="476.1260472" />
+        <DataPoint XValue="0.9844620166" YValues="457.4468091" />
+        <DataPoint XValue="0.9875223554" YValues="438.4063967" />
+        <DataPoint XValue="0.9901297516" YValues="419.0982134" />
+        <DataPoint XValue="0.9923328766" YValues="399.5896266" />
+        <DataPoint XValue="0.9941726201" YValues="379.9310057" />
+        <DataPoint XValue="0.9956850557" YValues="360.1610752" />
+        <DataPoint XValue="0.9963290222" YValues="350.2443605" />
+        <DataPoint XValue="0.9966247279" YValues="345.2794605" />
+        <DataPoint XValue="0.996766232" YValues="342.7955309" />
+        <DataPoint XValue="0.9968354243" YValues="341.5532146" />
+        <DataPoint XValue="0.996869634" YValues="340.9319709" />
+        <DataPoint XValue="0.9969204682" YValues="340" />
+        <DataPoint XValue="0.9969523998" YValues="339.4090654" />
+        <DataPoint XValue="0.996985729" YValues="338.7876303" />
+        <DataPoint XValue="0.9970516294" YValues="337.5445983" />
+        <DataPoint XValue="0.9971804261" YValues="335.0579046" />
+        <DataPoint XValue="0.9974262229" YValues="330.0821297" />
+        <DataPoint XValue="0.9978723943" YValues="320.122023" />
+        <DataPoint XValue="0.9985972665" YValues="300.1746362" />
+        <DataPoint XValue="0.9986021153" YValues="300.0186874" />
+        <DataPoint XValue="0.9986024179" YValues="300.0089406" />
+      </Points>
+    </Series>
+  </Series>
+  <Annotations>
+    <TextAnnotation Text="Cu" Font="Arial, 36pt" LineColor="0, 0, 0" Name="ElementO" X="-0.039509475725747041" Y="189.84234171300312" Width="6.4099726676940918" Height="5.2184391021728516" ForeColor="Transparent" ShadowColor="0, 0, 0" AxisXName="Default\rX" YAxisName="Default\rY" AllowSelecting="True" AllowMoving="True">
+    </TextAnnotation>
+    <TextAnnotation Text="Ni" Font="Arial, 36pt" LineColor="0, 0, 0" Name="ElementX" X="0.966996174783424" Y="189.84234171300312" Width="5.3545036315917969" Height="5.2184391021728516" ForeColor="Transparent" ShadowColor="0, 0, 0" AxisXName="Default\rX" YAxisName="Default\rY" AllowSelecting="True" AllowMoving="True">
+    </TextAnnotation>
+    <TextAnnotation Font="Arial, 36pt" LineColor="0, 0, 0" Name="ElementY" X="0" Y="1800" Width="2.3701784610748291" Height="5.218440055847168" ForeColor="Transparent" ShadowColor="0, 0, 0" AxisXName="Default\rX" YAxisName="Default\rY" AllowSelecting="True" AllowMoving="True">
+    </TextAnnotation>
+    <PolylineAnnotation ForeColor="0, 0, 0" Name="MarginAnnotation" X="0" Y="0" Width="0" Height="0" Visible="False" LineColor="0, 0, 0" ShadowColor="0, 0, 0">
+    </PolylineAnnotation>
+    <PolylineAnnotation ForeColor="Transparent" BackColor="Transparent" Name="TempSelectingRectName" X="1" Y="1" Width="0" Height="0" Visible="False" LineColor="255, 20, 147" LineWidth="2" LineDashStyle="Dot" ShadowColor="Transparent" AxisXName="Default\rX" YAxisName="Default\rY">
+      <GraphicsPathPoints>
+        <AnnotationPathPoint PointType="0" />
+        <AnnotationPathPoint X="100" />
+        <AnnotationPathPoint X="100" Y="100" />
+        <AnnotationPathPoint Y="100" PointType="129" />
+      </GraphicsPathPoints>
+    </PolylineAnnotation>
+    <TextAnnotation Text="x(Ni)" Font="Arial, 36pt" LineColor="0, 0, 0" Name="Pandat_Graph_X_Axis_Name" X="0.44428344003019382" Y="189.84234171300312" Width="9.0393877029418945" Height="5.2184391021728516" ForeColor="Transparent" ShadowColor="0, 0, 0" AxisXName="Default\rX" YAxisName="Default\rY" AllowSelecting="True" AllowMoving="True">
+    </TextAnnotation>
+    <TextAnnotation Text="T[K]" Font="Arial, 36pt" LineColor="0, 0, 0" Name="Pandat_Graph_Y_Axis_Name" X="-0.13564604428384053" Y="1163.2664198463003" Width="3.5305769443511963" Height="12.067644119262695" ForeColor="Transparent" ShadowColor="0, 0, 0" ShadowOffset="90" AxisXName="Default\rX" YAxisName="Default\rY" AllowSelecting="True" AllowMoving="True">
+    </TextAnnotation>
+    <TextAnnotation Text="Liquid" Font="Arial, 18pt" LineColor="0, 0, 0" Name="Annotation1" X="0.11716508445272753" Y="1626.04991135232" Width="5.4023380279541016" Height="2.6856262683868408" Alignment="TopLeft" ForeColor="Transparent" ShadowColor="0, 0, 0" AxisXName="Default\rX" YAxisName="Default\rY" AllowSelecting="True" AllowMoving="True">
+    </TextAnnotation>
+    <TextAnnotation Text="Fcc+Liquid" Font="Arial, 18pt" LineColor="0, 0, 0" Name="Annotation2" X="0.22876876854281947" Y="1426.3923605432103" Width="8.8704195022583" Height="2.6856272220611572" Alignment="TopLeft" ForeColor="Transparent" ShadowColor="0, 0, 0" AxisXName="Default\rX" YAxisName="Default\rY" AllowSelecting="True" AllowMoving="True">
+    </TextAnnotation>
+    <TextAnnotation Text="Fcc" Font="Arial, 18pt" LineColor="0, 0, 0" Name="Annotation3" X="0.27586569857160864" Y="1175.2767292409558" Width="3.7304072380065918" Height="2.6856272220611572" Alignment="TopLeft" ForeColor="Transparent" ShadowColor="0, 0, 0" AxisXName="Default\rX" YAxisName="Default\rY" AllowSelecting="True" AllowMoving="True">
+    </TextAnnotation>
+    <TextAnnotation Text="Fcc+Fcc" Font="Arial, 18pt" LineColor="0, 0, 0" Name="Annotation4" X="0.53744790091941075" Y="504.26268246359825" Width="7.1984901428222656" Height="2.6856272220611572" Alignment="TopLeft" ForeColor="Transparent" ShadowColor="0, 0, 0" AxisXName="Default\rX" YAxisName="Default\rY" AllowSelecting="True" AllowMoving="True">
+    </TextAnnotation>
+    <LineAnnotation EndCap="Round" ForeColor="0, 0, 0" Name="Annotation5" X="0.29432723302292119" Y="1431.4610049567796" Width="-1.1127596439169096" Height="-3.94736842105263" LineColor="Transparent" ShadowColor="0, 0, 0" AxisXName="Default\rX" YAxisName="Default\rY" AnchorOffsetX="5" AnchorOffsetY="5" AllowSelecting="True" AllowMoving="True" AllowResizing="True">
+    </LineAnnotation>
+  </Annotations>
+  <ChartAreas>
+    <ChartArea BackColor="Transparent" Name="Default">
+      <CursorX Interval="NaN" />
+      <CursorY Interval="NaN" />
+      <AxisY IsLabelAutoFit="False" Title="T[K]" TitleForeColor="Transparent" TitleFont="Arial, 36pt" LineColor="0, 0, 0" ToolTip="T[K]" IsStartedFromZero="False" IsMarginVisible="False" Maximum="1800" Minimum="300">
+        <MajorGrid LineColor="LightGray" Enabled="False" />
+        <MinorGrid LineColor="LightGray" />
+        <MajorTickMark LineColor="0, 0, 0" />
+        <MinorTickMark LineColor="0, 0, 0" />
+        <LabelStyle Font="Arial, 24pt" ForeColor="Transparent" Format="G6" />
+        <ScaleView Position="300" Size="1500" />
+        <ScrollBar Enabled="False" />
+      </AxisY>
+      <AxisX IsLabelAutoFit="False" Title="x(Ni)" TitleForeColor="Transparent" TitleFont="Arial, 36pt" LineColor="0, 0, 0" ToolTip="x(Ni)[mole/mole]" IsStartedFromZero="False" IsMarginVisible="False" Maximum="1" Minimum="0">
+        <MajorGrid LineColor="LightGray" Enabled="False" />
+        <MinorGrid LineColor="LightGray" />
+        <MajorTickMark LineColor="0, 0, 0" />
+        <MinorTickMark LineColor="0, 0, 0" />
+        <LabelStyle Font="Arial, 24pt" ForeColor="Transparent" Format="G6" />
+        <ScaleView Position="0" Size="1" />
+        <ScrollBar Enabled="False" />
+      </AxisX>
+      <AxisX2 TitleForeColor="Transparent" LineColor="0, 0, 0" Enabled="True">
+        <MajorGrid LineColor="LightGray" Enabled="False" />
+        <MinorGrid LineColor="LightGray" />
+        <MajorTickMark LineColor="0, 0, 0" Enabled="False" />
+        <MinorTickMark LineColor="0, 0, 0" />
+        <LabelStyle ForeColor="Transparent" Enabled="False" />
+      </AxisX2>
+      <AxisY2 TitleForeColor="Transparent" LineColor="0, 0, 0" Enabled="True">
+        <MajorGrid LineColor="LightGray" Enabled="False" />
+        <MinorGrid LineColor="LightGray" />
+        <MajorTickMark LineColor="0, 0, 0" Enabled="False" />
+        <MinorTickMark LineColor="0, 0, 0" />
+        <LabelStyle ForeColor="Transparent" Enabled="False" />
+      </AxisY2>
+      <Position X="2.5" Y="2.5" Width="95" Height="95" Auto="False" />
+      <Area3DStyle IsRightAngleAxes="False" WallWidth="2" />
+    </ChartArea>
+  </ChartAreas>
+</PanChart>

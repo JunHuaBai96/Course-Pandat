@@ -1,0 +1,67 @@
+<pbfx version="1.0" encoding="utf-8">
+  <Header copyright="CompuTherm, LLC">
+    <!-- this file defines the syntax for a batch calculation -->
+    <Application name="Pandat" version="2020" />
+  </Header>
+  <calculation name="Thermodynamic Property Cu-Ni" type="line" duration="0.2" original_batch_name="" id="6">
+    <databases>
+      <database type="tdb" file_name="C:\Users\17868\OneDrive\Desktop\Optimization\Lecture01\exercise\Database_Isomorphous_Cu-Ni.tdb" />
+    </databases>
+    <units>
+      <unit name="P" value="GPa" />
+      <unit name="T" value="K" />
+      <unit name="n" value="x" />
+    </units>
+    <system name="Default_System">
+      <components>
+        <component name="Cu" status="Selected" />
+        <component name="Ni" status="Selected" />
+      </components>
+      <phases>
+        <phase name="*" status="Entered" />
+      </phases>
+      <points>
+        <point>
+          <statespace>
+            <T value="1800" />
+            <P value="1" />
+            <n component="Cu" value="1" />
+            <n component="Ni" value="0" />
+          </statespace>
+        </point>
+        <point>
+          <statespace>
+            <T value="1800" />
+            <P value="1" />
+            <n component="Cu" value="0" />
+            <n component="Ni" value="1" />
+          </statespace>
+        </point>
+      </points>
+      <condition>
+        <steps value="100" />
+        <driving_force value="true" />
+      </condition>
+    </system>
+    <output unit="">
+      <tables>
+        <table name="thermodynamic_property" source="Default" type="thermodynamic_property">
+          <column name="T" />
+          <column name="phase_name" />
+          <column name="x(*)" />
+          <column name="w(*)" />
+          <column name="G(:Liquid[*])" />
+          <column name="H(:Liquid[*])" />
+        </table>
+      </tables>
+      <graphs>
+        <graph name="G">
+          <plot table_name="thermodynamic_property" xaxis="x(Ni)" yaxis="G" />
+        </graph>
+        <graph name="H">
+          <plot table_name="thermodynamic_property" xaxis="x(Ni)" yaxis="H" />
+        </graph>
+      </graphs>
+    </output>
+  </calculation>
+</pbfx>

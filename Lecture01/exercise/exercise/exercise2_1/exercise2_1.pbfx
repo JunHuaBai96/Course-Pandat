@@ -1,0 +1,89 @@
+<pbfx version="1.0" encoding="utf-8">
+  <Header copyright="CompuTherm, LLC">
+    <!-- this file defines the syntax for a batch calculation -->
+    <Application name="Pandat" version="2020" />
+  </Header>
+  <calculation name="Line Fe" type="line" duration="0.3" original_batch_name="" id="3">
+    <databases>
+      <database type="tdb" file_name="C:\Users\17868\OneDrive\Desktop\Optimization\Lecture01\exercise\Fe_Pressure.tdb" />
+    </databases>
+    <units>
+      <unit name="P" value="GPa" />
+      <unit name="T" value="K" />
+      <unit name="n" value="x" />
+    </units>
+    <system name="Default_System">
+      <components>
+        <component name="Fe" status="Selected" />
+      </components>
+      <phases>
+        <phase name="*" status="Entered" />
+        <phase name="GAS" status="Suspended" />
+      </phases>
+      <points>
+        <point>
+          <statespace>
+            <T value="200" />
+            <P value="1" />
+            <n component="Fe" value="1" />
+          </statespace>
+        </point>
+        <point>
+          <statespace>
+            <T value="2500" />
+            <P value="1" />
+            <n component="Fe" value="1" />
+          </statespace>
+        </point>
+      </points>
+      <condition>
+        <steps value="100" />
+        <individual_phase value="true" />
+        <driving_force value="true" />
+      </condition>
+    </system>
+    <output unit="">
+      <tables>
+        <table name="Default" source="Default" type="Default">
+          <column name="T" />
+          <column name="P" />
+          <column name="phase_name" />
+          <column name="x(Fe)" />
+          <column name="w(Fe)" />
+          <column name="G" />
+          <column name="f(@Bcc)" />
+          <column name="f(@Fcc)" />
+          <column name="f(@Hcp)" />
+          <column name="f(@Liquid)" />
+          <column name="G(@Bcc)" />
+          <column name="G(@Fcc)" />
+          <column name="G(@Hcp)" />
+          <column name="G(@Liquid)" />
+          <column name="Cp(@Bcc)" />
+          <column name="Cp(@Fcc)" />
+          <column name="Cp(@Hcp)" />
+          <column name="Cp(@Liquid)" />
+          <column name="a(Fe:Liquid[Fe])" />
+          <column name="G(:Liquid[*])" />
+          <column name="H(Fe@Bcc:Liquid[Fe])" />
+          <column name="H(Fe@Fcc:Liquid[Fe])" />
+          <column name="H(Fe@Hcp:Liquid[Fe])" />
+          <column name="H(Fe@Liquid:Liquid[Fe])" />
+          <column name="n_kg" />
+          <column name="n_mole" />
+        </table>
+      </tables>
+      <graphs>
+        <graph name="Default">
+          <plot table_name="Default" xaxis="T" yaxis="Cp(@*)" />
+        </graph>
+        <graph name="graph_g">
+          <plot table_name="table_output" xaxis="T" yaxis="G(@Bcc)-G(@Bcc)" />
+          <plot table_name="table_output" xaxis="T" yaxis="G(@Fcc)-G(@Bcc)" />
+          <plot table_name="table_output" xaxis="T" yaxis="G(@Hcp)-G(@Bcc)" />
+          <plot table_name="table_output" xaxis="T" yaxis="G(@Liquid)-G(@Bcc)" />
+        </graph>
+      </graphs>
+    </output>
+  </calculation>
+</pbfx>

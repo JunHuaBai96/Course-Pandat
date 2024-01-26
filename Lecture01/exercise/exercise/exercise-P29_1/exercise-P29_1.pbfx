@@ -1,0 +1,95 @@
+<pbfx version="1.0" encoding="utf-8">
+  <Header copyright="CompuTherm, LLC">
+    <!-- this file defines the syntax for a batch calculation -->
+    <Application name="Pandat" version="2020" />
+  </Header>
+  <calculation name="2D_Cu-Ni" type="section" duration="0.7" original_batch_name="" id="4">
+    <databases>
+      <database type="tdb" file_name="C:\Users\17868\OneDrive\Desktop\Optimization\Lecture01\exercise\Database_Isomorphous_Cu-Ni.tdb" />
+    </databases>
+    <units>
+      <unit name="P" value="GPa" />
+      <unit name="T" value="K" />
+      <unit name="n" value="x" />
+    </units>
+    <system name="Default_System">
+      <components>
+        <component name="Cu" status="Selected" />
+        <component name="Ni" status="Selected" />
+      </components>
+      <phases>
+        <phase name="*" status="Entered" />
+      </phases>
+      <points>
+        <point>
+          <statespace>
+            <T value="1800" />
+            <P value="1" />
+            <n component="Cu" value="1" />
+            <n component="Ni" value="0" />
+          </statespace>
+        </point>
+        <point>
+          <statespace>
+            <T value="1200" />
+            <P value="1" />
+            <n component="Cu" value="1" />
+            <n component="Ni" value="0" />
+          </statespace>
+        </point>
+        <point>
+          <statespace>
+            <T value="1200" />
+            <P value="1" />
+            <n component="Cu" value="0" />
+            <n component="Ni" value="1" />
+          </statespace>
+        </point>
+      </points>
+      <condition>
+      </condition>
+    </system>
+    <output unit="">
+      <tables>
+        <table name="Default" source="Default" type="Default">
+          <column name="T" />
+          <column name="P" />
+          <column name="phase_name" />
+          <column name="x(*)" />
+          <column name="w(*)" />
+          <column name="G" />
+          <column name="f(@*)" />
+        </table>
+        <table name="tieline" source="Default" type="tieline">
+          <column name="T" />
+          <column name="phase_name" />
+          <column name="x(*)" />
+          <column name="w(*)" />
+        </table>
+        <table name="invariant" source="invariant" type="invariant">
+          <column name="T" />
+          <column name="reaction" />
+          <column name="phase_name" />
+          <column name="#phases" />
+          <column name="x(*)" />
+          <column name="w(*)" />
+          <column name="f(@*)" />
+        </table>
+        <table name="invariant_tieline" source="invariant_tieline" type="invariant_tieline">
+          <column name="T" />
+          <column name="reaction" />
+          <column name="phase_name" />
+          <column name="x(*)" />
+          <column name="w(*)" />
+        </table>
+      </tables>
+      <graphs>
+        <graph name="2D_Cu-Ni">
+          <plot table_name="Default" xaxis="x(Ni)" yaxis="T" />
+          <plot table_name="tieline" xaxis="x(Ni)" yaxis="T" />
+          <plot table_name="invariant_tieline" xaxis="x(Ni)" yaxis="T" />
+        </graph>
+      </graphs>
+    </output>
+  </calculation>
+</pbfx>

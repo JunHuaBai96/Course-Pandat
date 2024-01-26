@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.computherm.com/schemes/2012">
+  <ItemGroup>
+    <Folder Include="line\Graph" />
+    <Folder Include="line\Table" />
+    <Folder Include="Line Cu-Ni\Graph" />
+    <Folder Include="Line Cu-Ni\Table" />
+    <Folder Include="Line Cu-Ni_1\Graph" />
+    <Folder Include="Line Cu-Ni_1\Table" />
+    <Folder Include="Line Cu-Ni_2\Graph" />
+    <Folder Include="Line Cu-Ni_2\Table" />
+    <Folder Include="Line Cu-Ni_3\Graph" />
+    <Folder Include="Line Cu-Ni_3\Table" />
+    <Folder Include="Line Cu-Ni_4\Graph" />
+    <Folder Include="Line Cu-Ni_4\Table" />
+    <File Include="line\Table\Default.table">
+      <TableColumns>
+        <string>T</string>
+        <string>x(Ni)</string>
+        <string>G(@Liquid)</string>
+        <string>G_id(@Liquid)</string>
+        <string>G_ex(@Liquid)</string>
+      </TableColumns>
+    </File>
+    <File Include="line\Graph\G(liquid).graph">
+      <TableColumns />
+    </File>
+    <File Include="line\Graph\G(liquid）&amp;G_id(liquid）&amp; G_ex(liquid).graph">
+      <TableColumns />
+    </File>
+    <File Include="Line Cu-Ni\Table\Default.table">
+      <TableColumns>
+        <string>T</string>
+        <string>x(Ni)</string>
+        <string>G(@Liquid)</string>
+        <string>G_id(@Liquid)</string>
+        <string>G_ex(@Liquid)</string>
+      </TableColumns>
+    </File>
+    <File Include="Line Cu-Ni\Graph\L0=0.graph">
+      <TableColumns />
+    </File>
+    <File Include="Line Cu-Ni_1\Table\Default.table">
+      <TableColumns />
+    </File>
+    <File Include="Line Cu-Ni_1\Graph\L0=-1000.graph">
+      <TableColumns />
+    </File>
+    <File Include="Line Cu-Ni_2\Table\Default.table">
+      <TableColumns />
+    </File>
+    <File Include="Line Cu-Ni_2\Graph\L1=-1000.graph">
+      <TableColumns />
+    </File>
+    <File Include="Line Cu-Ni_3\Table\Default.table">
+      <TableColumns />
+    </File>
+    <File Include="Line Cu-Ni_3\Graph\L2=-1000.graph">
+      <TableColumns />
+    </File>
+    <File Include="Line Cu-Ni_4\Table\Default.table">
+      <TableColumns />
+    </File>
+    <File Include="Line Cu-Ni_4\Graph\L3=-1000.graph">
+      <TableColumns />
+    </File>
+    <Simulation Include="line" SourceFile="line.pbfx" />
+    <Simulation Include="Line Cu-Ni" SourceFile="Line Cu-Ni.pbfx" />
+    <Simulation Include="Line Cu-Ni_1" SourceFile="Line Cu-Ni_1.pbfx" />
+    <Simulation Include="Line Cu-Ni_2" SourceFile="Line Cu-Ni_2.pbfx" />
+    <Simulation Include="Line Cu-Ni_3" SourceFile="Line Cu-Ni_3.pbfx" />
+    <Simulation Include="Line Cu-Ni_4" SourceFile="Line Cu-Ni_4.pbfx" />
+  </ItemGroup>
+</Project>

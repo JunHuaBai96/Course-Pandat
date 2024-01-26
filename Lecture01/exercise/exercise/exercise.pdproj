@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.computherm.com/schemes/2012">
+  <ItemGroup>
+    <Folder Include="exercise1\Graph" />
+    <Folder Include="exercise1\Table" />
+    <Folder Include="exercise2\Graph" />
+    <Folder Include="exercise2\Table" />
+    <Folder Include="exercise-P29_1\Graph" />
+    <Folder Include="exercise-P29_1\Table" />
+    <Folder Include="exercise-P29_2\Graph" />
+    <Folder Include="exercise-P29_2\Table" />
+    <Folder Include="exercise2_2\Graph" />
+    <Folder Include="exercise2_2\Table" />
+    <Folder Include="exercise2_1\Graph" />
+    <Folder Include="exercise2_1\Table" />
+    <Folder Include="exercise3\Graph" />
+    <Folder Include="exercise3\Table" />
+    <Folder Include="exercise3_append\Graph" />
+    <Folder Include="exercise3_append\Table" />
+    <File Include="exercise1\Table\Default.table">
+      <TableColumns>
+        <string>T</string>
+        <string>G(@BCC)</string>
+        <string>G(@FCC)</string>
+        <string>G(@HCP)</string>
+        <string>G(@LIQUID)</string>
+        <string>Cp(@BCC)</string>
+        <string>Cp(@FCC)</string>
+        <string>Cp(@HCP)</string>
+        <string>Cp(@LIQUID)</string>
+        <string>G(@BCC:HCP[*])</string>
+        <string>G(@FCC:HCP[*])</string>
+        <string>G(@HCP:HCP[*])</string>
+        <string>G(@LIQUID:HCP[*])</string>
+      </TableColumns>
+    </File>
+    <File Include="exercise1\Graph\G.graph">
+      <TableColumns />
+    </File>
+    <File Include="exercise1\Graph\cp.graph">
+      <TableColumns />
+    </File>
+    <File Include="exercise1\Graph\G_HCP.graph">
+      <TableColumns />
+    </File>
+    <File Include="exercise2\Table\Default.table">
+      <TableColumns />
+    </File>
+    <File Include="exercise2\Table\tieline.table">
+      <TableColumns />
+    </File>
+    <File Include="exercise2\Table\invariant.table">
+      <TableColumns />
+    </File>
+    <File Include="exercise2\Table\invariant_tieline.table">
+      <TableColumns />
+    </File>
+    <File Include="exercise2\Graph\T-P.graph">
+      <TableColumns />
+    </File>
+    <File Include="exercise-P29_1\Table\Default.table">
+      <TableColumns>
+        <string>T</string>
+        <string>P</string>
+        <string>phase_name</string>
+        <string>x(Cu)</string>
+        <string>x(Ni)</string>
+        <string>w(Cu)</string>
+        <string>w(Ni)</string>
+        <string>G</string>
+        <string>f(@Fcc)</string>
+        <string>f(@Liquid)</string>
+      </TableColumns>
+    </File>
+    <File Include="exercise-P29_1\Table\tieline.table">
+      <TableColumns />
+    </File>
+    <File Include="exercise-P29_1\Graph\PD_Cu-Ni.graph">
+      <TableColumns />
+    </File>
+    <File Include="exercise-P29_2\Table\thermodynamic_property.table">
+      <TableColumns />
+    </File>
+    <File Include="exercise-P29_2\Graph\G.graph">
+      <TableColumns />
+    </File>
+    <File Include="exercise-P29_2\Graph\H.graph">
+      <TableColumns />
+    </File>
+    <File Include="exercise2_2\Table\Default.table">
+      <TableColumns />
+    </File>
+    <File Include="exercise2_2\Table\tieline.table">
+      <TableColumns />
+    </File>
+    <File Include="exercise2_2\Table\invariant.table">
+      <TableColumns />
+    </File>
+    <File Include="exercise2_2\Table\invariant_tieline.table">
+      <TableColumns />
+    </File>
+    <File Include="exercise2_2\Graph\T-P.graph">
+      <TableColumns />
+    </File>
+    <File Include="exercise2_1\Table\Default.table">
+      <TableColumns>
+        <string>T</string>
+        <string>P</string>
+        <string>phase_name</string>
+        <string>x(Fe)</string>
+        <string>w(Fe)</string>
+        <string>G</string>
+        <string>f(@Bcc)</string>
+        <string>f(@Fcc)</string>
+        <string>f(@Hcp)</string>
+        <string>f(@Liquid)</string>
+        <string>G(@Bcc)</string>
+        <string>G(@Fcc)</string>
+        <string>G(@Hcp)</string>
+        <string>G(@Liquid)</string>
+        <string>Cp(@Bcc)</string>
+        <string>Cp(@Fcc)</string>
+        <string>Cp(@Hcp)</string>
+        <string>Cp(@Liquid)</string>
+        <string>a(Fe:Liquid[Fe])</string>
+        <string>G(:Liquid[*])</string>
+        <string>H(Fe@Bcc:Liquid[Fe])</string>
+        <string>H(Fe@Fcc:Liquid[Fe])</string>
+        <string>H(Fe@Hcp:Liquid[Fe])</string>
+        <string>H(Fe@Liquid:Liquid[Fe])</string>
+        <string>n_kg</string>
+        <string>n_mole</string>
+      </TableColumns>
+    </File>
+    <File Include="exercise2_1\Graph\Cp.graph">
+      <TableColumns />
+    </File>
+    <File Include="exercise2_1\Table\table_output.table">
+      <TableColumns>
+        <string>T</string>
+        <string>P</string>
+        <string>phase_name</string>
+        <string>x(Fe)</string>
+        <string>w(Fe)</string>
+        <string>G(@Bcc)</string>
+        <string>G(@Fcc)</string>
+        <string>G(@Hcp)</string>
+        <string>G(@Liquid)</string>
+        <string>G(@Bcc)-G(@Bcc)</string>
+        <string>G(@Fcc)-G(@Bcc)</string>
+        <string>G(@Hcp)-G(@Bcc)</string>
+        <string>G(@Liquid)-G(@Bcc)</string>
+      </TableColumns>
+    </File>
+    <File Include="exercise2_1\Graph\G.graph">
+      <TableColumns />
+    </File>
+    <File Include="exercise3\Table\Default.table">
+      <TableColumns>
+        <string>T</string>
+        <string>P</string>
+        <string>phase_name</string>
+        <string>x(Cu)</string>
+        <string>x(Ni)</string>
+        <string>w(Cu)</string>
+        <string>w(Ni)</string>
+        <string>G</string>
+        <string>f(@Liquid)</string>
+        <string>G(@Liquid)</string>
+        <string>Cp(@Liquid)</string>
+        <string>a(Cu:Liquid[Cu])</string>
+        <string>a(Ni:Liquid[Ni])</string>
+        <string>G(:Liquid[*])</string>
+        <string>H(@Liquid:Liquid[*])</string>
+        <string>n_kg</string>
+        <string>n_mole</string>
+      </TableColumns>
+    </File>
+    <File Include="exercise3\Graph\G.graph">
+      <TableColumns />
+    </File>
+    <File Include="exercise3\Graph\a.graph">
+      <TableColumns />
+    </File>
+    <File Include="exercise3\Graph\H.graph">
+      <TableColumns />
+    </File>
+    <File Include="exercise3_append\Table\Default.table">
+      <TableColumns>
+        <string>T</string>
+        <string>P</string>
+        <string>phase_name</string>
+        <string>x(Cu)</string>
+        <string>x(Ni)</string>
+        <string>w(Cu)</string>
+        <string>w(Ni)</string>
+        <string>G</string>
+        <string>f(@Liquid)</string>
+        <string>G(@Liquid)</string>
+        <string>a(Cu:Liquid[Cu])</string>
+        <string>a(Ni:Liquid[Ni])</string>
+        <string>G(:Liquid[*])</string>
+        <string>H(@Liquid:Liquid[*])</string>
+        <string>n_kg</string>
+        <string>n_mole</string>
+      </TableColumns>
+    </File>
+    <File Include="exercise3_append\Graph\G_append.graph">
+      <TableColumns />
+    </File>
+    <File Include="exercise3_append\Graph\a_append.graph">
+      <TableColumns />
+    </File>
+    <File Include="exercise3_append\Graph\H_append.graph">
+      <TableColumns />
+    </File>
+    <Simulation Include="exercise1" SourceFile="exercise1.pbfx" />
+    <Simulation Include="exercise2" SourceFile="exercise2.pbfx" />
+    <Simulation Include="exercise2" SourceFile="exercise2.pbfx" />
+    <Simulation Include="exercise-P29_1" SourceFile="exercise-P29_1.pbfx" />
+    <Simulation Include="exercise-P29_2" SourceFile="exercise-P29_2.pbfx" />
+    <Simulation Include="exercise2_2" SourceFile="exercise2_2.pbfx" />
+    <Simulation Include="exercise2_1" SourceFile="exercise2_1.pbfx" />
+    <Simulation Include="exercise3" SourceFile="exercise3.pbfx" />
+    <Simulation Include="exercise3_append" SourceFile="exercise3_append.pbfx" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,25 @@
+<?xml version = "1.0" encoding = "iso-8859-1"?>
+<sdb version = "2020">
+  <Header copyright = "CompuTherm, LLC">
+    <!--Parameters for PanSolidification-->
+    <!--All values of parameters are in SI unit-->
+    <Application name="PanSolidification" version="2020" />
+  </Header>
+
+  <Alloy name="AlMgSi Alloys">
+    <solvent name="Al"/>
+    <primary_phase name="Fcc"/>
+
+    <ParameterTable name="">
+      <Parameter name="coordinate" value="0" description = "geometry of dendrite. 0 for plate; 1 for cylinder; 2 for sphere" />	
+      <Parameter name="interfacial_energy" value="0.167"  description = "interfacial energy, unit = J/m^2"/>
+      <Parameter name="latent_heat" value="1.36e9"  description = "latent heat, unit=J/m^3"/> 
+      <Parameter name="solute_trapping_parameter" value="1e-9"  description = "solute trapping parameter, unit=m"/>
+      <Parameter name="sound_velocity" value="1000"  description = "sound velocity, unit=m/s"/>
+      <Parameter name="coarsening_geometric_factor" value="35"  description = "No unit"/>
+      <Parameter name="dendrite_tip_factor" value="1"  description = "No unit"/>
+      <Parameter name="solid_diffusivity_factor" value="1"  description = "No unit"/>
+      <Parameter name="boundary_layer_factor" value="1"  description = "No unit"/>
+    </ParameterTable>
+  </Alloy>
+</sdb>

@@ -1,0 +1,71 @@
+$case_sensitive
+$database_version AlMg_MB
+Element Al                Fcc  26.982    4577.3    28.322 !
+Element Mg                Hcp  24.305      4998    32.671 !
+
+Function GHSERAL 298.14 -7976.15+137.093038*T-24.3671976*T*ln(T)-0.001884662*T**2-8.77664e-007*T**3+74092*T**(-1); 700 Y
+      -11276.24+223.048446*T-38.5844296*T*ln(T)+0.018531982*T**2-5.764227e-006*T**3+74092*T**(-1); 933.47 Y
+      -11278.378+188.684153*T-31.748192*T*ln(T)-1.230524e+028*T**(-9); 2900 N !
+Function GLIQAL 298.14 11005.029-11.841867*T+7.934e-020*T**7+GHSERAL; 933.6 Y
+      10482.382-11.253974*T+1.231e+028*T**(-9)+GHSERAL; 6000 N !
+Function GBCCAL 298.15 10083-4.813*T+GHSERAL; 6000 N !
+Function GHSERMG 298.15 -8367.34+143.677875*T-26.1849782*T*ln(T)+0.0004858*T**2-1.393669e-006*T**3+78950*T**(-1); 923 Y
+      -14130.185+204.718543*T-34.3088*T*ln(T)+1.038192e+028*T**(-9); 3000 N !
+Function GLIQMG 298.15 8202.24-8.83693*T-8.01759e-020*T**7+GHSERMG; 923 Y
+      8690.32-9.39216*T-1.03819e+028*T**(-9)+GHSERMG; 3000 N !
+
+Type_Definition % SEQ *!
+Type_Definition a GES A_P_D Fcc Magnetic -3  0.28!
+Type_Definition b GES A_P_D Hcp Magnetic -3  0.28!
+
+Phase Liquid % 1 1 !
+Constituent Liquid :Al,Mg:!
+Parameter G(Liquid,Al;0)  298.15 +GLIQAL; 3000 N !
+Parameter G(Liquid,Mg;0)  298.15 +GLIQMG; 3000 N !
+Parameter G(Liquid,Al,Mg;0)  298.15 -12000+8.566*T; 6000 N !
+Parameter G(Liquid,Al,Mg;1)  298.15 1894-3*T; 6000 N !
+Parameter G(Liquid,Al,Mg;2)  298.15 2000; 6000 N !
+Parameter MQ(Liquid&Al,Al;0) 298.15 +R*T*Ln(1.0E-9); 6.00E+3 N !
+Parameter MQ(Liquid&Al,Mg;0) 298.15 -71600+R*T*Ln(9.9E-5); 6.00E+3 N !
+Parameter MQ(Liquid&Mg,Al;0) 298.15 -71600+R*T*Ln(9.9E-5); 6.00E+3 N !
+Parameter MQ(Liquid&Mg,Mg;0) 298.15 +R*T*Ln(1.0E-9); 6.00E+3 N !
+
+Phase Fcc %a 1 1 !
+Constituent Fcc :Al,Mg:!
+Parameter G(Fcc,Al;0)  298.15 +GHSERAL; 3000 N !
+Parameter G(Fcc,Mg;0)  298.15 2600-0.9*T+GHSERMG; 3000 N !
+Parameter G(Fcc,Al,Mg;0)  298.15 4945.7-1.318*T; 6000 N !
+Parameter G(Fcc,Al,Mg;1)  298.15 1594.4-0.973*T; 6000 N !
+
+Phase Hcp %b 1 1 !
+Constituent Hcp :Al,Mg:!
+Parameter G(Hcp,Al;0)  298.15 5481-1.8*T+GHSERAL; 2900 N !
+Parameter G(Hcp,Mg;0)  298.15 +GHSERMG; 3000 N !
+Parameter G(Hcp,Al,Mg;0)  298.15 4063.4-3.243*T; 6000 N !
+Parameter G(Hcp,Al,Mg;1)  298.15 -1642.1; 6000 N !
+Parameter MQ(Hcp&Al,Al;0)  298.15 -79790+R*T*ln(2.38e-005); 6000 N !
+Parameter MQ(Hcp&Al,Mg;0)  298.15 -155000+R*T*ln(0.0039); 6000 N !
+Parameter MQ(Hcp&Mg,Mg;0)  298.15 -138500+R*T*ln(0.000175); 6000 N !
+Parameter MQ(Hcp&Mg,Al;0)  298.15 -98900+R*T*ln(5.2e-007); 6000 N !
+Parameter MQ(Hcp&Al,Al,Mg;0)  298.15 201819-244*T; 6000 N !
+
+Phase AlMg_Beta % 2 89 140 !
+Constituent AlMg_Beta :Mg,Al:Mg,Al:!
+Parameter G(AlMg_Beta,Mg:Al;0)  298.15 -246175-580*T+89*GHSERMG+140*GHSERAL; 6000 N !
+Parameter G(AlMg_Beta,Al:Al;0)  298.15 900000+229*GHSERAL; 6000 N !
+Parameter G(AlMg_Beta,Mg,Al:Al;0)  298.15 -18175+480*T; 6000 N !
+Parameter G(AlMg_Beta,Mg:Mg;0)  298.15 1500000+229*GHSERMG; 6000 N !
+Parameter G(AlMg_Beta,Al:Mg;0)  298.15 950000+89*GHSERAL+140*GHSERMG; 6000 N !
+
+Phase AlMg_Gamma % 3 10 24 24 !
+Constituent AlMg_Gamma :Mg:Al,Mg:Al,Mg:!
+Parameter G(AlMg_Gamma,Mg:Al:Al;0)  298.15 195750-203*T+10*GHSERMG+48*GHSERAL; 6000 N !
+Parameter G(AlMg_Gamma,Mg:Mg:Al;0)  298.15 -105560-101.5*T+34*GHSERMG+24*GHSERAL; 6000 N !
+Parameter G(AlMg_Gamma,Mg:Al:Mg;0)  298.15 568249-276.138*T+34*GHSERMG+24*GHSERAL; 6000 N !
+Parameter G(AlMg_Gamma,Mg:Mg:Mg;0)  298.15 266939-174.638*T+58*GHSERMG; 6000 N !
+Parameter G(AlMg_Gamma,Mg:Al:Al,Mg;0)  298.15 226200-29*T; 6000 N !
+Parameter G(AlMg_Gamma,Mg:Mg:Al,Mg;0)  298.15 226200-29*T; 6000 N !
+
+Phase AlMg_Eps % 2 23 30 !
+Constituent AlMg_Eps :Mg:Al:!
+Parameter G(AlMg_Eps,Mg:Al;0) 298.15 -33658.4-198.86*T+23*GHSERMG+30*GHSERAL; 6000 N !

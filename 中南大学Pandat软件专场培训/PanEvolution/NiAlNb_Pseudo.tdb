@@ -1,0 +1,137 @@
+$ case_sensitive 
+$ database_version NiAlNb_Pseudo 
+
+Element Al                Fcc  26.982      4540      28.3 !
+Element Nb                Bcc  92.906      5220     36.27 !
+Element Ni                Fcc  58.693      4787    29.796 !
+
+Function GHSERAL 298.14 -7976.15+137.093038*T-24.3671976*T*ln(T)-0.001884662*T**2-8.77664e-007*T**3+74092*T**(-1); 700 Y
+      0.000230765-11276.24+223.048446*T-38.5844296*T*ln(T)+0.018531982*T**2-5.764227e-006*T**3+74092*T**(-1); 933.6 Y
+      0.00845315-11278.378+188.684153*T-31.748192*T*ln(T)-1.231e+028*T**(-9); 6000 N !
+Function GHSERNB 298.14 -8519.353+142.045475*T-26.4711*T*ln(T)+0.000203475*T**2-3.50119e-007*T**3+93399*T**(-1); 2750 Y
+      0.0123976-37669.3+271.720843*T-41.77*T*ln(T)+1.52824e+032*T**(-9); 6000 N !
+Function GFCCNB 298.15 13500+1.7*T+GHSERNB; 6000 N !
+Function GHSERNI 298.14 -5179.159+117.854*T-22.096*T*ln(T)-0.0048407*T**2; 1728 Y
+      -0.000384667-27840.655+279.135*T-43.1*T*ln(T)+1.12754e+031*T**(-9); 6000 N !
+Function U1ALNI 298.15 -14556.4+2.945*T; 6000 N !
+
+Type_Definition % SEQ *!
+Type_Definition ( GES A_P_D Fcc Magnetic -3  0.28!
+
+
+Phase Fcc %( 1 1 !
+Constituent Fcc :Al,Nb,Ni:!
+Parameter G(Fcc,Al;0)  298.15 +GHSERAL; 6000 N !
+Parameter G(Fcc,Nb;0)  298.15 +GFCCNB; 6000 N !
+Parameter G(Fcc,Ni;0)  298.15 +GHSERNI; 6000 N !
+Parameter G(Fcc,Al,Nb;0)  298.15 -115000+21.1*T; 5000 N !
+Parameter G(Fcc,Al,Nb;1)  298.15 5000; 5000 N !
+Parameter G(Fcc,Al,Nb;2)  298.15 0; 5000 N !
+Parameter G(Fcc,Al,Ni;0)  298.15 -168343+16*T; 6000 N !
+Parameter G(Fcc,Al,Ni;1)  298.15 34311; 6000 N !
+Parameter G(Fcc,Al,Ni;2)  298.15 4162+27.29*T; 6000 N !
+Parameter G(Fcc,Nb,Ni;0)  298.15 -31400-39*T; 6000 N !
+Parameter G(Fcc,Nb,Ni;1)  298.15 96115-23.075*T; 6000 N !
+Parameter G(Fcc,Al,Nb,Ni;0)  298.15 20000; 6000 N !
+Parameter TC(Fcc,Ni;0)  298.15 633; 6000 N !
+Parameter TC(Fcc,Al,Ni;0)  298.15 -1112; 6000 N !
+Parameter TC(Fcc,Al,Ni;1)  298.15 1745; 6000 N !
+Parameter BMAGN(Fcc,Ni;0)  298.15 0.52; 6000 N !
+
+Parameter MQ(Fcc&Al,Al;0) 298.15 -142000+R*T*LN(1.71e-4); 6000 N !
+Parameter MQ(Fcc&Al,Nb;0) 298.15 -284000+R*T*LN(7.5e-4); 6.000E+3 N !
+Parameter MQ(Fcc&Al,Ni;0) 298.15 -284000+R*T*LN(7.5e-4); 6000 N  !
+Parameter MQ(Fcc&Al,Al,Ni;0) 298.15 -41300-91.2*T; 6.000E+3 N !
+Parameter MQ(Fcc&Nb,Al;0) 298.15 -255333+R*T*LN(7.6071E-5);   6.000E+3 N !
+Parameter MQ(Fcc&Nb,Nb;0) 298.15  -1074328+R*T*LN(8.644E-5);  6.000E+3 N !
+Parameter MQ(Fcc&Nb,Ni;0) 298.15 -215000+R*T*LN(2.0E-006);    6.000E+3 N !
+Parameter MQ(Fcc&Ni,Al;0) 298.15 -145900+R*T*LN(4.4e-4); 6000 N !
+Parameter MQ(Fcc&Ni,Nb;0) 298.15 -287000+R*T*LN(1.0E-4); 6000 N !
+Parameter MQ(Fcc&Ni,Ni;0) 298.15 -287000-69.8*T; 6000 N !
+
+Phase L12_FCC % 2 0.75 0.25 !
+Constituent L12_FCC :Al,Nb,Ni:Al,Nb,Ni:!
+Parameter G(L12_FCC,Al:Al;0)  298.15 +GHSERAL+10; 6000 N !
+Parameter G(L12_FCC,Al:Nb;0)  298.15 0.75*GHSERAL+0.25*GFCCNB-19500+3.96*T; 6000 N !
+Parameter G(L12_FCC,Al:Ni;0)  298.15 0.75*GHSERAL+0.25*GHSERNI+3*U1ALNI+1067+3.74*T; 6000 N !
+Parameter G(L12_FCC,Nb:Al;0)  298.15 0.75*GFCCNB+0.25*GHSERAL-19500+3.96*T; 6000 N !
+Parameter G(L12_FCC,Nb:Nb;0)  298.15 +GFCCNB; 6000 N !
+Parameter G(L12_FCC,Nb:Ni;0)  298.15 0.75*GFCCNB+0.25*GHSERNI-20000+5*T; 6000 N !
+Parameter G(L12_FCC,Ni:Al;0)  298.15 0.75*GHSERNI+0.25*GHSERAL+3*U1ALNI+687-3.74*T-25810+20*T-2500; 6000 N !
+Parameter G(L12_FCC,Ni:Nb;0)  298.15 0.75*GHSERNI+0.25*GFCCNB-34800+2.5*T+1000; 6000 N !
+Parameter G(L12_FCC,Ni:Ni;0)  298.15 +GHSERNI; 6000 N !
+Parameter G(L12_FCC,Al,Nb:Al;0)  298.15 -35000+10*T; 6000 N !
+Parameter G(L12_FCC,Al,Nb:Nb;0)  298.15 -35000+10*T; 6000 N !
+Parameter G(L12_FCC,Nb:Al,Nb;0)  298.15 -7093+1.32*T; 6000 N !
+Parameter G(L12_FCC,Al:Al,Nb;0)  298.15 -7093+1.32*T; 6000 N !
+Parameter G(L12_FCC,Al,Ni:Al;0)  298.15 6*U1ALNI-11313+16.8303*T; 6000 N !
+Parameter G(L12_FCC,Al,Ni:Ni;0)  298.15 6*U1ALNI-13019-16.8303*T; 6000 N !
+Parameter G(L12_FCC,Al:Al,Ni;0)  298.15 12084+5.61*T; 6000 N !
+Parameter G(L12_FCC,Ni:Al,Ni;0)  298.15 11516-5.61*T; 6000 N !
+Parameter G(L12_FCC,Al,Ni:Al;1)  298.15 36364+16.8303*T; 6000 N !
+Parameter G(L12_FCC,Al,Ni:Ni;1)  298.15 -34658+16.8303*T; 6000 N !
+Parameter G(L12_FCC,Al:Al,Ni;1)  298.15 3978+0.6233*T; 6000 N !
+Parameter G(L12_FCC,Ni:Al,Ni;1)  298.15 -3914+0.6233*T; 6000 N !
+Parameter G(L12_FCC,Al,Ni:Al;2)  298.15 26633; 6000 N !
+Parameter G(L12_FCC,Al,Ni:Ni;2)  298.15 26633; 6000 N !
+Parameter G(L12_FCC,Al:Al,Ni;2)  298.15 329; 6000 N !
+Parameter G(L12_FCC,Ni:Al,Ni;2)  298.15 329; 6000 N !
+Parameter G(L12_FCC,Al,Ni:Al,Ni;0)  298.15 -71023; 6000 N !
+Parameter G(L12_FCC,Nb,Ni:Nb;0)  298.15 4719-5.4*T; 6000 N !
+Parameter G(L12_FCC,Nb,Ni:Ni;0)  298.15 4719-5.4*T; 6000 N !
+Parameter G(L12_FCC,Nb:Nb,Ni;0)  298.15 4969-0.6*T; 6000 N !
+Parameter G(L12_FCC,Ni:Nb,Ni;0)  298.15 4969-0.6*T; 6000 N !
+Parameter G(L12_FCC,Al,Ni:Nb;0)  298.15 -60000+20*T; 6000 N !
+Parameter G(L12_FCC,Al,Nb:Ni;0)  298.15 -35000+10*T; 6000 N !
+Parameter G(L12_FCC,Al:Nb,Ni;0)  298.15 3474+1.87*T; 6000 N !
+Parameter G(L12_FCC,Nb:Al,Ni;0)  298.15 10000; 6000 N !
+Parameter G(L12_FCC,Ni:Al,Nb;0)  298.15 -9400+3000; 6000 N !
+Parameter G(L12_FCC,Ni:Al,Nb;1)  298.15 -5000; 6000 N !
+Parameter G(L12_FCC,Nb,Ni:Al;0)  298.15 10000; 6000 N !
+Parameter G(L12_FCC,Ni:Al,Nb,Ni;0)  298.15 -15000; 6000 N !
+
+
+Phase Delta % 2 3 1 !
+Constituent Delta :Al,Nb,Ni:Al,Nb,Ni:!
+Parameter G(Delta,Al:Al;0)  298.15 0; 6000 N !
+Parameter G(Delta,Nb:Al;0)  298.15 0+3*GHSERNB+GHSERAL; 6000 N !
+Parameter G(Delta,Nb:Nb;0)  298.15 4*GHSERNB+20000; 6000 N !
+Parameter G(Delta,Nb:Ni;0)  298.15 181202-19.3329*T+3*GHSERNB+GHSERNI; 6000 N !
+Parameter G(Delta,Ni:Al;0)  298.15 -105000+12*T+3*GHSERNI+GHSERAL; 6000 N !
+Parameter G(Delta,Ni:Ni;0)  298.15 4*GHSERNI+20000; 6000 N !
+Parameter G(Delta,Ni:Nb;0)  298.15 -236202+69.3329*T+3*GHSERNI+GHSERNB; 6000 N !
+Parameter G(Delta,Al:Al,Nb;0)  298.15 -55000; 6000 N !
+Parameter G(Delta,Nb:Al,Nb;0)  298.15 -55000; 6000 N !
+Parameter G(Delta,Nb:Nb,Ni;0)  298.15 -12318.5; 6000 N !
+Parameter G(Delta,Nb,Ni:Nb;0)  298.15 54022.5; 6000 N !
+Parameter G(Delta,Nb,Ni:Ni;0)  298.15 54022.5; 6000 N !
+Parameter G(Delta,Ni:Nb,Ni;0)  298.15 -12318.5; 6000 N !
+Parameter G(Delta,Al:Nb,Ni;0)  298.15 7000; 6000 N !
+Parameter G(Delta,Nb,Ni:Al;0)  298.15 45000; 6000 N !
+Parameter G(Delta,Ni:Al,Nb;0)  298.15 -55000; 6000 N !
+
+
+Phase Gamma_double_prime % 2 3 1 !
+Constituent Gamma_double_prime :Al,Nb,Ni:Al,Nb,Ni:!
+Parameter G(Gamma_double_prime,Al:Al;0)  298.15 0+3*GHSERNB+GHSERAL+100; 6000 N !
+Parameter G(Gamma_double_prime,Nb:Al;0)  298.15 0+3*GHSERNB+GHSERAL+100; 6000 N !
+Parameter G(Gamma_double_prime,Nb:Nb;0)  298.15 4*GHSERNB+20000+100; 6000 N !
+Parameter G(Gamma_double_prime,Nb:Ni;0)  298.15 181202-19.3329*T+3*GHSERNB+GHSERNI+100; 6000 N !
+Parameter G(Gamma_double_prime,Ni:Al;0)  298.15 -105000+12*T+3*GHSERNI+GHSERAL+100; 6000 N !
+Parameter G(Gamma_double_prime,Ni:Ni;0)  298.15 4*GHSERNI+20000+100; 6000 N !
+Parameter G(Gamma_double_prime,Ni:Nb;0)  298.15 -137000+19.5*T+3*GHSERNI+GHSERNB+100-90000+50*T; 6000 N !
+Parameter G(Gamma_double_prime,Al:Al,Nb;0)  298.15 -55000; 6000 N !
+Parameter G(Gamma_double_prime,Nb:Al,Nb;0)  298.15 -55000; 6000 N !
+Parameter G(Gamma_double_prime,Nb:Nb,Ni;0)  298.15 -12318.5; 6000 N !
+Parameter G(Gamma_double_prime,Nb,Ni:Nb;0)  298.15 54022.5; 6000 N !
+Parameter G(Gamma_double_prime,Nb,Ni:Ni;0)  298.15 54022.5; 6000 N !
+Parameter G(Gamma_double_prime,Ni:Nb,Ni;0)  298.15 -12318.5; 6000 N !
+Parameter G(Gamma_double_prime,Al:Nb,Ni;0)  298.15 7000; 6000 N !
+Parameter G(Gamma_double_prime,Nb,Ni:Al;0)  298.15 45000; 6000 N !
+Parameter G(Gamma_double_prime,Ni:Al,Nb;0)  298.15 -55000; 6000 N !
+
+Phase Composite % 3 0.09 0.11 0.8 !
+Constituent Composite :Al:Nb:Ni:!
+Parameter G(Composite,Al:Nb:Ni;0)  298.15 -33000+0.09*GHSERAL+0.11*GHSERNB+0.8*GHSERNI; 6000 N !
+
+

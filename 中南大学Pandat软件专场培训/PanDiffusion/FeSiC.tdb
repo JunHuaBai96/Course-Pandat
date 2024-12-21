@@ -1,0 +1,85 @@
+$  case_sensitive 
+$  database_version FeSiC
+Element         /-          ELECTRON_GAS         0         0         0 !
+Element          C              Graphite    12.011      1054    5.7423 !
+Element         Fe                   Bcc    55.847      4489     27.28 !
+Element         Si               Diamond    28.086      3217     18.81 !
+Element         Va                VACUUM         0         0         0 !
+
+
+Function GHSERC 298.15   -17368.441+170.73*T-24.3*T*ln(T)-4.723e-04*T**2+2562600*T**(-1)-2.643e+08*T**(-2)+1.2e+10*T**(-3); 6000 N !
+Function GHSERFE 298.15   +1225.7+124.134*T-23.5143*T*ln(T)-0.00439752*T**2-5.8927e-008*T**3+77359*T**(-1); 1811 Y
+    +0.00608092-25383.581+299.31255*T-46*T*ln(T)+2.2960305e+31*T**(-9); 6000 N !
+Function GFCCFE 298.15   -1462.4+8.282*T-1.15*T*ln(T)+6.4e-04*T**2+GHSERFE; 1811 Y
+    +0.00304023-27097.396+300.25256*T-46*T*ln(T)+2.78854e+31*T**(-9); 6000 N !
+Function GHSERSI 298.15   -8162.609+137.236859*T-22.8317533*T*ln(T)-0.001912904*T**2-3.552e-09*T**3+176667*T**(-1); 1687 Y
+    -0.00171993-9457.642+167.281367*T-27.196*T*ln(T)-4.20369e+30*T**(-9); 6000 N !
+Function GBCCSI 298.15   +47000-22.5*T+GHSERSI; 6000 N !
+Function GFCCSI 298.15   +51000-21.8*T+GHSERSI; 6000 N !
+
+Type_Definition + GES AMEND_PHASE_DESCRIPTION Fcc MAGNETIC -3 0.28 !
+Type_Definition - GES AMEND_PHASE_DESCRIPTION Bcc MAGNETIC -1 0.4 !
+
+Default_Command DEF_SYS_ELEMENT Va !
+
+Phase Bcc %- 2 1 3 !
+Constituent Bcc :Fe,Si:C,Va:!
+    Parameter G(Bcc,Fe:Va;0) 	298.15   +GHSERFE; 6000 N !
+    Parameter G(Bcc,Si:Va;0) 	298.15   +GBCCSI; 3600 N !
+    Parameter G(Bcc,Fe:C;0)  	298.15   +322050+75.667*T+GHSERFE+3*GHSERC; 6000 N !
+    Parameter G(Bcc,Si:C;0)  	298.15   +369050-50*T+GHSERSI+3*GHSERC; 6000 N !
+    Parameter G(Bcc,Fe:C,Va;0) 	298.15   +26394.2-354.481*T+20*T*ln(T); 6000 N !
+    Parameter G(Bcc,Fe,Si:Va;0) 298.15   -153151.1+46.48*T; 6000 N !
+    Parameter G(Bcc,Fe,Si:Va;1) 298.15   -92352; 6000 N !
+    Parameter G(Bcc,Fe,Si:Va;2) 298.15   +62240; 6000 N !
+    Parameter G(Bcc,Fe,Si:C;0) 	298.15   +78866; 6000 N !
+    Parameter BMAGN(Bcc,Fe:C;0) 298.15   +2.22; 6000 N !
+    Parameter BMAGN(Bcc,Fe:Va;0) 298.15  +2.22; 6000 N !
+    Parameter TC(Bcc,Fe:C;0)  298.15     +1043; 6000 N !
+    Parameter TC(Bcc,Fe:Va;0) 298.15     +1043; 6000 N !
+    Parameter TC(Bcc,Fe,Si:Va;1) 298.15   +504; 6000 N !
+    Parameter MQ(Bcc&C,Fe:C;0) 298.15     +72007-16.008*T+R*T*LN(4.529E-7); 6000 N !
+    Parameter MQ(Bcc&C,Si:C;0) 298.15     -149000-80*T; 6000 N !
+    Parameter MQ(Bcc&C,Fe:Va;0) 298.15    -147723+32.809*T+R*T*LN(4.529E-7); 6000 N !
+    Parameter MQ(Bcc&C,Si:Va;0) 298.15    -149000-80*T; 6000 N !
+    Parameter MQ(Bcc&Fe,Fe:C;0) 298.15    -343036.59+R*T*LN(15); 1185 Y -218000+0.000915916-83*T; 6000 N !
+    Parameter MQ(Bcc&Fe,Si:C;0) 298.15     -229100+R*T*LN(1.7E-4); 6000 N !
+    Parameter MQ(Bcc&Fe,Fe:Va;0) 298.15     -343036.59+R*T*LN(15); 1185 Y -218000+0.000915916-83*T; 6000 N !
+    Parameter MQ(Bcc&Fe,Si:Va;0) 298.15     -229100+R*T*LN(1.7E-4); 6000 N !
+    Parameter MQ(Bcc&Si,Fe:C;0) 298.15     -229100+R*T*LN(1.7E-4); 6000 N !
+    Parameter MQ(Bcc&Si,Si:C;0) 298.15     -275359-73*T; 6000 N !
+    Parameter MQ(Bcc&Si,Fe:Va;0) 298.15     -229100+R*T*LN(1.7E-4); 6000 N !
+    Parameter MQ(Bcc&Si,Si:Va;0) 298.15     -275359-73*T; 6000 N !
+
+Phase Fcc %+ 2 1 1 !
+Constituent Fcc :Fe,Si:C,Va:!
+    Parameter G(Fcc,Fe:Va;0) 298.15   +GFCCFE; 6000 N !
+    Parameter G(Fcc,Si:Va;0) 298.15   +GFCCSI; 3600 N !
+    Parameter G(Fcc,Fe:C;0)  298.15   +77207-15.877*T+GFCCFE+GHSERC; 6000 N !
+    Parameter G(Fcc,Si:C;0)  298.15   -20510+38.7*T+GHSERSI+GHSERC; 6000 N !
+    Parameter G(Fcc,Fe:C,Va;0)  298.15    -34671; 6000 N !
+    Parameter G(Fcc,Fe,Si:Va;0) 298.15    -125248+41.116*T; 6000 N !
+    Parameter G(Fcc,Fe,Si:Va;1) 298.15    -142708; 6000 N !
+    Parameter G(Fcc,Fe,Si:Va;2) 298.15    +89907; 6000 N !
+    Parameter G(Fcc,Fe,Si:C;0)  298.15    +143219.9+39.31*T; 6000 N !
+    Parameter G(Fcc,Fe,Si:C;1)  298.15    -216320.5; 6000 N !
+    
+    Parameter BMAGN(Fcc,Fe:C;0) 298.15    -2.1; 6000 N !
+    Parameter BMAGN(Fcc,Fe:Va;0) 298.15   -2.1; 6000 N !
+    Parameter TC(Fcc,Fe:C;0) 298.15       -201; 6000 N !
+    Parameter TC(Fcc,Fe:Va;0) 298.15      -201; 6000 N !
+    Parameter MQ(Fcc&C,Fe:C;0) 298.15      +72007-16.008*T+R*T*LN(4.529e-7); 6000 N !
+    Parameter MQ(Fcc&C,Si:C;0) 298.15      -150000-80*T; 6000 N !
+    Parameter MQ(Fcc&C,Fe:Va;0) 298.15     -147723+32.809*T+R*T*LN(4.529E-7); 6000 N !
+    Parameter MQ(Fcc&C,Si:Va;0) 298.15     -150000-80*T; 6000 N !
+    Parameter MQ(Fcc&Fe,Fe:C;0) 298.15     -286000+R*T*LN(7.0E-5); 6000 N !
+    Parameter MQ(Fcc&Fe,Si:C;0) 298.15     -286000-79.55*T; 6000 N !
+    Parameter MQ(Fcc&Fe,Fe:Va;0) 298.15    -286000+R*T*LN(7.0E-5); 6000 N !
+    Parameter MQ(Fcc&Fe,Si:Va;0) 298.15    -286000-79.55*T; 6000 N !
+    Parameter MQ(Fcc&Si,Fe:C;0) 298.15     -228000-110*T; 6000 N !
+    Parameter MQ(Fcc&Si,Si:*;0) 298.15     -294000-125*T; 6000 N !
+    Parameter MQ(Fcc&Si,Fe:Va;0) 298.15    -228000-110*T; 6000 N !
+    
+ Phase Graphite % 1 1 !
+Constituent Graphite :C:!
+  Parameter G(Graphite,C;0)  298.15  +GHSERC; 6000 N !  

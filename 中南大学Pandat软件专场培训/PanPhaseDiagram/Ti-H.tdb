@@ -1,0 +1,90 @@
+$  case_sensitive 
+$  database_version Ti-H_TH 
+$  assessment (H,Ti) 10 !
+
+
+Element          H      1/2_MOLE_H2(GAS)     1.008      4234    65.285 !
+Element         Ti                   Hcp     47.88      4810    30.648 !
+Element         /-          ELECTRON_GAS         0         0         0 !
+Element         Va                VACUUM         0         0         0 !
+
+Species              H2                   (H)2 !
+Species             Ti2                   (Ti)2 !
+Species            TiH2                   (Ti)1(H)2 !
+
+Function G_Ti_GAS 298.15     464919.34984+43.49894*T-35.43727*T*ln(T)+0.02879*T**2-1.29186E-5*T**3+15620.48756*T**(-1); 298.15 Y
+    467338.76187-21.93902*T-24.03752*T*ln(T)+0.00312*T**2-5.58917E-7*T**3-80135.98326*T**(-1); 1800 Y
+    491765.2036-179.28512*T-2.88857*T*ln(T)-0.00533*T**2+1.03515E-7*T**3-5.52347E6*T**(-1); 4500 Y
+    385458.3624+71.89209*T-31.94311*T*ln(T)-0.00208*T**2+4.5097E-8*T**3+6.3471E7*T**(-1); 10000 N !
+Function G_Ti2_GAS 298.15    808934.93335-118.85593*T-16.014*T*ln(T)-0.04846*T**2+1.43265E-5*T**3-34468.94465*T**(-1); 600 Y
+    794507.0316+138.92396*T-57.44464*T*ln(T)+0.00813*T**2-9.27104E-7*T**3+984964.89124*T**(-1); 1500 Y
+    794975.99142+79.57488*T-48.08735*T*ln(T)-2.08006e-4*T**2+1.52778e-7*T**3+2.52724E6*T**(-1); 3050 Y
+    779075.88673+193.04758*T-63.09608*T*ln(T)+0.00453*T**2-9.56488E-8*T**3+2.67402E6*T**(-1); 10000 N !
+Function G_H_GAS 298.15   +211801.621+24.4989816*T-20.78611*T*LN(T); 6000 N !
+Function G_H2_GAS 298.15   -9522.97293+78.5273873*T-31.35707*T*LN(T)+0.0027589925*T**2+56582.3*T**(-1)-7.46390667e-007*T**3; 1000 Y
+    +180.10884-15.6128262*T-17.84857*T*LN(T)-0.00584168*T**2+3.14618667e-007*T**3-1280036*T**(-1); 2100 Y
+    -18840.1661+92.3120249*T-32.05082*T*LN(T)-0.0010728235*T**2+1.14281783e-008*T**3+3561002.5*T**(-1); 3000 N !
+Function GLIQH 298.15    +8035+25*T+2*T*LN(T)+0.5*G_H2_GAS; 6000 N !
+Function GHSERTI 298.15     -8059.921+133.687208*T-23.9933*T*LN(T)-.004777975*T**2+1.06716E-07*T**3+72636*T**(-1); 900 Y
+    0.000348124-7811.815+133.060068*T-23.9887*T*LN(T)-.0042033*T**2-9.0876E-08*T**3+42680*T**(-1); 1155 Y
+    0.000677705+908.837+67.048538*T-14.9466*T*LN(T)-.0081465*T**2+2.02715E-07*T**3-1477660*T**(-1); 1941 Y
+    -0.00285235-124526.786+638.878871*T-87.2182461*T*LN(T)+.008204849*T**2-3.04747E-07*T**3+36699805*T**(-1); 4000 N !
+Function GBCCTI 298.12     -1272.064+134.78618*T-25.5768*T*LN(T)-6.63845E-04*T**2-2.78803E-07*T**3+7208*T**(-1); 1155 Y
+    0.00155652+6667.385+105.438379*T-22.3771*T*LN(T)+.00121707*T**2-8.4534E-07*T**3-2002750*T**(-1); 1940.99 Y
+    0.00341903+26483.26-182.354471*T+19.0900905*T*LN(T)-.02200832*T**2+1.228863E-06*T**3+1400501*T**(-1); 4000 N !
+Function GLIQTI 298.15     +12194.415-6.980938*T+GHSERTI; 1300 Y
+    0.0747915+368610.36-2620.99904*T+357.005867*T*LN(T)-.155262855*T**2+1.2254402E-05*T**3-65556856*T**(-1)+GHSERTI; 1941 Y
+    -0.0282309+104639.72-340.070171*T+40.9282461*T*LN(T)-.008204849*T**2+3.04747E-07*T**3-36699805*T**(-1)+GHSERTI; 6000 N !
+Function GFCCTI 298.15     +GHSERTI+6000-0.1*T; 5000 N !
+Function RTLNP 298.15    +R*T*ln(1e-005*P); 6000 N !
+
+
+Type_Definition ( GES AMEND_PHASE_DESCRIPTION Bcc MAGNETIC -1 0.4 !
+Type_Definition ) GES AMEND_PHASE_DESCRIPTION Hcp MAGNETIC -3 0.28 !
+Type_Definition * GES AMEND_PHASE_DESCRIPTION Fcc MAGNETIC -3 0.28 !
+
+
+Define_System_Default SPECIE 2 !
+
+Default_Command DEF_SYS_ELEMENT Va !
+
+Phase Gas:G % 1 1 !
+Constituent Gas :H,H2,Ti,Ti2:!
+    Parameter G(Gas,H;0) 298.15 	+G_H_GAS+RTLNP; 6000 N !
+    Parameter G(Gas,H2;0) 298.15 	+G_H2_GAS+RTLNP; 6000 N !
+    Parameter G(Gas,Ti;0) 298.15   +G_Ti_GAS+RTLNP; 6000 N !
+    Parameter G(Gas,Ti2;0) 298.15   +G_Ti2_GAS+RTLNP; 6000 N !
+
+Phase Liquid % 1 1 !
+Constituent Liquid :H,Ti,TiH2:!
+    Parameter G(Liquid,H;0) 298.15     +GLIQH; 2900 N !
+    Parameter G(Liquid,Ti;0) 298.15     +GLIQTI; 4000 N !
+    Parameter G(Liquid,TiH2;0) 298.15   G_H2_GAS+GHSERTI+26000+20*T; 6000 N !
+    Parameter G(Liquid,Ti,TiH2;0) 298.15   -58700; 6000 N !
+    Parameter G(Liquid,Ti,TiH2;1) 298.15   +16000; 6000 N !
+    Parameter G(Liquid,TiH2,H;0) 298.15   -104000; 6000 N !
+
+Phase Bcc %( 2 1 3 !
+Constituent Bcc :Ti:H,Va:!
+    Parameter G(Bcc,Ti:Va;0) 298.15     GBCCTI; 4000 N !
+    Parameter G(Bcc,Ti:H;0) 298.15  -7520+20*T-126553-222.756*T+56.7927*T*ln(T)+GHSERTI+1.5*G_H2_GAS; 6000 N !
+    Parameter G(Bcc,Ti:H,Va;0) 298.15  -6000-46276.3-9.18758*T; 6000 N !
+    Parameter G(Bcc,Ti:H,Va;1) 298.15  -52192.9+46.1707*T; 6000 N !
+
+Phase Fcc %* 2 1 1 !
+Constituent Fcc :Ti:H,Va:!
+    Parameter G(Fcc,Ti:Va;0) 298.15     	+6000-.1*T+GHSERTI; 4000 N !
+    Parameter G(Fcc,Ti:H;0) 298.15    15000+40*T+GFCCTI+0.5*G_H2_GAS; 6000 N !
+
+Phase Hcp %) 2 1 0.5 !
+Constituent Hcp :Ti:H,Va:!
+    Parameter G(Hcp,Ti:Va;0) 298.15    +GHSERTI; 3600 N !
+    Parameter G(Hcp,Ti:H;0) 298.15    +5588-7*T+64310-766.9133*T+103.9079*T*ln(T)+584*7-7*T+GHSERTI+0.25*G_H2_GAS; 6000 N !
+    Parameter G(Hcp,Ti:H,Va;0) 298.15    -21155; 6000 N !
+
+Phase TH2 % 2 1 2 !
+Constituent TH2 :Ti:H,Va:!
+    Parameter G(TH2,Ti:Va;0) 298.15   GFCCTI; 6000 N !
+    Parameter G(TH2,Ti:H;0) 298.15   GFCCTI+G_H2_GAS-141748+130.601*T-8265+15*T; 6000 N !
+    Parameter G(TH2,Ti:H,Va;0) 298.15   8229.73; 6000 N !
+    Parameter G(TH2,Ti:H,Va;1) 298.15   -17080.7; 6000 N !

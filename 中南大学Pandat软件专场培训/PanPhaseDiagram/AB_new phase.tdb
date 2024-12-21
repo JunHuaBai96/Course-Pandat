@@ -1,0 +1,5 @@
+ $ this is an example to add new phase to the original database   
+	
+Phase AB % 2 0.5 0.5 !
+Constituent AB :A:B:!
+    Parameter G(AB,A:B;0) 298.15  -10000+6*T; 6000 N !

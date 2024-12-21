@@ -1,0 +1,238 @@
+$  case_sensitive 
+$  database_version Ni-Al-Cr
+
+Element         /-          ELECTRON_GAS         0         0         0 !
+Element         Al                FCC_A1    26.982      4540      28.3 !
+Element         Cr                BCC_A2    51.996      4050    23.543 !
+Element         Ni                FCC_A1    58.693      4787    29.796 !
+Element         Va                VACUUM         0         0         0 !
+
+Function GHSERAL 298.15   -7976.15+137.093038*T-24.3671976*T*LN(T)-.001884662*T**2-8.77664E-07*T**3+74092*T**(-1); 700 Y
+    +0.000230765-11276.24+223.048446*T-38.5844296*T*LN(T)+.018531982*T**2-5.764227E-06*T**3+74092*T**(-1); 933.6 Y
+    +0.00845315-11278.378+188.684153*T-31.748192*T*LN(T)-1.231E+28*T**(-9); 6000 N !
+Function GBCCAL 298.15   +10083-4.813*T+GHSERAL; 6000 N !
+Function GLIQAL 298.15   +11005.029-11.841867*T+7.934E-20*T**7+GHSERAL; 933.59 Y
+    +0.0917168+10482.282-11.253974*T+1.231e+28*T**(-9)+GHSERAL; 6000 N !
+Function GHSERCR 298.15   -8856.94+157.48*T-26.908*T*LN(T)+.00189435*T**2-1.47721E-06*T**3+139250*T**(-1); 2180 Y
+    +0.00342466-34869.344+344.18006*T-50.0*T*LN(T)-2.88526E+32*T**(-9); 6000 N !
+Function GFCCCR 298.15   +7284+.163*T+GHSERCR; 6000 N !
+Function GLIQCR 298.15   +24339.955-11.420225*T+2.37615E-21*T**7+GHSERCR; 2180 Y
+    -0.137223+18409.36-8.563683*T+2.88526E+32*T**(-9)+GHSERCR; 6000 N !
+Function GHSERNI 298.15   -5179.159+117.854*T-22.096*T*LN(T)-.0048407*T**2; 1728 Y
+    -0.000384667-27840.655+279.135*T-43.1*T*LN(T)+1.12754E+31*T**(-9); 6000 N !
+Function GBCCNI 298.15   +8715.084-3.556*T+GHSERNI; 6000 N !
+Function GLIQNI 298.15   +16414.686-9.397*T-3.82318E-21*T**7+GHSERNI; 1728 Y
+    -0.0796717+18290.88-10.537*T-1.12754E+31*T**(-9)+GHSERNI; 6000 N !
+Function U1ALCR 298.15   +7910; 6000 N !
+Function U1ALNI 298.15   -14556.4+2.945*T; 6000 N !
+Function U1CRNI 298.15   -3831; 6000 N !
+
+Type_Definition & GES AMEND_PHASE_DESCRIPTION Bcc MAGNETIC -1 0.4 !
+Type_Definition ( GES AMEND_PHASE_DESCRIPTION Fcc MAGNETIC -3 0.28 !
+Type_Definition M GES AMEND_PHASE_DESCRIPTION B2 MAGNETIC -1 0.4 !
+
+Define_System_Default SPECIE 2 !
+
+Default_Command DEF_SYS_ELEMENT Va !
+
+Phase Liquid:L % 1 1 !
+Constituent Liquid :Al,Cr,Ni:!
+    Parameter G(Liquid,Al;0) 298.15   +GLIQAL; 6000 N !
+    Parameter G(Liquid,Cr;0) 298.15   +GLIQCR; 6000 N !
+    Parameter G(Liquid,Ni;0) 298.15   +GLIQNI; 6000 N !
+    Parameter G(Liquid,Al,Cr;0) 298.15   -29000; 6000 N !
+    Parameter G(Liquid,Al,Cr;1) 298.15   -11000; 6000 N !
+    Parameter G(Liquid,Al,Ni;0) 298.15   -197088+30.353*T; 6000 N !
+    Parameter G(Liquid,Al,Ni;1) 298.15   +5450; 6000 N !
+    Parameter G(Liquid,Al,Ni;2) 298.15   +54624-11.383*T; 6000 N !
+    Parameter G(Liquid,Cr,Ni;0) 298.15   +318-7.3318*T; 6000 N !
+    Parameter G(Liquid,Cr,Ni;1) 298.15   +16941-6.3696*T; 6000 N !
+    Parameter G(Liquid,Al,Cr,Ni;0) 298.15   +8257; 6000 N !
+
+Phase Al11Cr2 % 3 10 1 2 !
+Constituent Al11Cr2 :Al:Al:Cr:!
+    Parameter G(Al11Cr2,Al:Al:Cr;0) 298.15   -175500+25.805*T+11*GHSERAL+2*GHSERCR; 6000 N !
+
+Phase Al13Cr2 % 2 13 2 !
+Constituent Al13Cr2 :Al:Cr:!
+    Parameter G(Al13Cr2,Al:Cr;0) 298.15   -174405+22.2*T+13*GHSERAL+2*GHSERCR; 6000 N !
+
+Phase Al3Ni % 2 0.75 0.25 !
+Constituent Al3Ni :Al:Ni:!
+    Parameter G(Al3Ni,Al:Ni;0) 298.15   -40463+5.312*T+.75*GHSERAL+.25*GHSERNI; 6000 N !
+
+Phase Al3Ni2 % 3 3 2 1 !
+Constituent Al3Ni2 :Al:Al,Ni:Ni,Va:!
+    Parameter G(Al3Ni2,Al:Al:Ni;0) 298.15   -41219+2.792*T+5*GBCCAL+GBCCNI; 6000 N !
+    Parameter G(Al3Ni2,Al:Ni:Ni;0) 298.15   -428055+71.808*T+3*GBCCAL+3*GBCCNI; 6000 N !
+    Parameter G(Al3Ni2,Al:Al:Va;0) 298.15   +30000-3*T+5*GBCCAL; 6000 N !
+    Parameter G(Al3Ni2,Al:Ni:Va;0) 298.15   -356836+66.079*T+3*GBCCAL+2*GBCCNI; 6000 N !
+    Parameter G(Al3Ni2,Al:Al,Ni:Ni;0) 298.15   -38157; 6000 N !
+    Parameter G(Al3Ni2,Al:Al:Ni,Va;0) 298.15   -23319; 6000 N !
+    Parameter G(Al3Ni2,Al:Ni:Ni,Va;0) 298.15   -23319; 6000 N !
+    Parameter G(Al3Ni2,Al:Al,Ni:Va;0) 298.15   -38157; 6000 N !
+
+Phase Al3Ni5 % 2 0.375 0.625 !
+Constituent Al3Ni5 :Al:Ni:!
+    Parameter G(Al3Ni5,Al:Ni;0) 298.15   -54795+5.292*T+.375*GHSERAL+.625*GHSERNI; 6000 N !
+
+Phase Al4Cr % 2 4 1 !
+Constituent Al4Cr :Al:Cr:!
+    Parameter G(Al4Cr,Al:Cr;0) 298.15   -89025+19.05*T+4*GHSERAL+GHSERCR; 6000 N !
+
+Phase Al8Cr5_H % 2 8 5 !
+Constituent Al8Cr5_H :Al:Cr:!
+    Parameter G(Al8Cr5_H,Al:Cr;0) 298.15   -147732-58.5*T+8*GHSERAL+5*GHSERCR; 6000 N !
+
+Phase Al8Cr5_L % 2 8 5 !
+Constituent Al8Cr5_L :Al:Cr:!
+    Parameter G(Al8Cr5_L,Al:Cr;0) 298.15   -229515+8*GHSERAL+5*GHSERCR; 6000 N !
+
+Phase Al9Cr4_H % 2 9 4 !
+Constituent Al9Cr4_H :Al:Cr:!
+    Parameter G(Al9Cr4_H,Al:Cr;0) 298.15   -134433-56.16*T+9*GHSERAL+4*GHSERCR; 6000 N !
+
+Phase Al9Cr4_L % 2 9 4 !
+Constituent Al9Cr4_L :Al:Cr:!
+    Parameter G(Al9Cr4_L,Al:Cr;0) 298.15   -230750+16.094*T+9*GHSERAL+4*GHSERCR; 6000 N !
+
+Phase AlCr2 % 2 1 2 !
+Constituent AlCr2 :Al:Cr:!
+    Parameter G(AlCr2,Al:Cr;0) 298.15   -32700-8.79*T+GHSERAL+2*GHSERCR; 6000 N !
+
+Phase B2 %M 2 1 1 !
+Constituent B2 :Al,Cr,Ni:Al,Cr,Ni,Va:!
+    Parameter G(B2,Al:Al;0) 298.15   +2*GBCCAL; 6000 N !
+    Parameter G(B2,Al:Cr;0) 298.15   +GHSERCR+GBCCAL; 6000 N !
+    Parameter G(B2,Al:Ni;0) 298.15   -152685+23.936*T+GBCCAL+GBCCNI; 6000 N !
+    Parameter G(B2,Al:Va;0) 298.15   +10000-T+GBCCAL; 6000 N !
+    Parameter G(B2,Cr:Cr;0) 298.15   +100+2*GHSERCR; 6000 N !
+    Parameter G(B2,Cr:Ni;0) 298.15   +7000+GHSERCR+GBCCNI; 6000 N !
+    Parameter G(B2,Cr:Va;0) 298.15   +20000+GHSERCR; 6000 N !
+    Parameter G(B2,Ni:Cr;0) 298.15   +7000+GBCCNI+GHSERCR; 6000 N !
+    Parameter G(B2,Ni:Ni;0) 298.15   +2*GBCCNI; 6000 N !
+    Parameter G(B2,Ni:Va;0) 298.15   +162685-24.936*T+GBCCNI; 6000 N !
+    Parameter G(B2,Al:Cr,Ni;0) 298.15   -10000; 6000 N !
+    Parameter G(B2,Al,Cr:Ni;0) 298.15   +28660-39.38*T; 6000 N !
+    Parameter G(B2,Al:Cr,Va;0) 298.15   -10000; 6000 N !
+    Parameter G(B2,Al,Ni:Cr;0) 298.15   -47306+4.909*T; 6000 N !
+    Parameter G(B2,Al,Ni:Ni;0) 298.15   -47306+4.909*T; 6000 N !
+    Parameter G(B2,Al:Al,Va;0) 298.15   +100000; 6000 N !
+    Parameter G(B2,Al:Ni,Va;0) 298.15   -62755+29.622*T; 6000 N !
+    Parameter G(B2,Al,Ni:Va;0) 298.15   -47306+4.909*T; 6000 N !
+    Parameter G(B2,Cr:Cr,Ni;0) 298.15   +10000; 6000 N !
+    Parameter G(B2,Cr:Cr,Ni;1) 298.15   +10000; 6000 N !
+    Parameter G(B2,Cr:Cr,Va;0) 298.15   +200000; 6000 N !
+    Parameter G(B2,Cr,Ni:Cr;0) 298.15   +10000; 6000 N !
+    Parameter G(B2,Cr,Ni:Cr;1) 298.15   +10000; 6000 N !
+    Parameter G(B2,Cr,Ni:Ni;0) 298.15   +10000; 6000 N !
+    Parameter G(B2,Cr,Ni:Ni;1) 298.15   +10000; 6000 N !
+    Parameter G(B2,Cr:Ni,Va;0) 298.15   -62755+29.622*T; 6000 N !
+    Parameter G(B2,Cr,Ni:Va;0) 298.15   +10000; 6000 N !
+    Parameter G(B2,Cr,Ni:Va;1) 298.15   +10000; 6000 N !
+    Parameter G(B2,Ni:Cr,Ni;0) 298.15   +10000; 6000 N !
+    Parameter G(B2,Ni:Cr,Ni;1) 298.15   +10000; 6000 N !
+    Parameter G(B2,Ni:Cr,Va;0) 298.15   +200000; 6000 N !
+    Parameter G(B2,Ni:Ni,Va;0) 298.15   -62755+29.622*T; 6000 N !
+
+Phase Bcc %& 2 1 3 !
+Constituent Bcc :Al,Cr,Ni:Va:!
+    Parameter G(Bcc,Al:Va;0) 298.15   +GBCCAL; 6000 N !
+    Parameter G(Bcc,Cr:Va;0) 298.15   +GHSERCR; 6000 N !
+    Parameter G(Bcc,Ni:Va;0) 298.15   +GBCCNI; 6000 N !
+    Parameter G(Bcc,Al,Cr:Va;0) 298.15   -54900+10*T; 6000 N !
+    Parameter G(Bcc,Al,Ni:Va;0) 298.15   -50000+11*T; 6000 N !
+    Parameter G(Bcc,Cr,Ni:Va;0) 298.15   +17170-11.8199*T; 6000 N !
+    Parameter G(Bcc,Cr,Ni:Va;1) 298.15   +34418-11.8577*T; 6000 N !
+    Parameter G(Bcc,Al,Cr,Ni:Va;0) 298.15   -100000; 6000 N !
+    Parameter BMAGN(Bcc,Cr:Va;0) 298.15   -.01; 6000 N !
+    Parameter BMAGN(Bcc,Ni:Va;0) 298.15   +.85; 6000 N !
+    Parameter BMAGN(Bcc,Cr,Ni:Va;0) 298.15   +4; 6000 N !
+    Parameter TC(Bcc,Cr:Va;0) 298.15   -311.5; 6000 N !
+    Parameter TC(Bcc,Ni:Va;0) 298.15   +575; 6000 N !
+    Parameter TC(Bcc,Cr,Ni:Va;0) 298.15   +2373; 6000 N !
+    Parameter TC(Bcc,Cr,Ni:Va;1) 298.15   +617; 6000 N !
+
+Phase Fcc %( 2 1 1 !
+Constituent Fcc :Al,Cr,Ni:Va:!
+    Parameter G(Fcc,Al:Va;0) 298.15   +GHSERAL; 6000 N !
+    Parameter G(Fcc,Cr:Va;0) 298.15   +GFCCCR; 6000 N !
+    Parameter G(Fcc,Ni:Va;0) 298.15   +GHSERNI; 6000 N !
+    Parameter G(Fcc,Al,Cr:Va;0) 298.15   -45900+6*T; 6000 N !
+    Parameter G(Fcc,Al,Ni:Va;0) 298.15   -168343+16*T; 6000 N !
+    Parameter G(Fcc,Al,Ni:Va;1) 298.15   +34311; 6000 N !
+    Parameter G(Fcc,Al,Ni:Va;2) 298.15   +4162+27.29*T; 6000 N !
+    Parameter G(Fcc,Cr,Ni:Va;0) 298.15   +8030-12.8801*T; 6000 N !
+    Parameter G(Fcc,Cr,Ni:Va;1) 298.15   +33080-16.0362*T; 6000 N !
+    Parameter G(Fcc,Al,Cr,Ni:Va;0) 298.15   -853+16.245*T; 6000 N !
+    Parameter BMAGN(Fcc,Cr:Va;0) 298.15   -2.46; 6000 N !
+    Parameter BMAGN(Fcc,Ni:Va;0) 298.15   +.52; 6000 N !
+    Parameter BMAGN(Fcc,Cr,Ni:Va;0) 298.15   -1.91; 6000 N !
+    Parameter TC(Fcc,Cr:Va;0) 298.15   -1109; 6000 N !
+    Parameter TC(Fcc,Ni:Va;0) 298.15   +633; 6000 N !
+    Parameter TC(Fcc,Al,Ni:Va;0) 298.15   -1112; 6000 N !
+    Parameter TC(Fcc,Al,Ni:Va;1) 298.15   +1745; 6000 N !
+    Parameter TC(Fcc,Cr,Ni:Va;0) 298.15   -3605; 6000 N !
+
+Phase L12_FCC % 3 0.75 0.25 1 !
+Constituent L12_FCC :Al,Cr,Ni:Al,Cr,Ni:Va:!
+    Parameter G(L12_FCC,Al:Al:Va;0) 298.15   +GHSERAL+10; 6000 N !
+    Parameter G(L12_FCC,Al:Cr:Va;0) 298.15   +0.75*GHSERAL+0.25*GFCCCR+0.75*U1ALCR-8597+1.125*T; 6000 N !
+    Parameter G(L12_FCC,Al:Ni:Va;0) 298.15   +0.75*GHSERAL+0.25*GHSERNI+3*U1ALNI+1067+3.74*T; 6000 N !
+    Parameter G(L12_FCC,Cr:Al:Va;0) 298.15   +0.75*GFCCCR+0.25*GHSERAL+0.75*U1ALCR-8597+1.125*T; 6000 N !
+    Parameter G(L12_FCC,Cr:Cr:Va;0) 298.15   +GFCCCR; 6000 N !
+    Parameter G(L12_FCC,Cr:Ni:Va;0) 298.15   +0.75*GFCCCR+0.25*GHSERNI+0.75*U1CRNI+4607-3.916525*T; 6000 N !
+    Parameter G(L12_FCC,Ni:Al:Va;0) 298.15   +0.75*GHSERNI+0.25*GHSERAL+3*U1ALNI+687-3.74*T; 6000 N !
+    Parameter G(L12_FCC,Ni:Cr:Va;0) 298.15   +0.75*GHSERNI+0.25*GFCCCR+0.75*U1CRNI-1595-0.909725*T; 6000 N !
+    Parameter G(L12_FCC,Ni:Ni:Va;0) 298.15   +GHSERNI; 6000 N !
+    Parameter G(L12_FCC,Al,Cr:Al:Va;0) 298.15   -0.75*U1ALCR-25791+3.375*T; 6000 N !
+    Parameter G(L12_FCC,Al,Cr:Cr:Va;0) 298.15   -0.75*U1ALCR-25791+3.375*T; 6000 N !
+    Parameter G(L12_FCC,Al:Al,Cr:Va;0) 298.15   -0.75*U1ALCR-2866+0.375*T; 6000 N !
+    Parameter G(L12_FCC,Cr:Al,Cr:Va;0) 298.15   -0.75*U1ALCR-2866+0.375*T; 6000 N !
+    Parameter G(L12_FCC,Al,Ni:Al:Va;0) 298.15   +6*U1ALNI-11313+16.8303*T; 6000 N !
+    Parameter G(L12_FCC,Al,Ni:Ni:Va;0) 298.15   +6*U1ALNI-13019-16.8303*T; 6000 N !
+    Parameter G(L12_FCC,Al:Al,Ni:Va;0) 298.15   +12084+5.61*T; 6000 N !
+    Parameter G(L12_FCC,Ni:Al,Ni:Va;0) 298.15   +11516-5.61*T; 6000 N !
+    Parameter G(L12_FCC,Al,Ni:Al:Va;1) 298.15   +36364+16.8303*T; 6000 N !
+    Parameter G(L12_FCC,Al,Ni:Ni:Va;1) 298.15   -34658+16.8303*T; 6000 N !
+    Parameter G(L12_FCC,Al:Al,Ni:Va;1) 298.15   +3978+0.6233*T; 6000 N !
+    Parameter G(L12_FCC,Ni:Al,Ni:Va;1) 298.15   -3914+0.6233*T; 6000 N !
+    Parameter G(L12_FCC,Al,Ni:Al:Va;2) 298.15   +26633; 6000 N !
+    Parameter G(L12_FCC,Al,Ni:Ni:Va;2) 298.15   +26633; 6000 N !
+    Parameter G(L12_FCC,Al:Al,Ni:Va;2) 298.15   +329; 6000 N !
+    Parameter G(L12_FCC,Ni:Al,Ni:Va;2) 298.15   +329; 6000 N !
+    Parameter G(L12_FCC,Al,Ni:Al,Ni:Va;0) 298.15   -71023; 6000 N !
+    Parameter G(L12_FCC,Cr,Ni:Cr:Va;0) 298.15   -0.75*U1CRNI+18473-14.005*T; 6000 N !
+    Parameter G(L12_FCC,Cr,Ni:Ni:Va;0) 298.15   -0.75*U1CRNI-9439-0.474*T; 6000 N !
+    Parameter G(L12_FCC,Cr:Cr,Ni:Va;0) 298.15   -0.75*U1CRNI+5154-3.0594*T; 6000 N !
+    Parameter G(L12_FCC,Ni:Cr,Ni:Va;0) 298.15   -0.75*U1CRNI-4150+1.4506*T; 6000 N !
+    Parameter G(L12_FCC,Cr,Ni:Cr:Va;1) 298.15   +13956-6.7653*T; 6000 N !
+    Parameter G(L12_FCC,Cr,Ni:Ni:Va;1) 298.15   +13956-6.7653*T; 6000 N !
+    Parameter G(L12_FCC,Cr:Cr,Ni:Va;1) 298.15   +517-0.2506*T; 6000 N !
+    Parameter G(L12_FCC,Ni:Cr,Ni:Va;1) 298.15   +517-0.2506*T; 6000 N !
+    Parameter G(L12_FCC,Al,Ni:Cr:Va;0) 298.15   +6*U1ALNI+9014-2.255*T; 6000 N !
+    Parameter G(L12_FCC,Cr:Al,Ni:Va;0) 298.15   +5050-0.7517*T; 6000 N !
+    Parameter G(L12_FCC,Al,Ni:Cr:Va;1) 298.15   +853+16.83*T; 6000 N !
+    Parameter G(L12_FCC,Cr:Al,Ni:Va;1) 298.15   +32+0.6233*T; 6000 N !
+    Parameter G(L12_FCC,Al,Ni:Cr:Va;2) 298.15   +26633; 6000 N !
+    Parameter G(L12_FCC,Cr:Al,Ni:Va;2) 298.15   +329; 6000 N !
+    Parameter G(L12_FCC,Al,Cr:Ni:Va;0) 298.15   -0.75*U1ALCR-23074+0.02*T; 6000 N !
+    Parameter G(L12_FCC,Ni:Al,Cr:Va;0) 298.15   -0.75*U1ALCR+1984-0.7433*T+600+1.0*T; 6000 N !
+    Parameter G(L12_FCC,Cr,Ni:Al:Va;0) 298.15   -0.75*U1CRNI+12452-1.629375*T; 6000 N !
+    Parameter G(L12_FCC,Al:Cr,Ni:Va;0) 298.15   -0.75*U1CRNI+7093+1.065625*T; 6000 N !
+    Parameter G(L12_FCC,Cr,Ni:Al:Va;1) 298.15   +13956-6.7653*T; 6000 N !
+    Parameter G(L12_FCC,Al:Cr,Ni:Va;1) 298.15   +517-0.2506*T; 6000 N !
+    Parameter G(L12_FCC,Al,Cr,Ni:Al:Va;0) 298.15   +40706; 6000 N !
+    Parameter G(L12_FCC,Al,Cr,Ni:Cr:Va;0) 298.15   +40706; 6000 N !
+    Parameter G(L12_FCC,Al,Cr,Ni:Ni:Va;0) 298.15   +40706; 6000 N !
+    Parameter G(L12_FCC,Al:Al,Cr,Ni:Va;0) 298.15   +1508; 6000 N !
+    Parameter G(L12_FCC,Cr:Al,Cr,Ni:Va;0) 298.15   +1508; 6000 N !
+    Parameter G(L12_FCC,Ni:Al,Cr,Ni:Va;0) 298.15   +1508; 6000 N !
+    Parameter G(L12_FCC,Al,Cr:Al,Ni:Va;0) 298.15   -8878; 6000 N !
+    Parameter G(L12_FCC,Cr,Ni:Al,Ni:Va;0) 298.15   -8878; 6000 N !
+    Parameter G(L12_FCC,Al,Ni:Al,Cr:Va;0) 298.15   -8878; 6000 N !
+    Parameter G(L12_FCC,Al,Ni:Cr,Ni:Va;0) 298.15   -8878; 6000 N !
+
+Phase Ni2Cr % 2 2 1 !
+Constituent Ni2Cr :Ni:Cr:!
+    Parameter G(Ni2Cr,Ni:Cr;0) 298.15   -16931+6*T+2*GHSERNI+GHSERCR; 6000 N !

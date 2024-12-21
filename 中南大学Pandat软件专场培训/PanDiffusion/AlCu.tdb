@@ -1,0 +1,44 @@
+$ case_sensitive 
+$ database_version AlCu_MB
+Element         /-          ELECTRON_GAS         0         0         0 !
+Element         Al                   Fcc    26.982      4540      28.3 !
+Element         Cu                   Fcc    63.546    5004.1     33.15 !
+Element         Va                VACUUM         0         0         0 !
+
+
+Function GHSERAL 298.14   -7976.15+137.093038*T-24.3671976*T*ln(T)-0.001884662*T**2-8.77664e-007*T**3+74092*T**(-1); 700 Y
+    0.000230765-11276.24+223.048446*T-38.5844296*T*ln(T)+0.018531982*T**2-5.764227e-006*T**3+74092*T**(-1); 933.47 Y
+    -0.000380943-11278.378+188.684153*T-31.748192*T*ln(T)-1.230524e+028*T**(-9); 2900 N !
+Function GBCCAL 298.15   10083-4.813*T+GHSERAL; 6000 N !
+Function GHSERCU 298.15    -7770.458+130.485403*T-24.112392*T*LN(T)-.00265684*T**2+1.29223E-07*T**3+52478*T**(-1); 1358.01 Y
+    0.00148719-13542.33+183.804197*T-31.38*T*LN(T)+3.64643E+29*T**(-9); 3200 N !
+
+Type_Definition a GES AMEND_PHASE_DESCRIPTION Fcc MAGNETIC -3 0.28 !
+
+
+Define_System_Default SPECIE 2 !
+
+Default_Command DEF_SYS_ELEMENT Va !
+
+Phase Fcc %a 2 1 1 !
+Constituent Fcc :Al,Cu:Va:!
+    Parameter G(Fcc,Al:Va;0) 298.15    +GHSERAL; 3000 N !
+    Parameter G(Fcc,Cu:Va;0) 298.15    +GHSERCU; 3200 N !
+    Parameter G(Fcc,Al,Cu:Va;0) 298.15    -47441-3*T; 6000 N !
+    Parameter G(Fcc,Al,Cu:Va;1) 298.15    +47597-11.5*T; 6000 N !
+    Parameter G(Fcc,Al,Cu:Va;2) 298.15    -2590; 6000 N !
+    Parameter MQ(Fcc&Al,Al:Va;0) 298.15       -126719-92.92*T; 6000 N !
+    Parameter MQ(Fcc&Al,Cu:Va;0) 298.15       -181583.4-99.80*T; 6000 N !
+    Parameter MQ(Fcc&Cu,Al:Va;0) 298.15       -133184.4-83.65*T; 6000 N !
+    Parameter MQ(Fcc&Cu,Cu:Va;0) 298.15       -205872-82.52*T; 6000 N !
+    Parameter MQ(Fcc&Al,Al,Cu:Va;0) 298.15       -183094.3+159.01*T; 6000 N !
+    Parameter MQ(Fcc&Cu,Al,Cu:Va;0) 298.15       -31461.4+78.91*T; 6000 N !
+
+Phase AlCu_Theta % 2 0.667 0.333 !
+Constituent AlCu_Theta :Al:Al,Cu:!
+    Parameter G(AlCu_Theta,Al:Al;0) 298.15    +GBCCAL; 6000 N !
+    Parameter G(AlCu_Theta,Al:Cu;0) 298.15    -15802+2.25*T+.667*GHSERAL+.333*GHSERCU; 6000 N !
+    Parameter G(AlCu_Theta,Al:Al,Cu;0) 298.15    737; 6000 N !
+    Parameter MQ(AlCu_Theta&Al,Al:Cu;0) 298.15      -120000+R*T*LN(2.02E-4); 6000 N !
+    Parameter MQ(AlCu_Theta&Cu,Al:Cu;0) 298.15      -120000+R*T*LN(2.02E-4); 6000 N !
+

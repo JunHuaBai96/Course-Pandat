@@ -1,0 +1,195 @@
+$  case_sensitive 
+$  database_version AlMgZn
+$  assessment (Al,Mg) 10 !
+$  assessment (Al,Zn) 10 !
+$  assessment (Mg,Zn) 10 !
+$  assessment (Al,Mg,Zn) 10 !
+
+Element         /-          ELECTRON_GAS         0         0         0 !
+Element         Al                   Fcc    26.982      4540      28.3 !
+Element         Mg                   Hcp    24.305      4998    32.671 !
+Element         Va                VACUUM         0         0         0 !
+Element         Zn                   Hcp     65.39      5657     41.63 !
+
+Function GHSERAL 298.14  -7976.15+137.093038*T-24.3671976*T*ln(T)-0.001884662*T**2-8.77664e-007*T**3+74092*T**(-1); 700 Y
+    0.000230765-11276.24+223.048446*T-38.5844296*T*ln(T)+0.018531982*T**2-5.764227e-006*T**3+74092*T**(-1); 933.47 Y
+    -0.000380943-11278.378+188.684153*T-31.748192*T*ln(T)-1.230524e+028*T**(-9); 2900 N !
+Function GLIQAL 298.14  11005.029-11.841867*T+7.934e-020*T**7+GHSERAL; 933.6 Y
+    -0.00828226+10482.382-11.253974*T+1.231e+028*T**(-9)+GHSERAL; 6000 N !
+Function GHCPAL 298.15   +5481-1.8*T+GHSERAL; 6000 N !
+Function GHSERMG 298.15   -8367.34+143.677875*T-26.1849782*T*LN(T)+4.858E-04*T**2-1.393669E-06*T**3+78950*T**(-1); 923 Y
+    0.00136255-14130.185+204.718543*T-34.3088*T*LN(T)+1.038192E+28*T**(-9); 3000 N !
+Function GLIQMG 298.15   +8202.24-8.83693*T-8.01759E-20*T**7+GHSERMG; 923 Y
+    -0.0063918+8690.32-9.39216*T-1.03819E+28*T**(-9)+GHSERMG; 3000 N !
+Function GHSERZN 298.15   -7285.787+118.470069*T-23.701314*T*LN(T)-.001712034*T**2-1.264963E-06*T**3; 692.68 Y
+    0.000870323-11070.559+172.34566*T-31.38*T*LN(T)+4.70514E+26*T**(-9); 1700 N !
+Function GLIQZN 298.15   -128.517+108.176926*T-23.701314*T*LN(T)-.001712034*T**2-1.264963E-06*T**3-3.58652E-19*T**7; 692.73 Y
+    0.000617642-3620.474+161.608677*T-31.38*T*LN(T); 2900 N !
+Function GFCCZN 298.15   +2969.82-1.56968*T+GHSERZN; 6000 N !
+Function BETARK 298.15   -7500+1.5*T; 6000 N !
+Function C14AL 298.15   +12671+16.8*T; 6000 N !
+Function C14ALMG0 298.15   +15000; 6000 N !
+Function C14ALZN0 298.15   -7500-18*T; 6000 N !
+Function C14MGZN0 298.15   +35000; 6000 N !
+Function C14MGAL 298.15   +8000; 6000 N !
+Function C14MGZN 298.15   +8000; 6000 N !
+Function C14X 298.15   +90000; 6000 N !
+Function C14Y 298.15   +90000; 6000 N !
+Function ZNBETA 298.15  900; 6000 N !
+Function ZNGAMMAL 298.15  -3000+2*T; 6000 N !
+Function ZNGAMMMG 298.15  -5000+2*T; 6000 N !
+Function GAMMALRK 298.15  -4000+2*T; 6000 N !
+Function EPSILOZN 298.15  -6000+1.2*T; 6000 N !
+Function V_Z_Z 298.15  -5678.33+1.41958*T; 6000 N !
+Function MG2ZN3_AL 298.15  200-0.04*T; 6000 N !
+Function MGZN_AL 298.15  -400+0.1*T; 6000 N !
+Function TAU3AL 298.15  -1000-2.3*T; 6000 N !
+Function TAU3MG 298.15  5000+3*T; 6000 N !
+Function TAU2AL3AL 298.15  1000+1*T; 6000 N !
+Function TAU2AL3MG 298.15  8000+2*T; 6000 N !
+Function TAUMGALR 298.15  -2500-0.5*T; 6000 N !
+Function TAU3ZN 298.15  -10020+2*T; 6000 N !
+Function TAU2AL3ZN 298.15  -260; 6000 N !
+Function TAURKAL 298.15  -200+3*T; 6000 N !
+Function TAURKMG 298.15  -1300+3*T; 6000 N !
+Function TAUMGZNR 298.15  3000+1*T; 6000 N !
+
+Type_Definition a GES AMEND_PHASE_DESCRIPTION Fcc MAGNETIC -3 0.28 !
+Type_Definition b GES AMEND_PHASE_DESCRIPTION Hcp MAGNETIC -3 0.28 !
+
+Define_System_Default SPECIE 2 !
+
+Default_Command DEF_SYS_ELEMENT Va !
+
+Phase Liquid:L % 1 1 !
+Constituent Liquid :Al,Mg,Zn:!
+    Parameter G(Liquid,Al;0) 298.15   +GLIQAL; 3000 N !
+    Parameter G(Liquid,Mg;0) 298.15   +GLIQMG; 3000 N !
+    Parameter G(Liquid,Zn;0) 298.15   +GLIQZN; 3000 N !
+    Parameter G(Liquid,Al,Mg;0) 298.15   -12000+8.566*T; 6000 N !
+    Parameter G(Liquid,Al,Mg;1) 298.15   +1894-3*T; 6000 N !
+    Parameter G(Liquid,Al,Mg;2) 298.15   +2000; 6000 N !
+    Parameter G(Liquid,Al,Zn;0) 298.15   +10288.0-3.035*T; 6000 N !
+    Parameter G(Liquid,Al,Zn;1) 298.15   -810.0+0.471*T; 6000 N !
+    Parameter G(Liquid,Mg,Zn;0) 298.15   -77729.24+680.52266*T-95*T*ln(T)+0.04*T**2; 2000 Y -77729.24+680.52266*2000-95*2000*ln(2000)+0.04*2000**2;6000 N !
+    Parameter G(Liquid,Mg,Zn;1) 298.15   +3674.72+0.57139*T; 6000 N !
+    Parameter G(Liquid,Mg,Zn;2) 298.15   -1588.15; 6000 N !
+    Parameter G(Liquid,Al,Mg,Zn;0) 298.15   -11475+11*T; 6000 N !
+    Parameter G(Liquid,Al,Mg,Zn;1) 298.15   -11475+11*T; 6000 N !
+    Parameter G(Liquid,Al,Mg,Zn;2) 298.15   -11475+11*T; 6000 N !
+
+Phase Fcc %a 2 1 1 !
+Constituent Fcc :Al,Mg,Zn:Va:!
+    Parameter G(Fcc,Al:Va;0) 298.15   +GHSERAL; 3000 N !
+    Parameter G(Fcc,Mg:Va;0) 298.15   +2600-0.9*T+GHSERMG; 3000 N !
+    Parameter G(Fcc,Zn:Va;0) 298.15   +2969.82-1.56968*T+GHSERZN; 6000 N !
+    Parameter G(Fcc,Al,Mg:Va;0) 298.15   +4971-3.5*T; 6000 N !
+    Parameter G(Fcc,Al,Mg:Va;1) 298.15   +900+0.423*T; 6000 N !
+    Parameter G(Fcc,Al,Mg:Va;2) 298.15   +950; 6000 N !
+    Parameter G(Fcc,Al,Zn:Va;0) 298.15   +6656.0+1.615*T; 6000 N !
+    Parameter G(Fcc,Al,Zn:Va;1) 298.15   +6793.0-4.982*T; 6000 N !
+    Parameter G(Fcc,Al,Zn:Va;2) 298.15   -5352.0+7.261*T; 6000 N !
+    Parameter G(Fcc,Mg,Zn:Va;0) 298.15   +18000; 6000 N !
+    Parameter G(Fcc,Al,Mg,Zn:Va;0) 298.15   -20000; 6000 N !
+
+Phase Hcp %b 2 1 0.5 !
+Constituent Hcp :Al,Mg,Zn:Va:!
+    Parameter G(Hcp,Al:Va;0) 298.15   +5481-1.8*T+GHSERAL; 2900 N !
+    Parameter G(Hcp,Mg:Va;0) 298.15   +GHSERMG; 3000 N !
+    Parameter G(Hcp,Zn:Va;0) 298.15   +GHSERZN; 6000 N !
+    Parameter G(Hcp,Al,Mg:Va;0) 298.15   +1950-2*T; 6000 N !
+    Parameter G(Hcp,Al,Mg:Va;1) 298.15   +1480-2.08*T; 6000 N !
+    Parameter G(Hcp,Al,Mg:Va;2) 298.15   +3500; 6000 N !
+    Parameter G(Hcp,Al,Zn:Va;0) 298.15   +14620; 6000 N !
+    Parameter G(Hcp,Mg,Zn:Va;0) 298.15   -1600.77+7.62441*T; 6000 N !
+    Parameter G(Hcp,Mg,Zn:Va;1) 298.15   -3823.03+8.02575*T; 6000 N !
+
+Phase C14 % 2 1 2 !
+Constituent C14 :Al,Mg,Zn:Al,Mg,Zn:!
+    Parameter G(C14,Al:Al;0) 298.15  15000+3*GHSERAL; 6000 N !
+    Parameter G(C14,Mg:Mg;0) 298.15  15000+3*GHSERMG; 6000 N !
+    Parameter G(C14,Zn:Zn;0) 298.15  15000+3*GHSERZN; 6000 N !
+    Parameter G(C14,Al:Zn;0) 298.15  15000+2*GHSERZN+GHSERAL; 6000 N !
+    Parameter G(C14,Zn:Al;0) 298.15  15000+2*GHSERAL+GHSERZN; 6000 N !
+    Parameter G(C14,Mg:Al;0) 298.15  +C14AL+2*GHSERAL+GHSERMG; 6000 N !
+    Parameter G(C14,Mg:Zn;0) 298.15  -35355.45+8.83886*T+2*GHSERZN+GHSERMG; 6000 N !
+    Parameter G(C14,Zn:Mg;0) 298.15  65355.45-8.83886*T+2*GHSERMG+GHSERZN; 6000 N !
+    Parameter G(C14,Al:Mg;0) 298.15  74970.96-16.46448*T+2*GHSERMG+GHSERAL; 6000 N !
+    Parameter G(C14,Al:Al,Mg;0) 298.15  +C14ALMG0; 6000 N !
+    Parameter G(C14,Mg:Al,Mg;0) 298.15  +C14ALMG0; 6000 N !
+    Parameter G(C14,Zn:Al,Mg;0) 298.15  +C14ALMG0; 6000 N !
+    Parameter G(C14,Al:Al,Zn;0) 298.15  +C14ALZN0+C14X; 6000 N !
+    Parameter G(C14,Mg:Al,Zn;0) 298.15  +C14ALZN0; 6000 N !
+    Parameter G(C14,Zn:Al,Zn;0) 298.15  +C14ALZN0+C14Y; 6000 N !
+    Parameter G(C14,Al:Mg,Zn;0) 298.15  +C14MGZN0; 6000 N !
+    Parameter G(C14,Mg:Mg,Zn;0) 298.15  +C14MGZN0; 6000 N !
+    Parameter G(C14,Zn:Mg,Zn;0) 298.15  +C14MGZN0; 6000 N !
+    Parameter G(C14,Al,Mg:Al;0) 298.15  +C14MGAL; 6000 N !
+    Parameter G(C14,Al,Mg:Mg;0) 298.15  +C14MGAL; 6000 N !
+    Parameter G(C14,Al,Mg:Zn;0) 298.15  +C14MGAL; 6000 N !
+    Parameter G(C14,Mg,Zn:Al;0) 298.15  +C14MGZN; 6000 N !
+    Parameter G(C14,Mg,Zn:Mg;0) 298.15  +C14MGZN; 6000 N !
+    Parameter G(C14,Mg,Zn:Zn;0) 298.15  +C14MGZN; 6000 N !
+
+Phase T_AlMgZn % 4 26 6 48 1 !
+Constituent T_AlMgZn :Mg:Al,Mg:Al,Mg,Zn:Al:!
+    Parameter G(T_AlMgZn,Mg:Mg:Al:Al;0) 298.15  81*TAU3AL+49*GHSERAL+32*GHSERMG; 6000 N !
+    Parameter G(T_AlMgZn,Mg:Mg:Mg:Al;0) 298.15  81*TAU3MG+GHSERAL+80*GHSERMG; 6000 N !
+    Parameter G(T_AlMgZn,Mg:Mg:Zn:Al;0) 298.15  81*TAU3ZN+GHSERAL+32*GHSERMG+48*GHSERZN; 6000 N !
+    Parameter G(T_AlMgZn,Mg:Al:Al:Al;0) 298.15  81*TAU3AL+81*TAU2AL3AL+55*GHSERAL+26*GHSERMG; 6000 N !
+    Parameter G(T_AlMgZn,Mg:Al:Mg:Al;0) 298.15  81*TAU3MG+81*TAU2AL3MG+7*GHSERAL+74*GHSERMG; 6000 N !
+    Parameter G(T_AlMgZn,Mg:Al:Zn:Al;0) 298.15  81*TAU3ZN+81*TAU2AL3ZN+7*GHSERAL+26*GHSERMG+48*GHSERZN; 6000 N !
+    Parameter G(T_AlMgZn,Mg:Mg:Al,Mg:Al;0) 298.15  81*TAUMGALR; 6000 N !
+    Parameter G(T_AlMgZn,Mg:Mg:Al,Zn:Al;0) 298.15  81*TAURKMG; 6000 N !
+    Parameter G(T_AlMgZn,Mg:Mg:Mg,Zn:Al;0) 298.15  81*TAUMGZNR; 6000 N !
+    Parameter G(T_AlMgZn,Mg:Al:Al,Mg:Al;0) 298.15  81*TAUMGALR; 6000 N !
+    Parameter G(T_AlMgZn,Mg:Al:Al,Zn:Al;0) 298.15  81*TAURKAL; 6000 N !
+    Parameter G(T_AlMgZn,Mg:Al:Mg,Zn:Al;0) 298.15  81*TAUMGZNR; 6000 N !
+
+Phase AlMg_Beta % 2 89 140 !
+Constituent AlMg_Beta :Mg:Al,Zn:!
+    Parameter G(AlMg_Beta,Mg:Al;0) 298.15  -246175-675.55*T+89*GHSERMG+140*GHSERAL; 6000 N !
+    Parameter G(AlMg_Beta,Mg:Zn;0) 298.15  229*ZNBETA+89*GHSERMG+140*GHSERZN; 6000 N !
+    Parameter G(AlMg_Beta,Mg:Al,Zn;0) 298.15  229*BETARK; 6000 N !
+
+Phase AlMg_Eps % 2 23 30 !
+Constituent AlMg_Eps :Mg:Al,Zn:!
+    Parameter G(AlMg_Eps,Mg:Al;0) 298.15  -52565.4-173.1775*T+23*GHSERMG+30*GHSERAL; 6000 N !
+    Parameter G(AlMg_Eps,Mg:Zn;0) 298.15  53*EPSILOZN+23*GHSERMG+30*GHSERZN; 6000 N !
+
+Phase AlMg_Gamma % 3 10 24 24 !
+Constituent AlMg_Gamma :Mg:Al,Mg,Zn:Al,Mg,Zn:!
+    Parameter G(AlMg_Gamma,Mg:Al:Al;0) 298.15  195750-203*T+10*GHSERMG+48*GHSERAL; 6000 N !
+    Parameter G(AlMg_Gamma,Mg:Mg:Al;0) 298.15  -105560-101.5*T+34*GHSERMG+24*GHSERAL; 6000 N !
+    Parameter G(AlMg_Gamma,Mg:Al:Mg;0) 298.15  568249.2-276.138*T+34*GHSERMG+24*GHSERAL; 6000 N !
+    Parameter G(AlMg_Gamma,Mg:Mg:Mg;0) 298.15  266939.2-174.638*T+58*GHSERMG; 6000 N !
+    Parameter G(AlMg_Gamma,Mg:Mg:Zn;0) 298.15  58*ZNGAMMMG+34*GHSERMG+24*GHSERZN; 6000 N !
+    Parameter G(AlMg_Gamma,Mg:Zn:Mg;0) 298.15  58*ZNGAMMAL+348000-58*T+34*GHSERMG+24*GHSERZN; 6000 N !
+    Parameter G(AlMg_Gamma,Mg:Zn:Zn;0) 298.15  580000+10*GHSERMG+48*GHSERZN; 6000 N !
+    Parameter G(AlMg_Gamma,Mg:Zn:Al;0) 298.15  58*ZNGAMMAL+10*GHSERMG+24*GHSERAL+24*GHSERZN; 6000 N !
+    Parameter G(AlMg_Gamma,Mg:Al:Zn;0) 298.15  58*ZNGAMMMG+290000-87*T+10*GHSERMG+24*GHSERAL+24*GHSERZN; 6000 N !
+    Parameter G(AlMg_Gamma,Mg:Al:Al,Mg;0) 298.15  226200-29*T; 6000 N !
+    Parameter G(AlMg_Gamma,Mg:Mg:Al,Mg;0) 298.15  226200-29*T; 6000 N !
+    Parameter G(AlMg_Gamma,Mg:Mg,Zn:Mg;0) 298.15  58*GAMMALRK; 6000 N !
+    Parameter G(AlMg_Gamma,Mg:Mg,Zn:Zn;0) 298.15  58*GAMMALRK; 6000 N !
+    Parameter G(AlMg_Gamma,Mg:Zn:Al,Mg;0) 298.15  226200-29*T; 6000 N !
+    Parameter G(AlMg_Gamma,Mg:Mg,Zn:Al;0) 298.15  58*GAMMALRK; 6000 N !
+
+Phase Mg2Zn11 % 3 5 6 2 !
+Constituent Mg2Zn11 :Al,Zn:Zn:Mg:!
+    Parameter G(Mg2Zn11,Zn:Zn:Mg;0) 298.15  13*V_Z_Z+11*GHSERZN+2*GHSERMG; 6000 N !
+    Parameter G(Mg2Zn11,Al:Zn:Mg;0) 298.15  +5*GHSERAL+2*GHSERMG+6*GHSERZN; 6000 N !
+
+Phase Mg2Zn3 % 2 2 3 !
+Constituent Mg2Zn3 :Mg:Al,Zn:!
+    Parameter G(Mg2Zn3,Mg:Al;0) 298.15  5*MG2ZN3_AL+2*GHSERMG+3*GHSERAL; 6000 N !
+    Parameter G(Mg2Zn3,Mg:Zn;0) 298.15  -54406.2+13.60156*T+2*GHSERMG+3*GHSERZN; 6000 N !
+
+Phase MgZn % 2 12 13 !
+Constituent MgZn :Mg:Al,Zn:!
+    Parameter G(MgZn,Mg:Al;0) 298.15  25*MGZN_AL+12*GHSERMG+13*GHSERAL; 6000 N !
+    Parameter G(MgZn,Mg:Zn;0) 298.15  -236980.84+59.24524*T+12*GHSERMG+13*GHSERZN; 6000 N !
+
+Phase Mg7Zn3 % 2 51 20 !
+Constituent Mg7Zn3 :Mg:Zn:!
+    Parameter G(Mg7Zn3,Mg:Zn;0) 298.15  -335041.54+36*T+51*GHSERMG+20*GHSERZN; 6000 N !

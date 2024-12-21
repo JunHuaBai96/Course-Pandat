@@ -1,0 +1,10 @@
+ $ this is an example to append new property to the original dataabse 
+	
+    Parameter Vm(Bcc,A;0) 298.15   +7.4e-6*exp(1e-6*T); 3000 N !
+    Parameter Vm(Bcc,B;0) 298.15   +8.4e-6*exp(1e-6*T); 3000 N !
+
+    Parameter Vm(Fcc,A;0) 298.15   +7.0e-6*exp(1e-6*T); 3000 N !
+    Parameter Vm(Fcc,B;0) 298.15   +8.0e-6*exp(1e-6*T); 3000 N !
+
+    Parameter Vm(Liquid,A;0) 298.15   +8.0e-6*exp(1e-6*T); 3000 N !
+    Parameter Vm(Liquid,B;0) 298.15   +9.0e-6*exp(1e-6*T); 3000 N !

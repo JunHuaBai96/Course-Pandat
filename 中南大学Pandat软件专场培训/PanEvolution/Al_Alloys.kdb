@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PPREC version="2024">
+  <Header copyright="CompuTherm, LLC">
+    <Application name="PanEvolution" version="2024" />
+  </Header>
+  
+  <Alloy name="AA2xxx">
+  <!-- Define the range of alloy compositions -->
+  <!-- x: mole fraction, w: weight fraction, x%: mole percentage, w%: weight percentage -->
+	<Composition unit="w%">
+	  <Component name="Al" value="90-100" />
+	  <Component name="Cu" value="2-7" />
+	  <Component name="Si" value="0.2-1.2" />
+	  <Component name="Mn" value="0-1.2" />
+	  <Component name="Mg" value="0-1.8" />
+	  <Component name="Ni" value="0-2.3" />
+	  <Component name="Ti" value="0-0.2" />
+	</Composition >
+
+    <MatrixPhase name="Fcc">
+      <ParameterTable name="kinetic" type="kinetic">
+        <Parameter type="Molar_Volume" value="1.0425E-5" description="The molar volume of the matrix phase [m^3/mole]." />
+      </ParameterTable>
+      <ParameterTable name="mechanical" type="mechanical">
+        <Parameter type="Intrinsic_Strength" value="10" description="The baseline contribution including lattice resistance, work-hardening and grain boundaries hardening [MPa]." />
+        <Parameter name="Cu" type="Solution_Strengthening_Factor" value="30" description="The scaling factor of alloying element for solution strengthening." />
+        <Parameter name="Li" type="Solution_Strengthening_Factor" value="20" description="The scaling factor of alloying element for solution strengthening." />
+        <Parameter name="Mg" type="Solution_Strengthening_Factor" value="20" description="The scaling factor of alloying element for solution strengthening." />
+        <Parameter name="Si" type="Solution_Strengthening_Factor" value="66.3" description="The scaling factor of alloying element for solution strengthening." />
+      </ParameterTable>
+      <PrecipitatePhase name="PRIME_S" model="KWN" morphology="Sphere" nucleation="Modified_Homogeneous" growth="SFFK">
+        <ParameterTable name="kinetic" type="kinetic">
+          <Parameter type="Molar_Volume" value="1.01e-5" description="The molar volume of the precipitate phase[m^3/mole]." />
+          <Parameter type="Interfacial_Energy" value="0.39" description="Interfacial energy between the matrix and precipitate phases [J/m^2]. With keyword 'IFE_CALC(*)', the generalized broken bond (GBB) method is used to estimate the interfacial energy." />
+          <Parameter type="Nucleation_Site_Parameter" value="5.5e-3" description="Homogeneous: choose a value close to solute concentration; Heterogeneous: choose a value close to nucleation density when  “Modified_Homogeneous” option is chosen for nucleation model.  Otherwise, use the model automatically estimate the nucleation density and default value of 1.0 can be used" />
+          <Parameter type="Atomic_Spacing" value="2.5E-10" description="Usually use the lattice constant [m]." />
+          <Parameter type="Driving_Force_Factor" value="1.0" description="A factor adjusting chemical driving force obtained by thermodynamic calculation." />
+          <Parameter type="Steady_State_Nucleation_Rate" value="1" description="0: transient nucleation rate; 1: steady state nucleation rate;" />
+          <Parameter type="Kinetic_Parameter_Factor" value="1.0" description="A factor adjusting kinetic parameter obtained by thermodynamic and mobility calculation." />
+        </ParameterTable>
+        <ParameterTable name="mechanical" type="mechanical">
+          <Parameter type="Strength_Parameter" value="0.95e-5" description="Strengthening parameter due to precipitation hardening." />
+          <Parameter type="Shearing_Critical_Radius" value="5.0e-9" description="Critical radius shifting from shearing to looping mechanism [m]." />
+        </ParameterTable>
+        <VariableTable name="user-defined variables" type="">
+          <Parameter type="Nucleation_Barrier_Energy" value="2.5e12/dgm(*)^2/6.02e23" description="User-defined activation energy for nucleation. It can be an expression, for example: 7.475e-12/dgm(*)^2" />
+        </VariableTable>
+      </PrecipitatePhase>
+    </MatrixPhase>
+  </Alloy>
+  
+  <Alloy name="A3xx">
+  <!-- Define the range of alloy compositions -->
+  <!-- x: mole fraction, w: weight fraction, x%: mole percentage, w%: weight percentage -->
+    <Composition unit="w%">
+	  <Component name="Al" value="90-100" />
+	  <Component name="Mg" value="0.25-0.5" />
+	  <Component name="Si" value="6.5-7.5" />
+	  <Component name="Cu" value="0-3.0" />
+	  <Component name="Mn" value="0-0.5" />
+	  <Component name="Zn" value="0-1.0" />
+	  <Component name="Ti" value="0-0.25" />
+    </Composition >  
+    <MatrixPhase name="Fcc">
+      <ParameterTable name="kinetic" type="kinetic">
+        <Parameter type="Molar_Volume" value="1.0425E-5" description="The molar volume of the matrix phase [m^3/mole]." />
+      </ParameterTable>
+      <ParameterTable name="mechanical" type="mechanical">
+        <Parameter type="Intrinsic_Strength" value="43" description="The baseline contribution including lattice resistance, work-hardening and grain boundaries hardening [MPa]." />
+        <Parameter name="Mg" type="Solution_Strengthening_Factor" value="29" description="The scaling factor of alloying element for solution strengthening." />
+      </ParameterTable>
+      <PrecipitatePhase name="Mg5Si6" model="KWN" morphology="Sphere" nucleation="Modified_Homogeneous" growth="SFFK">
+        <ParameterTable name="kinetic" type="kinetic">
+          <Parameter type="Molar_Volume" value="3.9e-5" description="The molar volume of the precipitate phase[m^3/mole]." />
+          <Parameter type="Interfacial_Energy" value="0.4" description="Interfacial energy between the matrix and precipitate phases [J/m^2]. With keyword 'IFE_CALC(*)', the generalized broken bond (GBB) method is used to estimate the interfacial energy." />
+          <Parameter type="Nucleation_Site_Parameter" value="0.3e-5" description="Homogeneous: choose a value close to solute concentration; Heterogeneous: choose a value close to nucleation density when  “Modified_Homogeneous” option is chosen for nucleation model.  Otherwise, use the model automatically estimate the nucleation density and default value of 1.0 can be used" />
+          <Parameter type="Atomic_Spacing" value="4.05E-10" description="Usually use the lattice constant [m]." />
+          <Parameter type="Driving_Force_Factor" value="1.0" description="A factor adjusting chemical driving force obtained by thermodynamic calculation." />
+          <Parameter type="Effective_Diffusivity_Factor" value="3" description="A factor adjusting effective diffusivity for nucleation obtained by mobility calculation." />
+          <Parameter type="Steady_State_Nucleation_Rate" value="1" description="0: transient nucleation rate; 1: steady state nucleation rate;" />
+          <Parameter type="Kinetic_Parameter_Factor" value="3.0" description="A factor adjusting kinetic parameter obtained by thermodynamic and mobility calculation." />
+        </ParameterTable>
+        <ParameterTable name="mechanical" type="mechanical">
+          <Parameter type="Strength_Parameter" value="1.3e-5" description="Strengthening parameter due to precipitation hardening." />
+          <Parameter type="Shearing_Critical_Radius" value="4.0e-9" description="Critical radius shifting from shearing to looping mechanism [m]." />
+        </ParameterTable>
+        <VariableTable name="user-defined variables" type="">
+          <Parameter type="Nucleation_Barrier_Energy" value="7.475e-12/dgm(*)^2" description="User-defined activation energy for nucleation. It can be an expression, for example: 7.475e-12/dgm(*)^2" />
+        </VariableTable>
+      </PrecipitatePhase>
+    </MatrixPhase>
+  </Alloy>
+  
+  <Alloy name="AA6xxx">
+  <!-- Define the range of alloy compositions -->
+  <!-- x: mole fraction, w: weight fraction, x%: mole percentage, w%: weight percentage -->
+    <Composition unit="w%">
+	  <Component name="Al" value="90-100" />
+	  <Component name="Mg" value="0.4-1.5" />
+	  <Component name="Si" value="0.2-1.8" />
+	  <Component name="Cu" value="0-0.5" />
+	  <Component name="Mn" value="0-1.0" />
+	  <Component name="Cr" value="0-0.35" />
+	  <Component name="Zn" value="0-0.05" />
+	  <Component name="Fe" value="0-0.5" />
+    </Composition >  
+    <MatrixPhase name="Fcc">
+      <ParameterTable name="kinetic" type="kinetic">
+        <Parameter type="Molar_Volume" value="1.0425E-5" description="The molar volume of the matrix phase [m^3/mole]." />
+      </ParameterTable>
+      <ParameterTable name="mechanical" type="mechanical">
+        <Parameter type="Intrinsic_Strength" value="10" description="The baseline contribution including lattice resistance, work-hardening and grain boundaries hardening [MPa]." />
+        <Parameter type="Hardness_Factor" value="0.33" description="The hardness factor used to convert the yield strength in MPa to hardness." />
+        <Parameter type="Hardness_Constant" value="16" description="The hardness constant used to convert the yield strength in MPa to hardness." />
+        <Parameter name="Mg" type="Solution_Strengthening_Factor" value="29" description="The scaling factor of alloying element for solution strengthening." />
+        <Parameter name="Si" type="Solution_Strengthening_Factor" value="66.3" description="The scaling factor of alloying element for solution strengthening." />
+      </ParameterTable>
+      <PrecipitatePhase name="Mg5Si6" model="KWN" morphology="Sphere" nucleation="Modified_Homogeneous" growth="SFFK">
+        <ParameterTable name="kinetic" type="kinetic">
+          <Parameter type="Molar_Volume" value="3.9e-5" description="The molar volume of the precipitate phase[m^3/mole]." />
+          <Parameter type="Interfacial_Energy" value="0.4" description="Interfacial energy between the matrix and precipitate phases [J/m^2]. With keyword 'IFE_CALC(*)', the generalized broken bond (GBB) method is used to estimate the interfacial energy." />
+          <Parameter type="Nucleation_Site_Parameter" value="0.3e-5" description="Homogeneous: choose a value close to solute concentration; Heterogeneous: choose a value close to nucleation density when  “Modified_Homogeneous” option is chosen for nucleation model.  Otherwise, use the model automatically estimate the nucleation density and default value of 1.0 can be used" />
+          <Parameter type="Atomic_Spacing" value="4.05E-10" description="Usually use the lattice constant [m]." />
+          <Parameter type="Driving_Force_Factor" value="1.0" description="A factor adjusting chemical driving force obtained by thermodynamic calculation." />
+          <Parameter type="Effective_Diffusivity_Factor" value="3" description="A factor adjusting effective diffusivity for nucleation obtained by mobility calculation." />
+          <Parameter type="Steady_State_Nucleation_Rate" value="1" description="0: transient nucleation rate; 1: steady state nucleation rate;" />
+          <Parameter type="Kinetic_Parameter_Factor" value="3.0" description="A factor adjusting kinetic parameter obtained by thermodynamic and mobility calculation." />
+        </ParameterTable>
+        <ParameterTable name="mechanical" type="mechanical">
+          <Parameter type="Strength_Parameter" value="1.1e-5" description="Strengthening parameter due to precipitation hardening." />
+          <Parameter type="Shearing_Critical_Radius" value="5.0e-9" description="Critical radius shifting from shearing to looping mechanism [m]." />
+        </ParameterTable>
+        <VariableTable name="user-defined variables" type="">
+          <Parameter type="Nucleation_Barrier_Energy" value="7.475e-12/dgm(*)^2" description="User-defined activation energy for nucleation. It can be an expression, for example: 7.475e-12/dgm(*)^2" />
+        </VariableTable>
+      </PrecipitatePhase>
+    </MatrixPhase>
+  </Alloy>
+  
+  <Alloy name="AA7xxx">
+  <!-- Define the range of alloy compositions -->
+  <!-- x: mole fraction, w: weight fraction, x%: mole percentage, w%: weight percentage -->
+	<Composition unit="w%">
+	  <Component name="Al" value="90-100" />
+	  <Component name="Mg" value="0.1-3.5" />
+	  <Component name="Zn" value="1-8" />
+	  <Component name="Cu" value="0-3.0" />
+	  <Component name="Mn" value="0-0.7" />
+	  <Component name="Cr" value="0-0.35" />
+	  <Component name="Zr" value="0-0.25" />
+	</Composition >  
+    <MatrixPhase name="Fcc">
+      <ParameterTable name="kinetic" type="kinetic">
+        <Parameter type="Molar_Volume" value="1.0425E-5" description="The molar volume of the matrix phase [m^3/mole]." />
+      </ParameterTable>
+      <ParameterTable name="mechanical" type="mechanical">
+        <Parameter type="Intrinsic_Strength" value="20" description="The baseline contribution including lattice resistance, work-hardening and grain boundaries hardening [MPa]." />
+        <Parameter type="Hardness_Factor" value="0.33" description="The hardness factor used to convert the yield strength in MPa to hardness." />
+        <Parameter name="Cu" type="Solution_Strengthening_Factor" value="26.6" description="The scaling factor of alloying element for solution strengthening." />
+        <Parameter name="Li" type="Solution_Strengthening_Factor" value="20" description="The scaling factor of alloying element for solution strengthening." />
+        <Parameter name="Mg" type="Solution_Strengthening_Factor" value="50" description="The scaling factor of alloying element for solution strengthening." />
+        <Parameter name="Si" type="Solution_Strengthening_Factor" value="66.3" description="The scaling factor of alloying element for solution strengthening." />
+        <Parameter name="Zn" type="Solution_Strengthening_Factor" value="50" description="The scaling factor of alloying element for solution strengthening." />
+      </ParameterTable>
+      <PrecipitatePhase name="ETA_PRIME" model="KWN" morphology="Sphere" nucleation="Modified_Homogeneous" growth="SFFK">
+        <ParameterTable name="kinetic" type="kinetic">
+          <Parameter type="Molar_Volume" value="2.95e-5" description="The molar volume of the precipitate phase[m^3/mole]." />
+          <Parameter type="Interfacial_Energy" value="0.18" description="Interfacial energy between the matrix and precipitate phases [J/m^2]. With keyword 'IFE_CALC(*)', the generalized broken bond (GBB) method is used to estimate the interfacial energy." />
+          <Parameter type="Nucleation_Site_Parameter" value="5e-4" description="Homogeneous: choose a value close to solute concentration; Heterogeneous: choose a value close to nucleation density when  “Modified_Homogeneous” option is chosen for nucleation model.  Otherwise, use the model automatically estimate the nucleation density and default value of 1.0 can be used" />
+          <Parameter type="Atomic_Spacing" value="4.96E-10" description="Usually use the lattice constant [m]." />
+          <Parameter type="Driving_Force_Factor" value="1.0" description="A factor adjusting chemical driving force obtained by thermodynamic calculation." />
+          <Parameter type="Effective_Diffusivity_Factor" value="1.0" description="A factor adjusting effective diffusivity for nucleation obtained by mobility calculation." />
+          <Parameter type="Steady_State_Nucleation_Rate" value="1" description="0: transient nucleation rate; 1: steady state nucleation rate;" />
+          <Parameter type="Kinetic_Parameter_Factor" value="1.0" description="A factor adjusting kinetic parameter obtained by thermodynamic and mobility calculation." />
+        </ParameterTable>
+        <ParameterTable name="mechanical" type="mechanical">
+          <Parameter type="Strength_Parameter" value="0.85e-5" description="Strengthening parameter due to precipitation hardening." />
+          <Parameter type="Shearing_Critical_Radius" value="4.3e-9" description="Critical radius shifting from shearing to looping mechanism [m]." />
+        </ParameterTable>
+        <VariableTable name="user-defined variables" type="">
+          <Parameter type="Nucleation_Barrier_Energy" value="1e12/dgm(*)^2/6.02e23" description="User-defined activation energy for nucleation. It can be an expression, for example: 7.475e-12/dgm(*)^2" />
+        </VariableTable>
+      </PrecipitatePhase>
+    </MatrixPhase>
+  </Alloy>
+</PPREC>

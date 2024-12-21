@@ -1,0 +1,122 @@
+<pbfx version="1.0" encoding="utf-8">
+  <Header copyright="CompuTherm, LLC">
+    <!-- this file defines the syntax for a batch calculation -->
+    <Application name="Pandat" version="2024" />
+  </Header>
+  <calculation name="Dissolution Simulation" type="diffusion" duration="32.4" original_batch_name="" id="2005">
+    <databases>
+      <database type="tdb" file_name="AlCu.tdb" />
+    </databases>
+    <units>
+      <unit name="T" value="C" />
+      <unit name="length" value="um" />
+      <unit name="n" value="w%" />
+      <unit name="time" value="minute" />
+    </units>
+    <system name="Default_System">
+      <components>
+        <component name="Al" status="Selected" />
+        <component name="Cu" status="Selected" />
+      </components>
+      <phases>
+        <phase name="*" status="Entered" />
+      </phases>
+      <points>
+        <point>
+          <statespace>
+            <n component="Al" value="98.45" />
+            <n component="Cu" value="1.55" />
+          </statespace>
+        </point>
+      </points>
+      <cells>
+        <cell name="Alloy" type="dissolution" active="yes">
+          <geometry type="spherical" />
+          <number_of_grids value="100" />
+          <lower_boundary_condition type="closed" value="" />
+          <upper_boundary_condition type="closed" value="" />
+          <region name="particle">
+            <length value="3" />
+            <volume_fraction value="0.008" />
+            <phases>
+              <phase name="*" status="Suspended" />
+              <phase name="AlCu_Theta" status="Entered" type="particle" />
+            </phases>
+          </region>
+          <region name="matrix">
+            <phases>
+              <phase name="*" status="Suspended" />
+              <phase name="Fcc" status="Entered" />
+            </phases>
+          </region>
+        </cell>
+      </cells>
+      <condition>
+        <processing_history useRate="false">
+          <node time="0" T="550" EPS="0" />
+          <node time="35" T="550" EPS="0" />
+        </processing_history>
+        <diffusion>
+          <integral_settings value="automatic" />
+          <Runge_Kutta_order value="1" />
+          <relative_tolerance value="1e-05" />
+          <num_of_profile_outputs value="5" type="linear" />
+          <profiles>
+            <profile time="0" />
+            <profile time="35" />
+          </profiles>
+          <interface_flux_model value="automatic" />
+          <effective_mobility_model value="HS_lower" />
+        </diffusion>
+      </condition>
+    </system>
+    <output unit="">
+      <tables>
+        <table name="Default" source="Default" type="Default">
+          <column name="T" />
+          <column name="time" />
+          <column name="distance" />
+          <column name="x(*)" />
+          <column name="w(*)" />
+          <column name="phase_name" />
+          <column name="f(@*)" />
+          <column name="mu(*)" />
+        </table>
+        <table name="interface" source="interface" type="interface">
+          <column name="time" />
+          <column name="log10(time)" />
+          <column name="distance" />
+        </table>
+        <table name="profile_0" source="Default" type="Default">
+          <column name="T" />
+          <column name="time==0" />
+          <column name="distance" />
+          <column name="x(*)" />
+          <column name="w(*)" />
+          <column name="phase_name" />
+          <column name="f(@*)" />
+          <column name="mu(*)" />
+        </table>
+        <table name="profile_35" source="Default" type="Default">
+          <column name="T" />
+          <column name="time==2100" />
+          <column name="distance" />
+          <column name="x(*)" />
+          <column name="w(*)" />
+          <column name="phase_name" />
+          <column name="f(@*)" />
+          <column name="mu(*)" />
+        </table>
+      </tables>
+      <graphs>
+        <graph name="Diffusion_Profiles" type="line">
+          <plot table_name="profile_0" xaxis="distance" yaxis="w(*)" />
+          <plot table_name="profile_35" xaxis="distance" yaxis="w(*)" />
+        </graph>
+        <graph name="particle_size" type="line">
+          <plot table_name="interface" xaxis="log10(time)" yaxis="distance" />
+        </graph>
+      </graphs>
+    </output>
+  </calculation>
+</pbfx>

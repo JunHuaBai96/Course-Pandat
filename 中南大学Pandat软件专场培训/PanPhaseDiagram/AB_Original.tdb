@@ -1,0 +1,22 @@
+$  case_sensitive 
+$  database_version AB 
+
+Element          A                   Fcc         1         0         0 !
+Element          B                   Bcc         1         0         0 !
+
+Phase Liquid % 1 1 !
+Constituent Liquid :A,B:!
+    Parameter G(Liquid,A;0) 298  0; 6000 N !
+    Parameter G(Liquid,B;0) 298  0; 6000 N !
+
+    Parameter G(Liquid,A,B;0) 298  3000; 6000 N !
+
+Phase Fcc % 1 1 !
+Constituent Fcc :A,B:!
+    Parameter G(Fcc,A;0) 298     -10000+10*T; 6000 N !
+    Parameter G(Fcc,B;0) 298     -1000+10*T; 6000 N !
+
+Phase Bcc % 1 1 !
+Constituent Bcc :A,B:!
+    Parameter G(Bcc,A;0) 298     -2000+10*T; 6000 N !
+    Parameter G(Bcc,B;0) 298     -9000+10*T; 6000 N !
